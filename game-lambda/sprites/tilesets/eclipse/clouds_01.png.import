@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpimnotmrwu8w"
-path="res://.godot/imported/clouds_02.png-80574bb9a763cbb42f3314d689888a73.ctex"
+uid="uid://c0vavibam1h5i"
+path="res://.godot/imported/clouds_01.png-a6c125507ac1df8794319c64806f42de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/eclipse (maconhha)/clouds_02.png"
-dest_files=["res://.godot/imported/clouds_02.png-80574bb9a763cbb42f3314d689888a73.ctex"]
+source_file="res://sprites/tilesets/eclipse/clouds_01.png"
+dest_files=["res://.godot/imported/clouds_01.png-a6c125507ac1df8794319c64806f42de.ctex"]
 
 [params]
 

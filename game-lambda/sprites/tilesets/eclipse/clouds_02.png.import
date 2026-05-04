@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn61mwgdwj3ds"
-path="res://.godot/imported/tiles.png-8e64345a129d5528a13109a4324220eb.ctex"
+uid="uid://dpimnotmrwu8w"
+path="res://.godot/imported/clouds_02.png-70c30a7d94891094080f954d8e5bf78b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/eclipse (maconhha)/tiles.png"
-dest_files=["res://.godot/imported/tiles.png-8e64345a129d5528a13109a4324220eb.ctex"]
+source_file="res://sprites/tilesets/eclipse/clouds_02.png"
+dest_files=["res://.godot/imported/clouds_02.png-70c30a7d94891094080f954d8e5bf78b.ctex"]
 
 [params]
 

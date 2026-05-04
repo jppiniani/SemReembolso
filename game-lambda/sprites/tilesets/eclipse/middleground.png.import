@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d246l4c7uak3g"
-path="res://.godot/imported/moon.png-5c992207660464211a0f9b2517253bb8.ctex"
+uid="uid://btcm654j71cda"
+path="res://.godot/imported/middleground.png-c086512cfe7284f00ef7f3ca51568b1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/eclipse (maconhha)/moon.png"
-dest_files=["res://.godot/imported/moon.png-5c992207660464211a0f9b2517253bb8.ctex"]
+source_file="res://sprites/tilesets/eclipse/middleground.png"
+dest_files=["res://.godot/imported/middleground.png-c086512cfe7284f00ef7f3ca51568b1f.ctex"]
 
 [params]
 
