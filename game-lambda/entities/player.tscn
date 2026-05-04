@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bchoqdk4vnrbl"]
 
 [ext_resource type="Script" uid="uid://djrbp51uch8d3" path="res://scripts/player.gd" id="1_merdl"]
-[ext_resource type="Texture2D" uid="uid://wgymlqa1f274" path="res://sprites/Characters/knight idle 1.png" id="2_rfe5m"]
+[ext_resource type="Texture2D" uid="uid://di58aaron71m0" path="res://sprites/Characters/knight idle-sheet.png" id="2_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight jump.png" id="3_rfe5m"]
-[ext_resource type="Texture2D" uid="uid://h2drp60swmdg" path="res://sprites/Characters/knight run-sheet.png" id="4_rfe5m"]
+[ext_resource type="Texture2D" uid="uid://dd77bnhsgmksv" path="res://sprites/Characters/knight run-sheet 3.png" id="4_rfe5m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
-radius = 6.0
-height = 16.0
+radius = 5.0
+height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
 atlas = ExtResource("2_rfe5m")
@@ -29,41 +29,41 @@ region = Rect2(36, 0, 12, 18)
 atlas = ExtResource("2_rfe5m")
 region = Rect2(48, 0, 12, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dp3pk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dchgp"]
 atlas = ExtResource("2_rfe5m")
 region = Rect2(60, 0, 12, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cgp7q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp3pk"]
 atlas = ExtResource("2_rfe5m")
 region = Rect2(72, 0, 12, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjdhl"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(0, 0, 30, 23)
+region = Rect2(0, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x08pd"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(30, 0, 30, 23)
+region = Rect2(14, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdgjc"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(60, 0, 30, 23)
+region = Rect2(28, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q0i8f"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(90, 0, 30, 23)
+region = Rect2(42, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i614"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(120, 0, 30, 23)
+region = Rect2(56, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oprnr"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(150, 0, 30, 23)
+region = Rect2(70, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rie4"]
 atlas = ExtResource("4_rfe5m")
-region = Rect2(180, 0, 30, 23)
+region = Rect2(84, 0, 14, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_merdl"]
 animations = [{
@@ -84,14 +84,14 @@ animations = [{
 "texture": SubResource("AtlasTexture_ef06p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dp3pk")
+"texture": SubResource("AtlasTexture_dchgp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cgp7q")
+"texture": SubResource("AtlasTexture_dp3pk")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -137,8 +137,9 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077530802]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_merdl")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.86769783
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=332282949]
 limit_left = 0
