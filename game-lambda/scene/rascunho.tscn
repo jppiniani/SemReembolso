@@ -221,3 +221,6 @@ repeat_times = 3
 [node name="Sprite2D" type="Sprite2D" parent="Background/Middlegorund" unique_id=889428369]
 texture = ExtResource("8_6yqkr")
 centered = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=830450775]
+position = Vector2(394, 143)
