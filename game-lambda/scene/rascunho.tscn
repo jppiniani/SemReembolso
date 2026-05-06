@@ -20,14 +20,15 @@ tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAAcAAsABAAMAAUAAAAcAAwABAAMAAY
 tile_set = ExtResource("2_txie6")
 
 [node name="Player" parent="." unique_id=758609415 instance=ExtResource("3_dcp8a")]
-position = Vector2(24, 158)
+position = Vector2(30, 138)
 
 [node name="Background" type="Node2D" parent="." unique_id=1417362306]
 z_index = -1
 
 [node name="Clouds2" type="Parallax2D" parent="Background" unique_id=1650654207]
 scroll_scale = Vector2(0.1, 0)
-repeat_size = Vector2(320, 0)
+scroll_offset = Vector2(-345.74698, -1)
+repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Clouds2" unique_id=740291467]
@@ -37,7 +38,8 @@ centered = false
 
 [node name="Clouds1" type="Parallax2D" parent="Background" unique_id=591296778]
 scroll_scale = Vector2(0.2, 0)
-repeat_size = Vector2(320, 0)
+scroll_offset = Vector2(-369, -1)
+repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Clouds1" unique_id=535172498]
@@ -47,7 +49,8 @@ centered = false
 
 [node name="Foreground" type="Parallax2D" parent="Background" unique_id=718186980]
 scroll_scale = Vector2(0.3, 0.4)
-repeat_size = Vector2(320, 0)
+scroll_offset = Vector2(-345.74698, -1)
+repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Foreground" unique_id=690072548]
@@ -57,7 +60,8 @@ centered = false
 
 [node name="Light" type="Parallax2D" parent="Background" unique_id=633320797]
 scroll_scale = Vector2(0.4, 0)
-repeat_size = Vector2(320, 0)
+scroll_offset = Vector2(-345.74698, -1)
+repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Light" unique_id=1272197400]
@@ -67,7 +71,8 @@ centered = false
 
 [node name="Middlegorund" type="Parallax2D" parent="Background" unique_id=1308993069]
 scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(320, 0)
+scroll_offset = Vector2(-345.74698, -1)
+repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Middlegorund" unique_id=889428369]
