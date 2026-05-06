@@ -12,7 +12,7 @@
 [node name="Forest" type="Node2D" unique_id=816977688]
 
 [node name="Player" parent="." unique_id=758609415 instance=ExtResource("1_e2knd")]
-position = Vector2(15, 25)
+position = Vector2(20, 158)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1564564474]
 tile_map_data = PackedByteArray("AAAAAAwAAQABAAMAAAABAAwAAQACAAMAAAACAAwAAQACAAMAAAADAAwAAQACAAMAAAAEAAwAAQACAAMAAAAFAAwAAQACAAMAAAAGAAwAAQACAAMAAAAHAAwAAQACAAMAAAAIAAwAAQACAAMAAAAJAAwAAQACAAMAAAAKAAwAAQACAAMAAAALAAwAAQACAAMAAAAMAAwAAQACAAMAAAANAAwAAQACAAMAAAAOAAwAAQACAAMAAAAPAAwAAQACAAMAAAAQAAwAAQACAAMAAAARAAwAAQACAAMAAAASAAwAAQACAAMAAAATAAwAAQACAAMAAAAUAAwAAQACAAMAAAAVAAwAAQACAAMAAAAWAAwAAQACAAMAAAAXAAwAAQACAAMAAAAYAAwAAQACAAMAAAAZAAwAAQACAAMAAAAaAAwAAQACAAMAAAAbAAwAAQACAAMAAAAcAAwAAQACAAMAAAAdAAwAAQACAAMAAAAeAAwAAQACAAMAAAAfAAwAAQACAAMAAAAgAAwAAQACAAMAAAAhAAwAAQACAAMAAAAiAAwAAQACAAMAAAAjAAwAAQACAAMAAAAkAAwAAQACAAMAAAAlAAwAAQACAAMAAAAmAAwAAQACAAMAAAAnAAwAAQACAAMAAAAoAAwAAQACAAMAAAApAAwAAQACAAMAAAAqAAwAAQACAAMAAAArAAwAAQACAAMAAAAsAAwAAQACAAMAAAAtAAwAAQACAAMAAAAuAAwAAQACAAMAAAAvAAwAAQACAAMAAAAwAAwAAQACAAMAAAAxAAwAAQACAAMAAAAyAAwAAQACAAMAAAAzAAwAAQACAAMAAAA0AAwAAQACAAMAAAA1AAwAAQACAAMAAAA2AAwAAQACAAMAAAA3AAwAAQACAAMAAAA4AAwAAQACAAMAAAA5AAwAAQACAAMAAAA6AAwAAQACAAMAAAA7AAwAAQACAAMAAAA8AAwAAQACAAMAAAA9AAwAAQACAAMAAAA+AAwAAQACAAMAAAA/AAwAAQACAAMAAABAAAwAAQACAAMAAABBAAwAAQACAAMAAABCAAwAAQACAAMAAABDAAwAAQACAAMAAABEAAwAAQACAAMAAABFAAwAAQACAAMAAABGAAwAAQACAAMAAABHAAwAAQACAAMAAABIAAwAAQACAAMAAABJAAwAAQACAAMAAABKAAwAAQACAAMAAABLAAwAAQACAAMAAABMAAwAAQACAAMAAABNAAwAAQACAAMAAABOAAwAAQACAAMAAABPAAwAAQACAAMAAABQAAwAAQACAAMAAABRAAwAAQACAAMAAABSAAwAAQACAAMAAABTAAwAAQACAAMAAABUAAwAAQACAAMAAABVAAwAAQACAAMAAABWAAwAAQACAAMAAABXAAwAAQACAAMAAABYAAwAAQACAAMAAABZAAwAAQACAAMAAABaAAwAAQACAAMAAABbAAwAAQACAAMAAABcAAwAAQACAAMAAABdAAwAAQACAAMAAABeAAwAAQACAAMAAABfAAwAAQACAAMAAABgAAwAAQAHAAMAAAA=")
@@ -21,6 +21,7 @@ tile_set = ExtResource("2_2xpkg")
 [node name="Background" type="Node2D" parent="." unique_id=419021975]
 
 [node name="DistantTrees" type="Parallax2D" parent="Background" unique_id=2001642517]
+scroll_scale = Vector2(0.1, 0)
 repeat_size = Vector2(288, 0)
 repeat_times = 3
 
@@ -29,7 +30,7 @@ texture = ExtResource("3_gbfvw")
 centered = false
 
 [node name="TreeRow2" type="Parallax2D" parent="Background" unique_id=2079484868]
-scroll_scale = Vector2(0.9, 0.9)
+scroll_scale = Vector2(0.2, 0)
 repeat_size = Vector2(288, 0)
 repeat_times = 3
 
@@ -38,7 +39,7 @@ texture = ExtResource("4_qxlj4")
 centered = false
 
 [node name="TreeRow1" type="Parallax2D" parent="Background" unique_id=91481917]
-scroll_scale = Vector2(0.8, 0.8)
+scroll_scale = Vector2(0.3, 0)
 repeat_size = Vector2(288, 0)
 repeat_times = 3
 
@@ -47,7 +48,7 @@ texture = ExtResource("5_jo4av")
 centered = false
 
 [node name="BottomLeaf" type="Parallax2D" parent="Background" unique_id=925980091]
-scroll_scale = Vector2(0.7, 0.7)
+scroll_scale = Vector2(0.4, 0)
 repeat_size = Vector2(288, 0)
 repeat_times = 3
 
@@ -56,7 +57,7 @@ texture = ExtResource("6_jxvlp")
 centered = false
 
 [node name="Trees" type="Parallax2D" parent="Background" unique_id=561387075]
-scroll_scale = Vector2(0.6, 0.6)
+scroll_scale = Vector2(0.5, 0)
 repeat_size = Vector2(288, 0)
 repeat_times = 3
 
@@ -65,7 +66,7 @@ texture = ExtResource("7_gwku7")
 centered = false
 
 [node name="LeafTop" type="Parallax2D" parent="Background" unique_id=637557555]
-scroll_scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.6, 0)
 repeat_size = Vector2(288, 0)
 repeat_times = 3
 
