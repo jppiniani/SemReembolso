@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ga5gc0tvhf4x"]
+
+[ext_resource type="Texture2D" uid="uid://byrvj18liqgxu" path="res://sprites/Characters/mercador-sheet.png" id="1_mtlcc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fskhb"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxur2"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwle5"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bptyn"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqdch"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3c6v"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(85, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o26jt"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(102, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he8rn"]
+atlas = ExtResource("1_mtlcc")
+region = Rect2(119, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ty4f5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fskhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxur2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwle5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bptyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqdch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3c6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o26jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he8rn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1244256968]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=381843377]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_ty4f5")
+autoplay = "default"

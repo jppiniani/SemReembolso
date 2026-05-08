@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://u7r7isi1t7l1" path="res://sprites/tilesets/eclipse/foregound.png" id="6_a2qk7"]
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="7_3sdn3"]
 [ext_resource type="Texture2D" uid="uid://btcm654j71cda" path="res://sprites/tilesets/eclipse/middleground.png" id="8_6yqkr"]
+[ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/ mercador.tscn" id="9_ru6yc"]
 
 [node name="Rascunho" type="Node2D" unique_id=1975790546]
 
@@ -16,10 +17,12 @@ tile_map_data = PackedByteArray("AAAOAAsAAgACAAEAAAANAAsAAgACAAEAAAAMAAsAAgACAAE
 tile_set = ExtResource("1_txie6")
 
 [node name="Decoração" type="TileMapLayer" parent="." unique_id=1790267563]
+z_index = 1
 tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAAcAAsABAAMAAUAAAAcAAwABAAMAAYAAAAdAAsABAAMAAUAAAAdAAwABAAMAAYAAAAeAAsABAAMAAUAAAAeAAwABAAMAAYAAAAfAAsABAAMAAUAAAAfAAwABAAMAAYAAAAgAAsABAAMAAUAAAAgAAwABAAMAAYAAAAhAAsABAAMAAUAAAAhAAwABAAMAAYAAAAiAAsABAAMAAUAAAAiAAwABAAMAAYAAAAjAAsABAAMAAUAAAAjAAwABAAMAAYAAAAkAAsABAAMAAUAAAAkAAwABAAMAAYAAAAlAAsABAAMAAUAAAAlAAwABAAMAAYAAAAmAAsABAAMAAUAAAAmAAwABAAMAAYAAAAnAAsABAAMAAUAAAAnAAwABAAMAAYAAAAoAAsABAAMAAUAAAAoAAwABAAMAAYAAAApAAsABAAMAAUAAAApAAwABAAMAAYAAAAqAAsABAAMAAUAAAAqAAwABAAMAAYAAAArAAsABAAMAAUAAAArAAwABAAMAAYAAAAsAAsABAAMAAUAAAAsAAwABAAMAAYAAAAtAAsABAAMAAUAAAAtAAwABAAMAAYAAAA=")
 tile_set = ExtResource("2_txie6")
 
 [node name="Player" parent="." unique_id=758609415 instance=ExtResource("3_dcp8a")]
+z_index = 2
 position = Vector2(30, 138)
 
 [node name="Background" type="Node2D" parent="." unique_id=1417362306]
@@ -82,3 +85,6 @@ centered = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=830450775]
 position = Vector2(394, 143)
+
+[node name="CharacterBody2D" parent="." unique_id=1244256968 instance=ExtResource("9_ru6yc")]
+position = Vector2(297, 167)

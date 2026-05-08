@@ -91,7 +91,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -139,7 +139,7 @@ z_index = 1
 sprite_frames = SubResource("SpriteFrames_merdl")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.86769783
+frame_progress = 0.22258234
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=332282949]
 limit_left = 0
