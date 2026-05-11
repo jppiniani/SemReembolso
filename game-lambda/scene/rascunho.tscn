@@ -88,3 +88,4 @@ position = Vector2(394, 143)
 
 [node name="CharacterBody2D" parent="." unique_id=1244256968 instance=ExtResource("9_ru6yc")]
 position = Vector2(297, 167)
+script = null
