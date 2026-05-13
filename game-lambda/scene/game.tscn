@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cdlr51nghlh38" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="5_ll5lq"]
 [ext_resource type="Texture2D" uid="uid://dpkonee0ycsmd" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="6_17rxn"]
 [ext_resource type="Texture2D" uid="uid://bmnmjlmv1q1ny" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_yq8tf"]
+[ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="8_ll5lq"]
 
 [node name="Game" type="Node2D" unique_id=1609397984]
 
@@ -71,3 +72,5 @@ repeat_times = 3
 [node name="Sprite2D" type="Sprite2D" parent="Background/Foreground" unique_id=652929058]
 texture = ExtResource("7_yq8tf")
 centered = false
+
+[node name="Camera" parent="." unique_id=2119136842 instance=ExtResource("8_ll5lq")]

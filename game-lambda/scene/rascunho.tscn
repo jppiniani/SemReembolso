@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="7_3sdn3"]
 [ext_resource type="Texture2D" uid="uid://btcm654j71cda" path="res://sprites/tilesets/eclipse/middleground.png" id="8_6yqkr"]
 [ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/ mercador.tscn" id="9_ru6yc"]
+[ext_resource type="Script" uid="uid://bsmxuobsjgqls" path="res://scripts/mercadorDirecao.gd" id="10_a2qk7"]
+[ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="11_3sdn3"]
 
 [node name="Rascunho" type="Node2D" unique_id=1975790546]
 
@@ -83,8 +85,8 @@ scale = Vector2(1.156, 1.156)
 texture = ExtResource("8_6yqkr")
 centered = false
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=830450775]
-position = Vector2(394, 143)
-
-[node name="CharacterBody2D" parent="." unique_id=1244256968 instance=ExtResource("9_ru6yc")]
+[node name="Mercador" parent="." unique_id=1244256968 instance=ExtResource("9_ru6yc")]
 position = Vector2(297, 167)
+script = ExtResource("10_a2qk7")
+
+[node name="Camera" parent="." unique_id=2119136842 instance=ExtResource("11_3sdn3")]

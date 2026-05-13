@@ -137,7 +137,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=758609415]
+[node name="Player" type="CharacterBody2D" unique_id=758609415 groups=["Player"]]
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113990277]
@@ -147,8 +147,3 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_merdl")
 animation = &"fall"
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=332282949]
-limit_left = 0
-limit_bottom = 208
-position_smoothing_enabled = true

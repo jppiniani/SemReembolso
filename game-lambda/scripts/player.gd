@@ -60,31 +60,34 @@ func go_to_fall_state():
 	anim.play("fall")
 
 func idle_state():
+	if Input.is_action_just_pressed("jump"):
+		go_to_jump_state()
+		return
+		
 	move()
 	if velocity.x != 0:
 		go_to_walk_state()
 		return
 	
+	
+	
+func walk_state():
 	if Input.is_action_just_pressed("jump"):
 		go_to_jump_state()
 		return
-	
-func walk_state():
-	move()
-	if velocity.x == 0:
-		go_to_idle_state()
-		return
+		
 	if !is_on_floor():
 		go_to_fall_state()
 		return
 		
-	if Input.is_action_just_pressed("jump"):
-		go_to_jump_state()
+	move()
+	if velocity.x == 0:
+		go_to_idle_state()
 		return
-		
+	
 func jump_state():
 	move()
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") && is_on_floor():
 		go_to_jump_state()
 		return
 		
