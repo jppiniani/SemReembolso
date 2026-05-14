@@ -84,7 +84,7 @@ func walk_state():
 		
 func jump_state():
 	move()
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") && is_on_floor():
 		go_to_jump_state()
 		return
 		
