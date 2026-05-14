@@ -8,31 +8,37 @@
 [ext_resource type="Texture2D" uid="uid://u7r7isi1t7l1" path="res://sprites/tilesets/eclipse/foregound.png" id="6_a2qk7"]
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="7_3sdn3"]
 [ext_resource type="Texture2D" uid="uid://btcm654j71cda" path="res://sprites/tilesets/eclipse/middleground.png" id="8_6yqkr"]
-[ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/ mercador.tscn" id="9_ru6yc"]
+[ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/mercador.tscn" id="9_ru6yc"]
 [ext_resource type="Script" uid="uid://bsmxuobsjgqls" path="res://scripts/mercadorDirecao.gd" id="10_a2qk7"]
 [ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="11_3sdn3"]
+[ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="12_6yqkr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
+size = Vector2(20, 34.97967)
 
 [node name="Rascunho" type="Node2D" unique_id=1975790546]
+metadata/_edit_vertical_guides_ = [573.0]
 
-[node name="Terreno" type="TileMapLayer" parent="." unique_id=1310768756]
-tile_map_data = PackedByteArray("AAAOAAsAAgACAAEAAAANAAsAAgACAAEAAAAMAAsAAgACAAEAAAALAAsAAgACAAEAAAAKAAsAAgACAAEAAAAJAAsAAgACAAEAAAAIAAsAAgACAAEAAAAHAAsAAgACAAEAAAAGAAsAAgACAAEAAAAFAAsAAgACAAEAAAAEAAsAAgACAAEAAAADAAsAAgACAAEAAAACAAsAAgACAAEAAAABAAsAAgACAAEAAAAAAAsAAgABAAEAAAAPAAsAAgACAAEAAAAQAAsAAgACAAEAAAARAAsAAgACAAEAAAASAAsAAgACAAEAAAATAAsAAgACAAEAAAAUAAsAAgACAAEAAAAVAAsAAgACAAEAAAAWAAsAAgACAAEAAAAXAAsAAgACAAEAAAAYAAsAAgACAAEAAAAZAAsAAgACAAEAAAAaAAsAAgACAAEAAAAbAAsAAgADAAEAAAAAAAwAAgABAAIAAAABAAwAAgACAAIAAAACAAwAAgACAAIAAAADAAwAAgACAAIAAAAEAAwAAgACAAIAAAAFAAwAAgACAAIAAAAGAAwAAgACAAIAAAAHAAwAAgACAAIAAAAIAAwAAgACAAIAAAAJAAwAAgACAAIAAAAKAAwAAgACAAIAAAALAAwAAgACAAIAAAAMAAwAAgACAAIAAAANAAwAAgACAAIAAAAOAAwAAgACAAIAAAAPAAwAAgACAAIAAAAQAAwAAgACAAIAAAARAAwAAgACAAIAAAASAAwAAgACAAIAAAATAAwAAgACAAIAAAAUAAwAAgACAAIAAAAVAAwAAgACAAIAAAAWAAwAAgACAAIAAAAXAAwAAgACAAIAAAAYAAwAAgACAAIAAAAZAAwAAgACAAIAAAAaAAwAAgACAAIAAAAbAAwAAgADAAIAAAAFAAoAAgAYAAIAAAAHAAoAAgAYAAIAAAAGAAoAAgAXAAIAAAAIAAoAAgAXAAEAAAANAAoAAgAYAAEAAAAOAAoAAgAYAAIAAAAPAAoAAgAYAAIAAAAUAAoAAgAaAAMAAAA=")
+[node name="TileMaps" type="Node2D" parent="." unique_id=1972785204]
+
+[node name="Terreno" type="TileMapLayer" parent="TileMaps" unique_id=1310768756]
+tile_map_data = PackedByteArray("AAAOAAsAAgACAAEAAAANAAsAAgACAAEAAAAMAAsAAgACAAEAAAALAAsAAgACAAEAAAAKAAsAAgACAAEAAAAJAAsAAgACAAEAAAAIAAsAAgACAAEAAAAHAAsAAgACAAEAAAAGAAsAAgACAAEAAAAFAAsAAgACAAEAAAAEAAsAAgACAAEAAAADAAsAAgACAAEAAAACAAsAAgACAAEAAAABAAsAAgACAAEAAAAAAAsAAgABAAEAAAAPAAsAAgACAAEAAAAQAAsAAgACAAEAAAARAAsAAgACAAEAAAASAAsAAgACAAEAAAATAAsAAgACAAEAAAAUAAsAAgACAAEAAAAVAAsAAgACAAEAAAAWAAsAAgACAAEAAAAXAAsAAgACAAEAAAAYAAsAAgACAAEAAAAZAAsAAgACAAEAAAAaAAsAAgACAAEAAAAbAAsAAgACAAEAAAAAAAwAAgABAAIAAAABAAwAAgACAAIAAAACAAwAAgACAAIAAAADAAwAAgACAAIAAAAEAAwAAgACAAIAAAAFAAwAAgACAAIAAAAGAAwAAgACAAIAAAAHAAwAAgACAAIAAAAIAAwAAgACAAIAAAAJAAwAAgACAAIAAAAKAAwAAgACAAIAAAALAAwAAgACAAIAAAAMAAwAAgACAAIAAAANAAwAAgACAAIAAAAOAAwAAgACAAIAAAAPAAwAAgACAAIAAAAQAAwAAgACAAIAAAARAAwAAgACAAIAAAASAAwAAgACAAIAAAATAAwAAgACAAIAAAAUAAwAAgACAAIAAAAVAAwAAgACAAIAAAAWAAwAAgACAAIAAAAXAAwAAgACAAIAAAAYAAwAAgACAAIAAAAZAAwAAgACAAIAAAAaAAwAAgACAAIAAAAbAAwAAgACAAIAAAAFAAoAAgAYAAIAAAAHAAoAAgAYAAIAAAAGAAoAAgAXAAIAAAAIAAoAAgAXAAEAAAANAAoAAgAYAAEAAAAOAAoAAgAYAAIAAAAPAAoAAgAYAAIAAAAUAAoAAgAaAAMAAAAcAAsAAgACAAEAAAAdAAsAAgACAAEAAAAeAAsAAgACAAEAAAAfAAsAAgACAAEAAAAgAAsAAgACAAEAAAAhAAsAAgACAAEAAAAiAAsAAgACAAEAAAAjAAsAAgACAAEAAAAjAAwAAgACAAIAAAAiAAwAAgACAAIAAAAhAAwAAgACAAIAAAAgAAwAAgACAAIAAAAfAAwAAgACAAIAAAAeAAwAAgACAAIAAAAdAAwAAgACAAIAAAAcAAwAAgACAAIAAAAkAAsAAgACAAEAAAAlAAsAAgACAAEAAAAmAAsAAgADAAEAAAAmAAwAAgADAAIAAAAkAAwAAgACAAIAAAAlAAwAAgACAAIAAAA=")
 tile_set = ExtResource("1_txie6")
 
-[node name="Decoração" type="TileMapLayer" parent="." unique_id=1790267563]
+[node name="Decoração" type="TileMapLayer" parent="TileMaps" unique_id=1790267563]
 z_index = 1
-tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAAcAAsABAAMAAUAAAAcAAwABAAMAAYAAAAdAAsABAAMAAUAAAAdAAwABAAMAAYAAAAeAAsABAAMAAUAAAAeAAwABAAMAAYAAAAfAAsABAAMAAUAAAAfAAwABAAMAAYAAAAgAAsABAAMAAUAAAAgAAwABAAMAAYAAAAhAAsABAAMAAUAAAAhAAwABAAMAAYAAAAiAAsABAAMAAUAAAAiAAwABAAMAAYAAAAjAAsABAAMAAUAAAAjAAwABAAMAAYAAAAkAAsABAAMAAUAAAAkAAwABAAMAAYAAAAlAAsABAAMAAUAAAAlAAwABAAMAAYAAAAmAAsABAAMAAUAAAAmAAwABAAMAAYAAAAnAAsABAAMAAUAAAAnAAwABAAMAAYAAAAoAAsABAAMAAUAAAAoAAwABAAMAAYAAAApAAsABAAMAAUAAAApAAwABAAMAAYAAAAqAAsABAAMAAUAAAAqAAwABAAMAAYAAAArAAsABAAMAAUAAAArAAwABAAMAAYAAAAsAAsABAAMAAUAAAAsAAwABAAMAAYAAAAtAAsABAAMAAUAAAAtAAwABAAMAAYAAAA=")
+tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAA=")
 tile_set = ExtResource("2_txie6")
 
 [node name="Player" parent="." unique_id=758609415 instance=ExtResource("3_dcp8a")]
 z_index = 2
-position = Vector2(30, 138)
+position = Vector2(8, 166)
 
 [node name="Background" type="Node2D" parent="." unique_id=1417362306]
 z_index = -1
 
 [node name="Clouds2" type="Parallax2D" parent="Background" unique_id=1650654207]
 scroll_scale = Vector2(0.1, 0)
-scroll_offset = Vector2(-345.74698, -1)
 repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
@@ -43,7 +49,6 @@ centered = false
 
 [node name="Clouds1" type="Parallax2D" parent="Background" unique_id=591296778]
 scroll_scale = Vector2(0.2, 0)
-scroll_offset = Vector2(-369, -1)
 repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
@@ -54,7 +59,6 @@ centered = false
 
 [node name="Foreground" type="Parallax2D" parent="Background" unique_id=718186980]
 scroll_scale = Vector2(0.3, 0.4)
-scroll_offset = Vector2(-345.74698, -1)
 repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
@@ -65,7 +69,6 @@ centered = false
 
 [node name="Light" type="Parallax2D" parent="Background" unique_id=633320797]
 scroll_scale = Vector2(0.4, 0)
-scroll_offset = Vector2(-345.74698, -1)
 repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
@@ -76,7 +79,6 @@ centered = false
 
 [node name="Middlegorund" type="Parallax2D" parent="Background" unique_id=1308993069]
 scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(-345.74698, -1)
 repeat_size = Vector2(369.92, 0)
 repeat_times = 3
 
@@ -90,3 +92,15 @@ position = Vector2(297, 167)
 script = ExtResource("10_a2qk7")
 
 [node name="Camera" parent="." unique_id=2119136842 instance=ExtResource("11_3sdn3")]
+position = Vector2(1, 104)
+limit_right = 572
+
+[node name="LevelEnd" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
+position = Vector2(583, 90)
+next_level = "forest"
+
+[node name="CollisionShape2D" parent="LevelEnd" index="0" unique_id=1580299939]
+scale = Vector2(1, 4.92)
+shape = SubResource("RectangleShape2D_6yqkr")
+
+[editable path="LevelEnd"]

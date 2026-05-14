@@ -7,6 +7,9 @@
 [sub_resource type="TileMapPattern" id="TileMapPattern_g7jkm"]
 tile_data = PackedInt32Array(0, 589824, 3, 1, 655360, 3, 2, 786432, 3, 3, 851968, 3)
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_r0ryr"]
+tile_data = PackedInt32Array(0, 589825, 3, 1, 655361, 3, 2, 851969, 3)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_33cqm"]
 resource_name = "Grassland"
 texture = ExtResource("1_aohir")
@@ -131,10 +134,18 @@ texture = ExtResource("2_vh2sl")
 7:3/0/z_index = 1
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+9:3/0/physics_layer_0/polygon_0/one_way = true
 10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+10:3/0/physics_layer_0/polygon_0/one_way = true
 11:3/0 = 0
 12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+12:3/0/physics_layer_0/polygon_0/one_way = true
 13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+13:3/0/physics_layer_0/polygon_0/one_way = true
 15:3/0 = 0
 1:4/0 = 0
 1:4/0/z_index = 1
@@ -282,7 +293,9 @@ texture = ExtResource("3_g7jkm")
 
 [resource]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_33cqm")
 sources/1 = SubResource("TileSetAtlasSource_g7jkm")
 sources/2 = SubResource("TileSetAtlasSource_r0ryr")
 pattern_0 = SubResource("TileMapPattern_g7jkm")
+pattern_1 = SubResource("TileMapPattern_r0ryr")

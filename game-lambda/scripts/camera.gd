@@ -6,8 +6,9 @@ func _ready() -> void:
 	get_target()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	position = target.position
+func _physics_process(_delta: float) -> void:
+	if target:
+		position = target.position
 
 func get_target():
 	var nodes = get_tree().get_nodes_in_group("Player")

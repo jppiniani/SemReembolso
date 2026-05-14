@@ -74,3 +74,4 @@ texture = ExtResource("7_yq8tf")
 centered = false
 
 [node name="Camera" parent="." unique_id=2119136842 instance=ExtResource("8_ll5lq")]
+position = Vector2(0, 103)
