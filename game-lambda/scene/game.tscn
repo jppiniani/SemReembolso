@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cql7jotpe1ws4"]
 
 [ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="1_5kiuu"]
+[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/levels.gd" id="1_17rxn"]
 [ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="2_33cqm"]
 [ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="3_xwcet"]
 [ext_resource type="Texture2D" uid="uid://ddjnlaw3xpl4h" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_qpk70"]
@@ -8,8 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://dpkonee0ycsmd" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="6_17rxn"]
 [ext_resource type="Texture2D" uid="uid://bmnmjlmv1q1ny" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_yq8tf"]
 [ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="8_ll5lq"]
+[ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="10_yq8tf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym5sv"]
+size = Vector2(20, 128)
 
 [node name="Game" type="Node2D" unique_id=1609397984]
+script = ExtResource("1_17rxn")
 
 [node name="Player" parent="." unique_id=758609415 instance=ExtResource("1_5kiuu")]
 position = Vector2(19, 113)
@@ -75,3 +81,16 @@ centered = false
 
 [node name="Camera" parent="." unique_id=2119136842 instance=ExtResource("8_ll5lq")]
 position = Vector2(0, 103)
+
+[node name="ForestPos" type="Marker2D" parent="." unique_id=1165534239]
+position = Vector2(17, 116)
+
+[node name="LevelEnd" parent="." unique_id=1700122172 instance=ExtResource("10_yq8tf")]
+position = Vector2(-4, 119)
+next_level = "forest"
+
+[node name="CollisionShape2D" parent="LevelEnd" index="0" unique_id=1580299939]
+position = Vector2(0, -54)
+shape = SubResource("RectangleShape2D_ym5sv")
+
+[editable path="LevelEnd"]

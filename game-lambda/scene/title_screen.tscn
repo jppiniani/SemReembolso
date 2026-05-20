@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://bi0ytf1f3wj1v"]
+
+[ext_resource type="Script" uid="uid://cngx2vmwihmf4" path="res://scripts/title_screen.gd" id="1_j6oad"]
+[ext_resource type="Texture2D" uid="uid://csj3rrihbrbsv" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="1_wxbcn"]
+[ext_resource type="Texture2D" uid="uid://de1drnu6du0u6" path="res://sprites/game_logo.png" id="2_j6oad"]
+[ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="3_wxbcn"]
+[ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight jump.png" id="4_gh7ws"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wxbcn"]
+
+[sub_resource type="Animation" id="Animation_j6oad"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/HBoxContainer/player:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80.5, 12)]
+}
+
+[sub_resource type="Animation" id="Animation_ulgj7"]
+resource_name = "reveal"
+length = 1.1666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.16666663, 0.5666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/HBoxContainer/player:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.16666663, 0.8666667, 1.1666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.43333337, 0.8000001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-170, 12), Vector2(80.5, 12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gh7ws"]
+_data = {
+&"RESET": SubResource("Animation_j6oad"),
+&"reveal": SubResource("Animation_ulgj7")
+}
+
+[node name="TitleScreen" type="Control" unique_id=1481495419]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j6oad")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1465728703]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 208.0
+texture = ExtResource("1_wxbcn")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1440227635]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.5
+offset_top = -92.0
+offset_right = 119.50003
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0034243, 0.9722241)
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1540336299]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1090688634]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="game_logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1826867272]
+layout_mode = 2
+texture = ExtResource("2_j6oad")
+expand_mode = 5
+
+[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1630009689]
+layout_mode = 2
+theme = ExtResource("3_wxbcn")
+text = "JOGAR"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=245455744]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wxbcn")
+
+[node name="leaderboard_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1583322244]
+layout_mode = 2
+theme = ExtResource("3_wxbcn")
+text = "LEADERBORD"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1210522793]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wxbcn")
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=521686460]
+layout_mode = 2
+theme = ExtResource("3_wxbcn")
+text = "SAIR"
+
+[node name="player" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=581191975]
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("4_gh7ws")
+expand_mode = 2
+flip_h = true
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=932584672]
+libraries/ = SubResource("AnimationLibrary_gh7ws")
+autoplay = &"reveal"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/leaderboard_btn" to="." method="_on_leaderboard_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

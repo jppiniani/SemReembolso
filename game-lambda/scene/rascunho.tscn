@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dshx3igm13fm2"]
 
+[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/levels.gd" id="1_4u11s"]
 [ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="1_txie6"]
 [ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="2_txie6"]
 [ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="3_dcp8a"]
@@ -75,6 +76,7 @@ animations = [{
 size = Vector2(20, 34.97967)
 
 [node name="Rascunho" type="Node2D" unique_id=1975790546]
+script = ExtResource("1_4u11s")
 metadata/_edit_vertical_guides_ = [400.0]
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=1972785204]
@@ -157,12 +159,15 @@ script = ExtResource("10_a2qk7")
 position = Vector2(1, 104)
 limit_right = 400
 
-[node name="LevelEnd" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
+[node name="LevelEndForest" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
 position = Vector2(410, 91)
 next_level = "forest"
 
-[node name="CollisionShape2D" parent="LevelEnd" index="0" unique_id=1580299939]
+[node name="CollisionShape2D" parent="LevelEndForest" index="0" unique_id=1580299939]
 scale = Vector2(1, 4.92)
 shape = SubResource("RectangleShape2D_6yqkr")
 
-[editable path="LevelEnd"]
+[node name="ForestPos" type="Marker2D" parent="." unique_id=438677090]
+position = Vector2(393, 167)
+
+[editable path="LevelEndForest"]

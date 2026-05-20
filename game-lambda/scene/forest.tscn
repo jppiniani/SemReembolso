@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cplyvbhhfffyn"]
 
 [ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="1_e2knd"]
+[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/levels.gd" id="1_kmspj"]
 [ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="2_2xpkg"]
 [ext_resource type="Texture2D" uid="uid://ejaec4sqpnfu" path="res://sprites/tilesets/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_gbfvw"]
 [ext_resource type="Texture2D" uid="uid://cgferwdb85ygy" path="res://sprites/tilesets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="3_jxvlp"]
@@ -63,6 +64,7 @@ size = Vector2(20, 205.34396)
 size = Vector2(20, 34.97967)
 
 [node name="Forest" type="Node2D" unique_id=816977688]
+script = ExtResource("1_kmspj")
 metadata/_edit_vertical_guides_ = [910.0]
 
 [node name="Player" parent="." unique_id=758609415 instance=ExtResource("1_e2knd")]
@@ -163,6 +165,12 @@ next_level = "rascunho"
 position = Vector2(-424, 18)
 scale = Vector2(1, 4.92)
 shape = SubResource("RectangleShape2D_64es3")
+
+[node name="RascunhoPos" type="Marker2D" parent="." unique_id=33421509]
+position = Vector2(7, 183)
+
+[node name="GamePos" type="Marker2D" parent="." unique_id=65660036]
+position = Vector2(897, 182)
 
 [editable path="LevelEnd"]
 [editable path="LevelEnd2"]
