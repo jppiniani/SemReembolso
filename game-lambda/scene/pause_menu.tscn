@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dtarmuf6px25p"]
+
+[ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="1_grdc7"]
+[ext_resource type="Script" uid="uid://ddquvvn81eomv" path="res://scripts/pause_menu.gd" id="1_me6vf"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_me6vf"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_cq4tv"]
+events = [SubResource("InputEventAction_me6vf")]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grdc7"]
+
+[node name="pauseMenu" type="CanvasLayer" unique_id=487234452]
+process_mode = 3
+visible = false
+script = ExtResource("1_me6vf")
+
+[node name="bg_overlay" type="ColorRect" parent="." unique_id=950577475]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.33333334)
+
+[node name="menuHolder" type="VBoxContainer" parent="." unique_id=941618951]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -35.5
+offset_right = 28.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="voltar_btn" type="Button" parent="menuHolder" unique_id=562537566]
+layout_mode = 2
+theme = ExtResource("1_grdc7")
+shortcut = SubResource("Shortcut_cq4tv")
+text = "VOLTAR"
+
+[node name="HSeparator" type="HSeparator" parent="menuHolder" unique_id=824619601]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_grdc7")
+
+[node name="opcoes_btn" type="Button" parent="menuHolder" unique_id=1418092979]
+layout_mode = 2
+theme = ExtResource("1_grdc7")
+text = "OPCOES"
+
+[node name="HSeparator2" type="HSeparator" parent="menuHolder" unique_id=1049780773]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_grdc7")
+
+[node name="sair_btn" type="Button" parent="menuHolder" unique_id=1884257410]
+layout_mode = 2
+theme = ExtResource("1_grdc7")
+text = "SAIR"
+
+[connection signal="pressed" from="menuHolder/voltar_btn" to="." method="_on_voltar_btn_pressed"]
+[connection signal="pressed" from="menuHolder/opcoes_btn" to="." method="_on_opcoes_btn_pressed"]
+[connection signal="pressed" from="menuHolder/sair_btn" to="." method="_on_sair_btn_pressed"]
