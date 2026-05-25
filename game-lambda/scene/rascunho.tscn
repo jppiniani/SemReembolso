@@ -161,17 +161,17 @@ script = ExtResource("10_a2qk7")
 position = Vector2(1, 104)
 limit_right = 400
 
-[node name="LevelEndForest" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
+[node name="LevelEndCenario2" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
 position = Vector2(410, 91)
-next_level = "forest"
+next_level = "cenario_2"
 
-[node name="CollisionShape2D" parent="LevelEndForest" index="0" unique_id=1580299939]
+[node name="CollisionShape2D" parent="LevelEndCenario2" index="0" unique_id=1580299939]
 scale = Vector2(1, 4.92)
 shape = SubResource("RectangleShape2D_6yqkr")
 
-[node name="ForestPos" type="Marker2D" parent="." unique_id=438677090]
+[node name="Cenario2Pos" type="Marker2D" parent="." unique_id=438677090]
 position = Vector2(393, 167)
 
 [node name="pauseMenu" parent="." unique_id=487234452 instance=ExtResource("15_viwft")]
 
-[editable path="LevelEndForest"]
+[editable path="LevelEndCenario2"]

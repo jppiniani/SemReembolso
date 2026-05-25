@@ -10,9 +10,10 @@ enum PlayerState{
 
 # Variável nova referenciando o nó do AnimatedSprite2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D # Caminho do nó
+@onready var jump_sfx: AudioStreamPlayer = $jump
 
 const SPEED = 80.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -320.0
 
 # Variavel que só pode receber algum dos valores do enum, se não gera erro
 var status: PlayerState
@@ -51,6 +52,7 @@ func go_to_walk_state():
 	anim.play("walk")
 	
 func go_to_jump_state():
+	jump_sfx.play()
 	status = PlayerState.jump
 	anim.play("jump")
 	velocity.y = JUMP_VELOCITY
