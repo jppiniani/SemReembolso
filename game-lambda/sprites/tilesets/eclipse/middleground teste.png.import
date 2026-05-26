@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clgewkwwefn5t"
-path="res://.godot/imported/game_logo.png-5a141246cd7f6653dbe97db5ee50e4e6.ctex"
+uid="uid://dagklko2s6q3o"
+path="res://.godot/imported/middleground teste.png-51966f959ab067249bbaef200f6b456e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game_logo.png"
-dest_files=["res://.godot/imported/game_logo.png-5a141246cd7f6653dbe97db5ee50e4e6.ctex"]
+source_file="res://sprites/tilesets/eclipse/middleground teste.png"
+dest_files=["res://.godot/imported/middleground teste.png-51966f959ab067249bbaef200f6b456e.ctex"]
 
 [params]
 
