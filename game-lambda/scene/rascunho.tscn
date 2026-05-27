@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dgt2eb3ko84vv" path="res://sprites/tilesets/eclipse/clouds_01_branco.png" id="5_ru6yc"]
 [ext_resource type="Texture2D" uid="uid://u7r7isi1t7l1" path="res://sprites/tilesets/eclipse/foregound.png" id="6_a2qk7"]
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="7_3sdn3"]
-[ext_resource type="Texture2D" uid="uid://dagklko2s6q3o" path="res://sprites/tilesets/eclipse/middleground teste.png" id="9_4u11s"]
 [ext_resource type="Texture2D" uid="uid://co5cjng2te635" path="res://sprites/tilesets/eclipse/clouds_02_claro-sheet.png" id="9_kpo55"]
 [ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/mercador.tscn" id="9_ru6yc"]
+[ext_resource type="Texture2D" uid="uid://t11kl2hd1vu0" path="res://sprites/tilesets/middleground-teste5.png" id="9_viwft"]
 [ext_resource type="Script" uid="uid://bsmxuobsjgqls" path="res://scripts/mercadorDirecao.gd" id="10_a2qk7"]
 [ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="11_3sdn3"]
 [ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="12_6yqkr"]
@@ -139,9 +139,8 @@ scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(0, -9)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Middlegorund" unique_id=889428369]
-position = Vector2(-1, 28)
-scale = Vector2(1.156, 0.8833334)
-texture = ExtResource("9_4u11s")
+position = Vector2(112, -23)
+texture = ExtResource("9_viwft")
 centered = false
 
 [node name="Clouds3" type="Parallax2D" parent="Background" unique_id=166633829]
