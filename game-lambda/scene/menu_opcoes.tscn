@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://c554qq5sr74s2"]
+
+[ext_resource type="Script" uid="uid://dmufgu7rq7d2k" path="res://scripts/menu_opcoes.gd" id="1_gdftu"]
+[ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="1_wa0mi"]
+
+[sub_resource type="Theme" id="Theme_gdftu"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_gdftu"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_0asgk"]
+events = [SubResource("InputEventAction_gdftu")]
+
+[node name="MenuOpcoes" type="Control" unique_id=513534261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gdftu")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=780639821]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1771919714]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=775023760]
+layout_mode = 2
+
+[node name="BotaoSom" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=782482843]
+layout_mode = 2
+theme = SubResource("Theme_gdftu")
+button_pressed = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=789368562]
+layout_mode = 2
+theme = ExtResource("1_wa0mi")
+text = "Sons do Jogo"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1932242998]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1344058281]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="voltar_btn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=777345567]
+layout_mode = 2
+theme = ExtResource("1_wa0mi")
+shortcut = SubResource("Shortcut_0asgk")
+text = "VOLTAR"
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/BotaoSom" to="." method="_on_botao_som_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/voltar_btn" to="." method="_on_voltar_btn_pressed"]

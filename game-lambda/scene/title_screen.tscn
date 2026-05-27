@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cngx2vmwihmf4" path="res://scripts/title_screen.gd" id="1_j6oad"]
 [ext_resource type="Texture2D" uid="uid://csj3rrihbrbsv" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="1_wxbcn"]
+[ext_resource type="PackedScene" uid="uid://c554qq5sr74s2" path="res://scene/menu_opcoes.tscn" id="2_ulgj7"]
 [ext_resource type="Texture2D" uid="uid://clgewkwwefn5t" path="res://sprites/game_logo.png" id="3_j6oad"]
 [ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="3_wxbcn"]
 [ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight jump.png" id="4_gh7ws"]
@@ -109,6 +110,9 @@ offset_bottom = 208.0
 texture = ExtResource("1_wxbcn")
 expand_mode = 2
 stretch_mode = 1
+
+[node name="MenuOpcoes" parent="." unique_id=513534261 instance=ExtResource("2_ulgj7")]
+layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1440227635]
 layout_mode = 1

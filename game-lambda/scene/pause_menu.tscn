@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="1_grdc7"]
 [ext_resource type="Script" uid="uid://ddquvvn81eomv" path="res://scripts/pause_menu.gd" id="1_me6vf"]
+[ext_resource type="PackedScene" uid="uid://c554qq5sr74s2" path="res://scene/menu_opcoes.tscn" id="2_cq4tv"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_me6vf"]
 action = &"ui_cancel"
@@ -60,6 +61,8 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_grdc7")
 layout_mode = 2
 theme = ExtResource("1_grdc7")
 text = "SAIR"
+
+[node name="MenuOpcoes" parent="." unique_id=513534261 instance=ExtResource("2_cq4tv")]
 
 [connection signal="pressed" from="menuHolder/voltar_btn" to="." method="_on_voltar_btn_pressed"]
 [connection signal="pressed" from="menuHolder/opcoes_btn" to="." method="_on_opcoes_btn_pressed"]

@@ -6,6 +6,7 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
+	$MenuOpcoes.voltar_pressionado.connect(_on_menu_opcoes_fechado)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,8 +30,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _on_opcoes_btn_pressed() -> void:
-	pass # Replace with function body.
-
+	# Mostra a tela de opções quando clicar
+	$MenuOpcoes.visible = true 
+	$menuHolder.visible = false
+	$MenuOpcoes/MarginContainer/VBoxContainer/HBoxContainer/BotaoSom.grab_focus()
 
 func _on_sair_btn_pressed() -> void:
 	get_tree().quit()
+
+func _on_menu_opcoes_fechado() -> void:
+	$menuHolder.visible = true
+	voltar_btn.grab_focus()

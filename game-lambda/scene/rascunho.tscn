@@ -76,6 +76,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
 size = Vector2(20, 34.97967)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viwft"]
+size = Vector2(8, 208)
+
 [node name="Rascunho" type="Node2D" unique_id=1975790546]
 script = ExtResource("1_4u11s")
 metadata/_edit_vertical_guides_ = [400.0]
@@ -136,10 +139,11 @@ centered = false
 
 [node name="Middlegorund" type="Parallax2D" parent="Background" unique_id=1308993069]
 scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(0, -9)
+repeat_size = Vector2(288, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Middlegorund" unique_id=889428369]
-position = Vector2(112, -23)
+position = Vector2(0, -31)
 texture = ExtResource("9_viwft")
 centered = false
 
@@ -172,5 +176,11 @@ shape = SubResource("RectangleShape2D_6yqkr")
 position = Vector2(393, 167)
 
 [node name="pauseMenu" parent="." unique_id=487234452 instance=ExtResource("15_viwft")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1623243963]
+position = Vector2(-4, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=993780815]
+shape = SubResource("RectangleShape2D_viwft")
 
 [editable path="LevelEndCenario2"]
