@@ -123,7 +123,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.5
 offset_top = -113.0
-offset_right = 144.5
+offset_right = 153.5
 offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -165,7 +165,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_wxbcn")
 [node name="leaderboard_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1583322244]
 layout_mode = 2
 theme = ExtResource("3_wxbcn")
-text = "LEADERBORD"
+text = "LEADERBOARD"
 
 [node name="HSeparator4" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1210522793]
 layout_mode = 2

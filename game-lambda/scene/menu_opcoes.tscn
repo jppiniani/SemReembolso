@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dmufgu7rq7d2k" path="res://scripts/menu_opcoes.gd" id="1_gdftu"]
 [ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="1_wa0mi"]
+[ext_resource type="Texture2D" uid="uid://s2siqx1jk3ei" path="res://UI/botoes/checked.png" id="2_387e6"]
+[ext_resource type="Texture2D" uid="uid://bhinqs8kq6sbv" path="res://UI/botoes/unchecked.png" id="3_e8r4a"]
 
 [sub_resource type="Theme" id="Theme_gdftu"]
+CheckButton/icons/checked = ExtResource("2_387e6")
+CheckButton/icons/unchecked = ExtResource("3_e8r4a")
 
 [sub_resource type="InputEventAction" id="InputEventAction_gdftu"]
 action = &"ui_cancel"

@@ -79,8 +79,12 @@ size = Vector2(20, 34.97967)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viwft"]
 size = Vector2(8, 208)
 
-[node name="Rascunho" type="Node2D" unique_id=1975790546]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cdna"]
+size = Vector2(66, 48)
+
+[node name="Rascunho" type="Node2D" unique_id=1975790546 node_paths=PackedStringArray("_hud")]
 script = ExtResource("1_4u11s")
+_hud = NodePath("HUD")
 metadata/_edit_vertical_guides_ = [400.0]
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=1972785204]
@@ -182,5 +186,15 @@ position = Vector2(-4, 104)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=993780815]
 shape = SubResource("RectangleShape2D_viwft")
+
+[node name="DialogArea" type="Area2D" parent="." unique_id=1426194842]
+position = Vector2(296, 156)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogArea" unique_id=1545896307]
+shape = SubResource("RectangleShape2D_3cdna")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1243359729]
 
 [editable path="LevelEndCenario2"]

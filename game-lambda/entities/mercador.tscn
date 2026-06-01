@@ -80,3 +80,5 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151059]
 shape = SubResource("CapsuleShape2D_mtlcc")
 disabled = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=548230508]

@@ -272,6 +272,7 @@ animations = [{
 }]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dchgp"]
+render_priority = 0
 shader = ExtResource("10_x08pd")
 
 [node name="Player" type="CharacterBody2D" unique_id=758609415 groups=["Player"]]
@@ -288,6 +289,7 @@ sprite_frames = SubResource("SpriteFrames_merdl")
 animation = &"fall"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1635500717]
+visible = false
 show_behind_parent = true
 material = SubResource("ShaderMaterial_dchgp")
 sprite_frames = SubResource("SpriteFrames_merdl")
