@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ble2unwxc31mc" path="res://sprites/Characters/player jump.png" id="5_i623q"]
 [ext_resource type="Texture2D" uid="uid://dougwj4ivjagj" path="res://sprites/Characters/player run-sheet.png" id="6_i623q"]
 [ext_resource type="AudioStream" uid="uid://ckghbjcv8a7fm" path="res://sounds/sfx/jump.wav" id="10_tjdhl"]
+[ext_resource type="Shader" uid="uid://c7fdufunqo0st" path="res://entities/2dOutline.gdshader" id="10_x08pd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
 radius = 5.0
@@ -270,6 +271,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dchgp"]
+shader = ExtResource("10_x08pd")
+
 [node name="Player" type="CharacterBody2D" unique_id=758609415 groups=["Player"]]
 collision_layer = 2
 collision_mask = 9
@@ -280,6 +284,12 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077530802]
 z_index = 1
+sprite_frames = SubResource("SpriteFrames_merdl")
+animation = &"fall"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1635500717]
+show_behind_parent = true
+material = SubResource("ShaderMaterial_dchgp")
 sprite_frames = SubResource("SpriteFrames_merdl")
 animation = &"fall"
 
