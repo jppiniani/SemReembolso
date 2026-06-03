@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="9_jmb51"]
 [ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="10_1q7gi"]
 [ext_resource type="PackedScene" uid="uid://dtarmuf6px25p" path="res://scene/pause_menu.tscn" id="11_i8abe"]
+[ext_resource type="PackedScene" uid="uid://cj4qjunqvwou5" path="res://entities/orc.tscn" id="12_ucpn8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8abe"]
 size = Vector2(20, 34.97967)
@@ -90,5 +91,16 @@ shape = SubResource("RectangleShape2D_i8abe")
 position = Vector2(9, 167)
 
 [node name="pauseMenu" parent="." unique_id=487234452 instance=ExtResource("11_i8abe")]
+
+[node name="enemies" type="Node2D" parent="." unique_id=1573191498]
+
+[node name="Orc" parent="enemies" unique_id=830318618 instance=ExtResource("12_ucpn8")]
+position = Vector2(268, 162)
+
+[node name="Orc2" parent="enemies" unique_id=1720276176 instance=ExtResource("12_ucpn8")]
+position = Vector2(395, 130)
+
+[node name="Orc3" parent="enemies" unique_id=782656377 instance=ExtResource("12_ucpn8")]
+position = Vector2(681, 162)
 
 [editable path="LevelBegin"]

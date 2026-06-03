@@ -1,20 +1,25 @@
 [gd_scene format=3 uid="uid://bchoqdk4vnrbl"]
 
 [ext_resource type="Script" uid="uid://djrbp51uch8d3" path="res://scripts/player.gd" id="1_merdl"]
-[ext_resource type="Texture2D" uid="uid://8l4muab06m2w" path="res://sprites/Characters/player fall.png" id="2_ef06p"]
-[ext_resource type="Texture2D" uid="uid://ctigeawsyor2" path="res://sprites/Characters/knight fall.png" id="2_qly61"]
-[ext_resource type="Texture2D" uid="uid://di58aaron71m0" path="res://sprites/Characters/knight idle-sheet.png" id="2_rfe5m"]
-[ext_resource type="Texture2D" uid="uid://b4i671l6ofati" path="res://sprites/Characters/player-2.png" id="3_6nm46"]
-[ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight jump.png" id="3_rfe5m"]
-[ext_resource type="Texture2D" uid="uid://dd77bnhsgmksv" path="res://sprites/Characters/knight run-sheet 3.png" id="4_rfe5m"]
-[ext_resource type="Texture2D" uid="uid://ble2unwxc31mc" path="res://sprites/Characters/player jump.png" id="5_i623q"]
-[ext_resource type="Texture2D" uid="uid://dougwj4ivjagj" path="res://sprites/Characters/player run-sheet.png" id="6_i623q"]
+[ext_resource type="Texture2D" uid="uid://c12dqqxhsabgs" path="res://sprites/Characters/player/player.png" id="2_dchgp"]
+[ext_resource type="Texture2D" uid="uid://8l4muab06m2w" path="res://sprites/Characters/player/player fall.png" id="2_ef06p"]
+[ext_resource type="Texture2D" uid="uid://ctigeawsyor2" path="res://sprites/Characters/knight/knight fall.png" id="2_qly61"]
+[ext_resource type="Texture2D" uid="uid://di58aaron71m0" path="res://sprites/Characters/knight/knight idle-sheet.png" id="2_rfe5m"]
+[ext_resource type="Texture2D" uid="uid://b4i671l6ofati" path="res://sprites/Characters/player/player-2.png" id="3_6nm46"]
+[ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight/knight jump.png" id="3_rfe5m"]
+[ext_resource type="Texture2D" uid="uid://dd77bnhsgmksv" path="res://sprites/Characters/knight/knight run-sheet 3.png" id="4_rfe5m"]
+[ext_resource type="Texture2D" uid="uid://ble2unwxc31mc" path="res://sprites/Characters/player/player jump.png" id="5_i623q"]
+[ext_resource type="Texture2D" uid="uid://dougwj4ivjagj" path="res://sprites/Characters/player/player run-sheet.png" id="6_i623q"]
 [ext_resource type="AudioStream" uid="uid://ckghbjcv8a7fm" path="res://sounds/sfx/jump.wav" id="10_tjdhl"]
 [ext_resource type="Shader" uid="uid://c7fdufunqo0st" path="res://entities/2dOutline.gdshader" id="10_x08pd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
 radius = 5.0
 height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykqge"]
+atlas = ExtResource("2_dchgp")
+region = Rect2(60, 0, 12, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgp7q"]
 atlas = ExtResource("3_6nm46")
@@ -134,6 +139,14 @@ region = Rect2(84, 0, 14, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_merdl"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykqge")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_ef06p")
@@ -275,6 +288,9 @@ animations = [{
 render_priority = 0
 shader = ExtResource("10_x08pd")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x08pd"]
+size = Vector2(10, 17)
+
 [node name="Player" type="CharacterBody2D" unique_id=758609415 groups=["Player"]]
 collision_layer = 2
 collision_mask = 9
@@ -286,7 +302,7 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077530802]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_merdl")
-animation = &"fall"
+animation = &"dead"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1635500717]
 visible = false
@@ -295,6 +311,15 @@ material = SubResource("ShaderMaterial_dchgp")
 sprite_frames = SubResource("SpriteFrames_merdl")
 animation = &"fall"
 
+[node name="Hitbox" type="Area2D" parent="." unique_id=1490856148]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1520567059]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_x08pd")
+debug_color = Color(0.9888875, 0, 0.30216813, 0.41960785)
+
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=251744420]
 stream = ExtResource("10_tjdhl")
 volume_db = -5.0
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c554qq5sr74s2" path="res://scene/menu_opcoes.tscn" id="2_ulgj7"]
 [ext_resource type="Texture2D" uid="uid://clgewkwwefn5t" path="res://sprites/game_logo.png" id="3_j6oad"]
 [ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="3_wxbcn"]
-[ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight jump.png" id="4_gh7ws"]
+[ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight/knight jump.png" id="4_gh7ws"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wxbcn"]
 

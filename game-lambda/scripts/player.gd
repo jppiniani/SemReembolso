@@ -5,7 +5,8 @@ enum PlayerState{
 	idle,
 	walk,
 	jump,
-	fall
+	fall,
+	dead
 }
 
 # Variável nova referenciando o nó do AnimatedSprite2D
@@ -40,6 +41,8 @@ func _physics_process(delta: float) -> void:
 			jump_state()
 		PlayerState.fall:
 			fall_state()
+		PlayerState.dead:
+			dead_state(delta)
 
 	move_and_slide()
 
@@ -60,6 +63,11 @@ func go_to_jump_state():
 func go_to_fall_state():
 	status = PlayerState.fall
 	anim.play("fall")
+	
+func go_to_dead_state():
+	status = PlayerState.dead
+	anim.play("dead")
+	velocity = Vector2.ZERO
 
 func idle_state():
 	if Input.is_action_just_pressed("jump"):
@@ -106,6 +114,9 @@ func fall_state():
 			go_to_walk_state()
 		return
 
+func dead_state(_delta):
+	pass
+
 # Lógica da direção
 func move():
 	var direction := Input.get_axis("left", "right") # left e right estão no mapa de entrada com outras teclas
@@ -119,7 +130,14 @@ func move():
 	elif direction > 0:
 		anim.flip_h = false
 
-
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if velocity.y > 0:
+		# inimigo morre
+		area.get_parent().take_damage()
+		go_to_jump_state()
+	else:
+		# player morre
+		go_to_dead_state()
 
 
 
