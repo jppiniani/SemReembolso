@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="7_3sdn3"]
 [ext_resource type="Texture2D" uid="uid://co5cjng2te635" path="res://sprites/tilesets/eclipse/clouds_02_claro-sheet.png" id="9_kpo55"]
 [ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/mercador.tscn" id="9_ru6yc"]
-[ext_resource type="Texture2D" uid="uid://t11kl2hd1vu0" path="res://sprites/tilesets/middleground-teste5.png" id="9_viwft"]
+[ext_resource type="Texture2D" uid="uid://bxu6qj80rg8m5" path="res://sprites/tilesets/middleground-teste6.png" id="9_viwft"]
 [ext_resource type="Script" uid="uid://bsmxuobsjgqls" path="res://scripts/mercadorDirecao.gd" id="10_a2qk7"]
 [ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="11_3sdn3"]
 [ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="12_6yqkr"]

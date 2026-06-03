@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://d26hpeaosm10t" path="res://sprites/tilesets/eclipse/clouds_02_branco.png" id="1_fo34q"]
 [ext_resource type="Script" uid="uid://d30u5hbjuaw1x" path="res://scripts/cenario_2.gd" id="1_i8abe"]
 [ext_resource type="Texture2D" uid="uid://dgt2eb3ko84vv" path="res://sprites/tilesets/eclipse/clouds_01_branco.png" id="2_vec1t"]
-[ext_resource type="Texture2D" uid="uid://u7r7isi1t7l1" path="res://sprites/tilesets/eclipse/foregound.png" id="3_jmb51"]
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="4_1q7gi"]
+[ext_resource type="Texture2D" uid="uid://ccuk0wsadyg5x" path="res://sprites/tilesets/middleground-cenario2.png" id="5_i8abe"]
 [ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="6_ucpn8"]
 [ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="7_exsy7"]
 [ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="7_vec1t"]
@@ -51,8 +51,9 @@ repeat_size = Vector2(365.714, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Foreground" unique_id=805258548]
-scale = Vector2(1.156, 1.156)
-texture = ExtResource("3_jmb51")
+position = Vector2(0, -25.000004)
+scale = Vector2(1.396, 1.156)
+texture = ExtResource("5_i8abe")
 centered = false
 
 [node name="Light" type="Parallax2D" parent="Background" unique_id=220036419]
