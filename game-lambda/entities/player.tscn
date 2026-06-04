@@ -320,6 +320,6 @@ debug_color = Color(0.9888875, 0, 0.30216813, 0.41960785)
 
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=251744420]
 stream = ExtResource("10_tjdhl")
-volume_db = -5.0
+volume_db = -13.0
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

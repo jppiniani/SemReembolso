@@ -9,7 +9,15 @@ func _ready() -> void:
 	MusicaGlobal.tocar_musica("res://sounds/music/titleTheme.mp3")
 	start_btn.grab_focus()
 	$MenuOpcoes.voltar_pressionado.connect(_on_menu_opcoes_fechado)
-
+	
+	if Global.from_world != null and Global.from_world != "":
+		var nome_do_no = Global.from_world + "Pos"
+		
+		# Verifica se o nó realmente existe na árvore antes de tentar acessá-lo
+		if has_node(nome_do_no):
+			$Player.global_position = get_node(nome_do_no).global_position
+		else:
+			print("Aviso: Ponto de spawn '", nome_do_no, "' não encontrado! Usando posição padrão.")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -17,12 +25,13 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_btn_pressed() -> void:
+	Global.from_world = null
 	get_tree().change_scene_to_file("res://scene/rascunho.tscn")
 
 func _on_opcoes_btn_pressed() -> void:
 	$MenuOpcoes.visible = true
 	$MarginContainer.visible = false
-	$MenuOpcoes/MarginContainer/VBoxContainer/HBoxContainer/BotaoSom.grab_focus()
+	$MenuOpcoes/MarginContainer/VBoxContainer/HSlider.grab_focus()
 
 func _on_leaderboard_btn_pressed() -> void:
 	pass # Replace with function body.

@@ -9,17 +9,27 @@ var _dialog_data: Dictionary = {
 	},
 	1: {
 		"faceset": "res://sprites/faceset/mercador.png",
-		"dialog": "Teste1",
+		"dialog": "Percebo que voce eh novo aqui",
 		"title": "Mercador"
 	},
 	2: {
 		"faceset": "res://sprites/faceset/mercador.png",
-		"dialog": "Teste2",
+		"dialog": "Sou o mercador dessa terra, porem enfrento muitos perigos aqui sozinho...",
 		"title": "Mercador"
 	},
 	3: {
 		"faceset": "res://sprites/faceset/mercador.png",
-		"dialog": "Teste3",
+		"dialog": "Preciso de um corajoso heroi que possa me livrar dos monstros que vivem aqui..",
+		"title": "Mercador"
+	},
+	4: {
+		"faceset": "res://sprites/faceset/mercador.png",
+		"dialog": "Derrote os monstros que estao a frente para coletar moedas",
+		"title": "Mercador"
+	},
+	5: {
+		"faceset": "res://sprites/faceset/mercador.png",
+		"dialog": "Depois volte e compre meus itens que te ajudarao a derrotar o monstro mais poderoso!",
 		"title": "Mercador"
 	},
 }

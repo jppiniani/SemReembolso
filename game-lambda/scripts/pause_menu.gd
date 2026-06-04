@@ -33,10 +33,16 @@ func _on_opcoes_btn_pressed() -> void:
 	# Mostra a tela de opções quando clicar
 	$MenuOpcoes.visible = true 
 	$menuHolder.visible = false
-	$MenuOpcoes/MarginContainer/VBoxContainer/HBoxContainer/BotaoSom.grab_focus()
+	$MenuOpcoes/MarginContainer/VBoxContainer/HSlider.grab_focus()
 
-func _on_sair_btn_pressed() -> void:
-	get_tree().quit()
+func _on_menu_btn_pressed() -> void:
+	call_deferred("return_to_title")
+
+func return_to_title():
+	get_tree().paused = false
+	MusicaGlobal.abafar_musica_pause(false)
+	Global.from_world = get_parent().name
+	get_tree().change_scene_to_file("res://scene/title_screen.tscn")
 
 func _on_menu_opcoes_fechado() -> void:
 	$menuHolder.visible = true

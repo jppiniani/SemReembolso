@@ -57,13 +57,13 @@ text = "OPCOES"
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_grdc7")
 
-[node name="sair_btn" type="Button" parent="menuHolder" unique_id=1884257410]
+[node name="menu_btn" type="Button" parent="menuHolder" unique_id=1884257410]
 layout_mode = 2
 theme = ExtResource("1_grdc7")
-text = "SAIR"
+text = "MENU"
 
 [node name="MenuOpcoes" parent="." unique_id=513534261 instance=ExtResource("2_cq4tv")]
 
 [connection signal="pressed" from="menuHolder/voltar_btn" to="." method="_on_voltar_btn_pressed"]
 [connection signal="pressed" from="menuHolder/opcoes_btn" to="." method="_on_opcoes_btn_pressed"]
-[connection signal="pressed" from="menuHolder/sair_btn" to="." method="_on_sair_btn_pressed"]
+[connection signal="pressed" from="menuHolder/menu_btn" to="." method="_on_menu_btn_pressed"]
