@@ -12,6 +12,7 @@ enum PlayerState{
 # Variável nova referenciando o nó do AnimatedSprite2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D # Caminho do nó
 @onready var jump_sfx: AudioStreamPlayer = $jump
+@onready var reload_timer: Timer = $ReloadTimer
 
 const SPEED = 80.0
 const JUMP_VELOCITY = -320.0
@@ -65,9 +66,13 @@ func go_to_fall_state():
 	anim.play("fall")
 	
 func go_to_dead_state():
+	if status == PlayerState.dead:
+		return
+	
 	status = PlayerState.dead
 	anim.play("dead")
 	velocity = Vector2.ZERO
+	reload_timer.start()
 
 func idle_state():
 	if Input.is_action_just_pressed("jump"):
@@ -138,12 +143,14 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	else:
 		# player morre
 		go_to_dead_state()
-
-
-
-
-
-
+	
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("LethalArea"):
+		go_to_dead_state()
+	
+	
+func _on_reload_timer_timeout() -> void:
+	get_tree().reload_current_scene()
 
 
 # func _physics_process(delta: float) -> void:

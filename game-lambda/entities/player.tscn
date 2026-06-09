@@ -293,7 +293,7 @@ size = Vector2(10, 17)
 
 [node name="Player" type="CharacterBody2D" unique_id=758609415 groups=["Player"]]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 41
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113990277]
@@ -312,6 +312,8 @@ sprite_frames = SubResource("SpriteFrames_merdl")
 animation = &"fall"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1490856148]
+collision_layer = 2
+collision_mask = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1520567059]
 position = Vector2(0, 0.5)
@@ -322,4 +324,9 @@ debug_color = Color(0.9888875, 0, 0.30216813, 0.41960785)
 stream = ExtResource("10_tjdhl")
 volume_db = -13.0
 
+[node name="ReloadTimer" type="Timer" parent="." unique_id=1157247297]
+one_shot = true
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

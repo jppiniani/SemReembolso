@@ -38,7 +38,7 @@ var _dialog_data: Dictionary = {
 @export var _hud: CanvasLayer = null
 
 # Pega a referência da DialogArea que está na sua árvore de nós
-@onready var _dialog_area: Area2D = $DialogArea
+@onready var _dialog_area: Area2D = $Diálogo/DialogArea
 
 # Variável para controlar se o jogador está perto o suficiente
 var _can_interact: bool = false
@@ -54,7 +54,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	# Verifica se pode interagir E se o botão foi pressionado
-	if _can_interact and Input.is_action_just_pressed("ui_accept"):
+	if _can_interact and Input.is_action_just_pressed("interact"):
 		
 		# Verifica se já não existe um diálogo na tela para evitar sobreposição
 		if _hud.get_child_count() == 0: 

@@ -15,6 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="11_3sdn3"]
 [ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="12_6yqkr"]
 [ext_resource type="PackedScene" uid="uid://dtarmuf6px25p" path="res://scene/pause_menu.tscn" id="15_viwft"]
+[ext_resource type="Script" uid="uid://b7bqkky6ywbb4" path="res://scripts/warning.gd" id="16_u4djg"]
+[ext_resource type="Texture2D" uid="uid://cg8j25us36oyx" path="res://sprites/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="17_bqvdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
+size = Vector2(20, 34.97967)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u11s"]
 atlas = ExtResource("9_kpo55")
@@ -73,100 +78,19 @@ animations = [{
 "speed": 0.5
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
-size = Vector2(20, 34.97967)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viwft"]
 size = Vector2(8, 208)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cdna"]
 size = Vector2(66, 48)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02al1"]
+size = Vector2(68, 45)
+
 [node name="Rascunho" type="Node2D" unique_id=1975790546 node_paths=PackedStringArray("_hud")]
 script = ExtResource("1_4u11s")
-_hud = NodePath("HUD")
+_hud = NodePath("UI/HUD")
 metadata/_edit_vertical_guides_ = [400.0]
-
-[node name="TileMaps" type="Node2D" parent="." unique_id=1972785204]
-
-[node name="Terreno" type="TileMapLayer" parent="TileMaps" unique_id=1310768756]
-tile_map_data = PackedByteArray("AAAOAAsAAgACAAEAAAANAAsAAgACAAEAAAAMAAsAAgACAAEAAAALAAsAAgACAAEAAAAKAAsAAgACAAEAAAAJAAsAAgACAAEAAAAIAAsAAgACAAEAAAAHAAsAAgACAAEAAAAGAAsAAgACAAEAAAAFAAsAAgACAAEAAAAEAAsAAgACAAEAAAADAAsAAgACAAEAAAACAAsAAgACAAEAAAABAAsAAgACAAEAAAAAAAsAAgABAAEAAAAPAAsAAgACAAEAAAAQAAsAAgACAAEAAAARAAsAAgACAAEAAAASAAsAAgACAAEAAAATAAsAAgACAAEAAAAUAAsAAgACAAEAAAAVAAsAAgACAAEAAAAWAAsAAgACAAEAAAAXAAsAAgACAAEAAAAYAAsAAgACAAEAAAAAAAwAAgABAAIAAAABAAwAAgACAAIAAAACAAwAAgACAAIAAAADAAwAAgACAAIAAAAEAAwAAgACAAIAAAAFAAwAAgACAAIAAAAGAAwAAgACAAIAAAAHAAwAAgACAAIAAAAIAAwAAgACAAIAAAAJAAwAAgACAAIAAAAKAAwAAgACAAIAAAALAAwAAgACAAIAAAAMAAwAAgACAAIAAAANAAwAAgACAAIAAAAOAAwAAgACAAIAAAAPAAwAAgACAAIAAAAQAAwAAgACAAIAAAARAAwAAgACAAIAAAASAAwAAgACAAIAAAATAAwAAgACAAIAAAAUAAwAAgACAAIAAAAVAAwAAgACAAIAAAAWAAwAAgACAAIAAAAXAAwAAgACAAIAAAAFAAoAAgAYAAIAAAAHAAoAAgAYAAIAAAAGAAoAAgAXAAIAAAAIAAoAAgAXAAEAAAANAAoAAgAYAAEAAAAOAAoAAgAYAAIAAAAPAAoAAgAYAAIAAAAUAAoAAgAaAAMAAAAYAAwAAgACAAIAAAA=")
-tile_set = ExtResource("1_txie6")
-
-[node name="Decoração" type="TileMapLayer" parent="TileMaps" unique_id=1790267563]
-z_index = 1
-tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAA=")
-tile_set = ExtResource("2_txie6")
-
-[node name="Player" parent="." unique_id=758609415 instance=ExtResource("3_dcp8a")]
-z_index = 2
-position = Vector2(8, 166)
-
-[node name="Background" type="Node2D" parent="." unique_id=1417362306]
-z_index = -1
-
-[node name="Clouds2" type="Parallax2D" parent="Background" unique_id=1650654207]
-scroll_scale = Vector2(0.1, 0)
-repeat_size = Vector2(365.714, 0)
-repeat_times = 3
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds2" unique_id=740291467]
-scale = Vector2(1.156, 1.156)
-texture = ExtResource("4_txie6")
-centered = false
-
-[node name="Clouds1" type="Parallax2D" parent="Background" unique_id=591296778]
-scroll_scale = Vector2(0.2, 0)
-repeat_size = Vector2(365.714, 0)
-repeat_times = 3
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds1" unique_id=535172498]
-scale = Vector2(1.156, 1.156)
-texture = ExtResource("5_ru6yc")
-centered = false
-
-[node name="Foreground" type="Parallax2D" parent="Background" unique_id=718186980]
-scroll_scale = Vector2(0.3, 0.4)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Foreground" unique_id=690072548]
-scale = Vector2(1.156, 1.156)
-texture = ExtResource("6_a2qk7")
-centered = false
-
-[node name="Light" type="Parallax2D" parent="Background" unique_id=633320797]
-scroll_scale = Vector2(0.4, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Light" unique_id=1272197400]
-scale = Vector2(1.156, 1.156)
-texture = ExtResource("7_3sdn3")
-centered = false
-
-[node name="Middlegorund" type="Parallax2D" parent="Background" unique_id=1308993069]
-scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(288, 0)
-repeat_times = 3
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Middlegorund" unique_id=889428369]
-position = Vector2(0, -31)
-texture = ExtResource("9_viwft")
-centered = false
-
-[node name="Clouds3" type="Parallax2D" parent="Background" unique_id=166633829]
-scroll_scale = Vector2(0, 0)
-scroll_offset = Vector2(243, 29)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Clouds3" unique_id=1523172430]
-sprite_frames = SubResource("SpriteFrames_uuwj0")
-autoplay = "default"
-frame_progress = 0.39620367
-
-[node name="Mercador" parent="." unique_id=1244256968 instance=ExtResource("9_ru6yc")]
-position = Vector2(297, 167)
-script = ExtResource("10_a2qk7")
-
-[node name="Camera" parent="." unique_id=2119136842 instance=ExtResource("11_3sdn3")]
-position = Vector2(1, 104)
-limit_right = 400
 
 [node name="LevelEndCenario2" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
 position = Vector2(410, 91)
@@ -179,22 +103,129 @@ shape = SubResource("RectangleShape2D_6yqkr")
 [node name="Cenario2Pos" type="Marker2D" parent="." unique_id=438677090]
 position = Vector2(393, 167)
 
-[node name="pauseMenu" parent="." unique_id=487234452 instance=ExtResource("15_viwft")]
+[node name="Mundo" type="Node2D" parent="." unique_id=199716359]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1623243963]
+[node name="TileMaps" type="Node2D" parent="Mundo" unique_id=1972785204]
+
+[node name="Terreno" type="TileMapLayer" parent="Mundo/TileMaps" unique_id=1310768756]
+tile_map_data = PackedByteArray("AAAOAAsAAgACAAEAAAANAAsAAgACAAEAAAAMAAsAAgACAAEAAAALAAsAAgACAAEAAAAKAAsAAgACAAEAAAAJAAsAAgACAAEAAAAIAAsAAgACAAEAAAAHAAsAAgACAAEAAAAGAAsAAgACAAEAAAAFAAsAAgACAAEAAAAEAAsAAgACAAEAAAADAAsAAgACAAEAAAACAAsAAgACAAEAAAABAAsAAgACAAEAAAAAAAsAAgABAAEAAAAPAAsAAgACAAEAAAAQAAsAAgACAAEAAAARAAsAAgACAAEAAAASAAsAAgACAAEAAAATAAsAAgACAAEAAAAUAAsAAgACAAEAAAAVAAsAAgACAAEAAAAWAAsAAgACAAEAAAAXAAsAAgACAAEAAAAYAAsAAgACAAEAAAAAAAwAAgABAAIAAAABAAwAAgACAAIAAAACAAwAAgACAAIAAAADAAwAAgACAAIAAAAEAAwAAgACAAIAAAAFAAwAAgACAAIAAAAGAAwAAgACAAIAAAAHAAwAAgACAAIAAAAIAAwAAgACAAIAAAAJAAwAAgACAAIAAAAKAAwAAgACAAIAAAALAAwAAgACAAIAAAAMAAwAAgACAAIAAAANAAwAAgACAAIAAAAOAAwAAgACAAIAAAAPAAwAAgACAAIAAAAQAAwAAgACAAIAAAARAAwAAgACAAIAAAASAAwAAgACAAIAAAATAAwAAgACAAIAAAAUAAwAAgACAAIAAAAVAAwAAgACAAIAAAAWAAwAAgACAAIAAAAXAAwAAgACAAIAAAAFAAoAAgAYAAIAAAAHAAoAAgAYAAIAAAAGAAoAAgAXAAIAAAAIAAoAAgAXAAEAAAANAAoAAgAYAAEAAAAOAAoAAgAYAAIAAAAPAAoAAgAYAAIAAAAUAAoAAgAaAAMAAAAYAAwAAgACAAIAAAA=")
+tile_set = ExtResource("1_txie6")
+
+[node name="Decoração" type="TileMapLayer" parent="Mundo/TileMaps" unique_id=1790267563]
+z_index = 1
+tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAA=")
+tile_set = ExtResource("2_txie6")
+
+[node name="Background" type="Node2D" parent="Mundo" unique_id=1417362306]
+z_index = -1
+
+[node name="Clouds2" type="Parallax2D" parent="Mundo/Background" unique_id=1650654207]
+scroll_scale = Vector2(0.1, 0)
+repeat_size = Vector2(365.714, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Clouds2" unique_id=740291467]
+scale = Vector2(1.156, 1.156)
+texture = ExtResource("4_txie6")
+centered = false
+
+[node name="Clouds1" type="Parallax2D" parent="Mundo/Background" unique_id=591296778]
+scroll_scale = Vector2(0.2, 0)
+repeat_size = Vector2(365.714, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Clouds1" unique_id=535172498]
+scale = Vector2(1.156, 1.156)
+texture = ExtResource("5_ru6yc")
+centered = false
+
+[node name="Foreground" type="Parallax2D" parent="Mundo/Background" unique_id=718186980]
+scroll_scale = Vector2(0.3, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Foreground" unique_id=690072548]
+scale = Vector2(1.156, 1.156)
+texture = ExtResource("6_a2qk7")
+centered = false
+
+[node name="Light" type="Parallax2D" parent="Mundo/Background" unique_id=633320797]
+scroll_scale = Vector2(0.4, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Light" unique_id=1272197400]
+scale = Vector2(1.156, 1.156)
+texture = ExtResource("7_3sdn3")
+centered = false
+
+[node name="Middlegorund" type="Parallax2D" parent="Mundo/Background" unique_id=1308993069]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(288, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Middlegorund" unique_id=889428369]
+position = Vector2(0, -31)
+texture = ExtResource("9_viwft")
+centered = false
+
+[node name="Clouds3" type="Parallax2D" parent="Mundo/Background" unique_id=166633829]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(243, 29)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mundo/Background/Clouds3" unique_id=1523172430]
+sprite_frames = SubResource("SpriteFrames_uuwj0")
+autoplay = "default"
+frame_progress = 0.39620367
+
+[node name="Player" parent="Mundo" unique_id=758609415 instance=ExtResource("3_dcp8a")]
+z_index = 2
+position = Vector2(8, 166)
+
+[node name="Mercador" parent="Mundo" unique_id=1244256968 instance=ExtResource("9_ru6yc")]
+position = Vector2(297, 167)
+script = ExtResource("10_a2qk7")
+
+[node name="Barreira" type="StaticBody2D" parent="Mundo" unique_id=1623243963]
 position = Vector2(-4, 104)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=993780815]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mundo/Barreira" unique_id=993780815]
 shape = SubResource("RectangleShape2D_viwft")
 
-[node name="DialogArea" type="Area2D" parent="." unique_id=1426194842]
+[node name="UI" type="Node2D" parent="." unique_id=1509559322]
+
+[node name="Camera" parent="UI" unique_id=2119136842 instance=ExtResource("11_3sdn3")]
+position = Vector2(1, 104)
+limit_right = 400
+
+[node name="pauseMenu" parent="UI" unique_id=487234452 instance=ExtResource("15_viwft")]
+
+[node name="HUD" type="CanvasLayer" parent="UI" unique_id=1243359729]
+
+[node name="Diálogo" type="Node2D" parent="." unique_id=1857205737]
+
+[node name="DialogArea" type="Area2D" parent="Diálogo" unique_id=1426194842]
 position = Vector2(296, 156)
 collision_layer = 8
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogArea" unique_id=1545896307]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diálogo/DialogArea" unique_id=1545896307]
 shape = SubResource("RectangleShape2D_3cdna")
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1243359729]
+[node name="warning" type="Node2D" parent="Diálogo" unique_id=1844662133]
+position = Vector2(297, 166)
+script = ExtResource("16_u4djg")
+
+[node name="Area2D" type="Area2D" parent="Diálogo/warning" unique_id=739546379]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diálogo/warning/Area2D" unique_id=396066233]
+position = Vector2(-1, -12.5)
+shape = SubResource("RectangleShape2D_02al1")
+debug_color = Color(0.050980393, 0.64705884, 0.20392157, 0.3882353)
+
+[node name="Sprite2D" type="Sprite2D" parent="Diálogo/warning" unique_id=2145075117]
+z_index = 2
+position = Vector2(-1, -19)
+texture = ExtResource("17_bqvdt")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [editable path="LevelEndCenario2"]

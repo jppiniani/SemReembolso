@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cs0omhjyv6nrs"]
 
-[ext_resource type="Script" uid="uid://cajoltmwlrbwg" path="res://entities/boss.gd" id="1_etn2v"]
+[ext_resource type="Script" uid="uid://cajoltmwlrbwg" path="res://scripts/boss.gd" id="1_etn2v"]
 [ext_resource type="Texture2D" uid="uid://bgsq8hssll41n" path="res://sprites/Characters/boss/Dead_anin.png" id="1_nqa23"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_etn2v"]
@@ -268,6 +268,8 @@ target_position = Vector2(0, 16)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=300195767]
 position = Vector2(0, 6)
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=302272360]
 position = Vector2(0, -0.25)

@@ -7,11 +7,14 @@ var master_bus = AudioServer.get_bus_index("Master")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Quando o menu abrir, garante que o botão mostra o estado real do som
-	#botaoSom.button_pressed = not AudioServer.is_bus_mute(master_bus)
-	h_slider.value = h_slider.max_value - 0.6
+	# Pega o volume atual do bus "Master" em decibéis (dB)
+	var volume_db_atual = AudioServer.get_bus_volume_db(master_bus)
+	
+	# Converte de dB para linear (0.0 a 1.0 ou o valor que seu slider usar)
+	# e define o valor do slider SEM emitir o sinal, para evitar loops.
+	h_slider.set_value_no_signal(db_to_linear(volume_db_atual))
+	
 	visible = false
-	pass
 	
 
 

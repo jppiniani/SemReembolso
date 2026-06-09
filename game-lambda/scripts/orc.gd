@@ -10,6 +10,8 @@ enum OrcState {
 @onready var wall_detector: RayCast2D = $WallDetector
 @onready var ground_detector: RayCast2D = $GroundDetector
 
+@export var coin_scene: PackedScene
+
 const SPEED = 30.0
 const JUMP_VELOCITY = -400.0
 
@@ -42,7 +44,14 @@ func go_to_dead_state():
 	anim.play("dead")
 	hitbox.process_mode = Node.PROCESS_MODE_DISABLED
 	velocity = Vector2.ZERO
+	
 	await get_tree().create_timer(0.7).timeout
+	
+	if coin_scene:
+		var coin_instance = coin_scene.instantiate()
+		coin_instance.global_position = global_position
+		get_parent().call_deferred("add_child", coin_instance)
+		
 	queue_free()
 	
 func walk_state(_delta):

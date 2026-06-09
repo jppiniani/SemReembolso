@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dm2ic73k5c45" path="res://scripts/orc.gd" id="1_vb5lg"]
 [ext_resource type="Texture2D" uid="uid://6lg1m5wqjii6" path="res://sprites/Characters/orc/Idle_(64 x 32).png" id="1_xejwb"]
 [ext_resource type="Texture2D" uid="uid://baoxpm74swl2p" path="res://sprites/Characters/orc/Hurt_(64 x 32).png" id="2_m1tai"]
+[ext_resource type="PackedScene" uid="uid://clcvho0vnnxs6" path="res://entities/coin.tscn" id="2_uet01"]
 [ext_resource type="Texture2D" uid="uid://cstrxgjvrqpvh" path="res://sprites/Characters/orc/hurt2.png" id="3_nwr8m"]
 [ext_resource type="Texture2D" uid="uid://cgwbhf1oqpy5k" path="res://sprites/Characters/inimigo walk wip.png" id="5_nwr8m"]
 
@@ -135,12 +136,15 @@ animations = [{
 [node name="Orc" type="CharacterBody2D" unique_id=830318618]
 collision_layer = 4
 script = ExtResource("1_vb5lg")
+coin_scene = ExtResource("2_uet01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=890755856]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_vb5lg")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1607721609]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=199032594]
 position = Vector2(0, 2)
