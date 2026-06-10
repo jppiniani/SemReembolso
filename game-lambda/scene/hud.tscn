@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://do1scgp62l0rt"]
+
+[ext_resource type="Script" uid="uid://cujf5cgovcjoy" path="res://scripts/ui/hud_manager.gd" id="1_lky30"]
+[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://sprites/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="1_ry2h7"]
+[ext_resource type="Texture2D" uid="uid://byt5ar30rr4lk" path="res://sprites/Mini FX, Items & UI/Coin-Sprites/01_Coin-Sprites.png" id="2_lky30"]
+[ext_resource type="Texture2D" uid="uid://dn4vcy65s8hmt" path="res://sprites/Mini FX, Items & UI/Coin-Sprites/02_Coin-Sprites.png" id="3_qy82l"]
+[ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://sprites/Mini FX, Items & UI/Coin-Sprites/03_Coin-Sprites.png" id="4_sjh6b"]
+[ext_resource type="FontFile" uid="uid://bc8tm3iqs6mwi" path="res://UI/fonts/at01.ttf" id="5_xphas"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2kke1"]
+frames = 4
+speed_scale = 3.5
+frame_0/texture = ExtResource("1_ry2h7")
+frame_1/texture = ExtResource("2_lky30")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_qy82l")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_sjh6b")
+frame_3/duration = 1.0
+
+[node name="HUD" type="CanvasLayer" unique_id=577550706]
+script = ExtResource("1_lky30")
+
+[node name="Control" type="Control" parent="." unique_id=1864898183]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=54617750]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Coins_Container" type="HBoxContainer" parent="Control/MarginContainer" unique_id=1211496213]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="coins_icon" type="TextureRect" parent="Control/MarginContainer/Coins_Container" unique_id=1836724297]
+custom_minimum_size = Vector2(14, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AnimatedTexture_2kke1")
+
+[node name="coins_counter" type="Label" parent="Control/MarginContainer/Coins_Container" unique_id=44977224]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_xphas")
+theme_override_font_sizes/font_size = 18
+text = "0000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer_Container" type="HBoxContainer" parent="Control/MarginContainer" unique_id=1492732297]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer_label" type="Label" parent="Control/MarginContainer/Timer_Container" unique_id=421303983]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_xphas")
+theme_override_font_sizes/font_size = 18
+text = "TEMPO: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timer_counter" type="Label" parent="Control/MarginContainer/Timer_Container" unique_id=1436032688]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_xphas")
+theme_override_font_sizes/font_size = 18
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1

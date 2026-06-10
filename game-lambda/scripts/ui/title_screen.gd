@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 
 func _on_start_btn_pressed() -> void:
 	Global.from_world = null
-	get_tree().change_scene_to_file("res://scene/rascunho.tscn")
+	get_tree().change_scene_to_file("res://scene/cenario_1.tscn")
 
 func _on_opcoes_btn_pressed() -> void:
 	$MenuOpcoes.visible = true

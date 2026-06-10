@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byyxdtna3dn6c"]
 
 [ext_resource type="Texture2D" uid="uid://tyuh436x5fyr" path="res://sprites/faceset/faceset.png" id="1_7w1c7"]
-[ext_resource type="Script" uid="uid://bnjx3jx3tlg1j" path="res://scripts/dialogo_screen.gd" id="1_iaxdl"]
+[ext_resource type="Script" uid="uid://bnjx3jx3tlg1j" path="res://scripts/ui/dialogo_screen.gd" id="1_iaxdl"]
 [ext_resource type="FontFile" uid="uid://bc8tm3iqs6mwi" path="res://UI/fonts/at01.ttf" id="2_iaxdl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dubke"]

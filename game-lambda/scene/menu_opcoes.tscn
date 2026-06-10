@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c554qq5sr74s2"]
 
-[ext_resource type="Script" uid="uid://dmufgu7rq7d2k" path="res://scripts/menu_opcoes.gd" id="1_gdftu"]
+[ext_resource type="Script" uid="uid://dmufgu7rq7d2k" path="res://scripts/ui/menu_opcoes.gd" id="1_gdftu"]
 [ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="1_wa0mi"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_gdftu"]

@@ -45,6 +45,7 @@ var _can_interact: bool = false
 
 func _ready() -> void:
 	MusicaGlobal.tocar_musica("res://sounds/music/shop.mp3")
+	Global.contar_tempo = true
 	if Global.from_world != null:
 		$Player.global_position = get_node(Global.from_world + "Pos").global_position
 		

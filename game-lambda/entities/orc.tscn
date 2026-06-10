@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj4qjunqvwou5"]
 
-[ext_resource type="Script" uid="uid://dm2ic73k5c45" path="res://scripts/orc.gd" id="1_vb5lg"]
+[ext_resource type="Script" uid="uid://dm2ic73k5c45" path="res://scripts/entidades/orc.gd" id="1_vb5lg"]
 [ext_resource type="Texture2D" uid="uid://6lg1m5wqjii6" path="res://sprites/Characters/orc/Idle_(64 x 32).png" id="1_xejwb"]
 [ext_resource type="Texture2D" uid="uid://baoxpm74swl2p" path="res://sprites/Characters/orc/Hurt_(64 x 32).png" id="2_m1tai"]
 [ext_resource type="PackedScene" uid="uid://clcvho0vnnxs6" path="res://entities/coin.tscn" id="2_uet01"]

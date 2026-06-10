@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cql7jotpe1ws4"]
 
 [ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="1_5kiuu"]
-[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/levels.gd" id="1_17rxn"]
+[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/niveis/cenario_1.gd" id="1_17rxn"]
 [ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="2_33cqm"]
 [ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="3_xwcet"]
 [ext_resource type="Texture2D" uid="uid://ddjnlaw3xpl4h" path="res://sprites/tilesets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_qpk70"]

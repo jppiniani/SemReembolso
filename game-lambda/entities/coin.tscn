@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clcvho0vnnxs6"]
 
-[ext_resource type="Script" uid="uid://cqorsrxh6io1" path="res://scripts/coin.gd" id="1_a182a"]
+[ext_resource type="Script" uid="uid://cqorsrxh6io1" path="res://scripts/entidades/coin.gd" id="1_a182a"]
 [ext_resource type="Texture2D" uid="uid://b7ut1dms5uj18" path="res://sprites/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png" id="1_cg25x"]
 [ext_resource type="Texture2D" uid="uid://dycbdh2q7q75s" path="res://sprites/Mini FX, Items & UI/Effects/Yellow_Sparkle (16 x 16).png" id="2_e0yd8"]
 [ext_resource type="AudioStream" uid="uid://bideq8bsw74au" path="res://sounds/sfx/coin.wav" id="4_rte4k"]
@@ -75,7 +75,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ettv"]
-radius = 9.0
+radius = 7.0
 
 [node name="Coin" type="Area2D" unique_id=1546560883]
 collision_layer = 32
@@ -83,11 +83,10 @@ collision_mask = 2
 script = ExtResource("1_a182a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1399524305]
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_r21wx")
-animation = &"collect"
+animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545917123]
 shape = SubResource("CircleShape2D_5ettv")

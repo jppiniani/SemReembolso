@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bchoqdk4vnrbl"]
 
-[ext_resource type="Script" uid="uid://djrbp51uch8d3" path="res://scripts/player.gd" id="1_merdl"]
+[ext_resource type="Script" uid="uid://djrbp51uch8d3" path="res://scripts/entidades/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://c12dqqxhsabgs" path="res://sprites/Characters/player/player.png" id="2_dchgp"]
 [ext_resource type="Texture2D" uid="uid://8l4muab06m2w" path="res://sprites/Characters/player/player fall.png" id="2_ef06p"]
 [ext_resource type="Texture2D" uid="uid://ctigeawsyor2" path="res://sprites/Characters/knight/knight fall.png" id="2_qly61"]

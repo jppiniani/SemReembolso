@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cv1ltf2h6qiox"]
 
-[ext_resource type="Script" uid="uid://vel3w73bwyym" path="res://scripts/cenario_3.gd" id="1_qtpu8"]
+[ext_resource type="Script" uid="uid://vel3w73bwyym" path="res://scripts/niveis/cenario_3.gd" id="1_qtpu8"]
 [ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="1_xa1te"]
 [ext_resource type="PackedScene" uid="uid://cs0omhjyv6nrs" path="res://entities/boss.tscn" id="2_ich1l"]
 [ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="2_ogtl8"]

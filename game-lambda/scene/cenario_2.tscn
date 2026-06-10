@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://djh8ovyi22xs8"]
 
 [ext_resource type="Texture2D" uid="uid://d26hpeaosm10t" path="res://sprites/tilesets/eclipse/clouds_02_branco.png" id="1_fo34q"]
-[ext_resource type="Script" uid="uid://d30u5hbjuaw1x" path="res://scripts/cenario_2.gd" id="1_i8abe"]
+[ext_resource type="Script" uid="uid://d30u5hbjuaw1x" path="res://scripts/niveis/cenario_2.gd" id="1_i8abe"]
 [ext_resource type="Texture2D" uid="uid://dgt2eb3ko84vv" path="res://sprites/tilesets/eclipse/clouds_01_branco.png" id="2_vec1t"]
 [ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="4_1q7gi"]
 [ext_resource type="Texture2D" uid="uid://ccuk0wsadyg5x" path="res://sprites/tilesets/middleground-cenario2.png" id="5_i8abe"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="10_1q7gi"]
 [ext_resource type="PackedScene" uid="uid://dtarmuf6px25p" path="res://scene/pause_menu.tscn" id="11_i8abe"]
 [ext_resource type="PackedScene" uid="uid://cj4qjunqvwou5" path="res://entities/orc.tscn" id="12_ucpn8"]
+[ext_resource type="PackedScene" uid="uid://do1scgp62l0rt" path="res://scene/hud.tscn" id="14_m57yx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m57yx"]
 texture = ExtResource("9_exsy7")
@@ -152,7 +153,7 @@ limit_right = 1520
 
 [node name="LevelBegin" parent="." unique_id=1700122172 instance=ExtResource("10_1q7gi")]
 position = Vector2(-10, 94)
-next_level = "rascunho"
+next_level = "cenario_1"
 
 [node name="CollisionShape2D" parent="LevelBegin" index="0" unique_id=1580299939]
 scale = Vector2(1, 4.92)
@@ -169,7 +170,7 @@ shape = SubResource("RectangleShape2D_ucpn8")
 [node name="Cenario3Pos" type="Marker2D" parent="." unique_id=2147195139]
 position = Vector2(1506, 152)
 
-[node name="RascunhoPos" type="Marker2D" parent="." unique_id=551566751]
+[node name="Cenario1Pos" type="Marker2D" parent="." unique_id=551566751]
 position = Vector2(9, 167)
 
 [node name="pauseMenu" parent="." unique_id=487234452 instance=ExtResource("11_i8abe")]
@@ -184,6 +185,8 @@ position = Vector2(395, 130)
 
 [node name="Orc3" parent="enemies" unique_id=782656377 instance=ExtResource("12_ucpn8")]
 position = Vector2(681, 162)
+
+[node name="HUD" parent="." unique_id=577550706 instance=ExtResource("14_m57yx")]
 
 [editable path="LevelBegin"]
 [editable path="LevelEndCenario2"]

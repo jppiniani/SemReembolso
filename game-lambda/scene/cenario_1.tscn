@@ -1,52 +1,53 @@
 [gd_scene format=4 uid="uid://dshx3igm13fm2"]
 
-[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/levels.gd" id="1_4u11s"]
-[ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="1_txie6"]
-[ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="2_txie6"]
-[ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="3_dcp8a"]
-[ext_resource type="Texture2D" uid="uid://d26hpeaosm10t" path="res://sprites/tilesets/eclipse/clouds_02_branco.png" id="4_txie6"]
-[ext_resource type="Texture2D" uid="uid://dgt2eb3ko84vv" path="res://sprites/tilesets/eclipse/clouds_01_branco.png" id="5_ru6yc"]
-[ext_resource type="Texture2D" uid="uid://u7r7isi1t7l1" path="res://sprites/tilesets/eclipse/foregound.png" id="6_a2qk7"]
-[ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="7_3sdn3"]
-[ext_resource type="Texture2D" uid="uid://co5cjng2te635" path="res://sprites/tilesets/eclipse/clouds_02_claro-sheet.png" id="9_kpo55"]
-[ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/mercador.tscn" id="9_ru6yc"]
-[ext_resource type="Texture2D" uid="uid://bxu6qj80rg8m5" path="res://sprites/tilesets/middleground-teste6.png" id="9_viwft"]
-[ext_resource type="Script" uid="uid://bsmxuobsjgqls" path="res://scripts/mercadorDirecao.gd" id="10_a2qk7"]
-[ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="11_3sdn3"]
-[ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="12_6yqkr"]
-[ext_resource type="PackedScene" uid="uid://dtarmuf6px25p" path="res://scene/pause_menu.tscn" id="15_viwft"]
-[ext_resource type="Script" uid="uid://b7bqkky6ywbb4" path="res://scripts/warning.gd" id="16_u4djg"]
-[ext_resource type="Texture2D" uid="uid://cg8j25us36oyx" path="res://sprites/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="17_bqvdt"]
+[ext_resource type="Script" uid="uid://b04t2aqlti81q" path="res://scripts/niveis/cenario_1.gd" id="1_oxix0"]
+[ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="2_j3lp7"]
+[ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="3_millt"]
+[ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="4_h7ffk"]
+[ext_resource type="Texture2D" uid="uid://d26hpeaosm10t" path="res://sprites/tilesets/eclipse/clouds_02_branco.png" id="5_2wdjg"]
+[ext_resource type="Texture2D" uid="uid://dgt2eb3ko84vv" path="res://sprites/tilesets/eclipse/clouds_01_branco.png" id="6_d1dvl"]
+[ext_resource type="Texture2D" uid="uid://u7r7isi1t7l1" path="res://sprites/tilesets/eclipse/foregound.png" id="7_c7j72"]
+[ext_resource type="Texture2D" uid="uid://3sm7r760buld" path="res://sprites/tilesets/eclipse/light.png" id="8_cgwv1"]
+[ext_resource type="Texture2D" uid="uid://bxu6qj80rg8m5" path="res://sprites/tilesets/middleground-teste6.png" id="9_lpmn5"]
+[ext_resource type="Texture2D" uid="uid://co5cjng2te635" path="res://sprites/tilesets/eclipse/clouds_02_claro-sheet.png" id="10_utvfr"]
+[ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="11_m3q1d"]
+[ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/mercador.tscn" id="12_sa1ve"]
+[ext_resource type="Script" uid="uid://bsmxuobsjgqls" path="res://scripts/entidades/mercadorDirecao.gd" id="13_bmope"]
+[ext_resource type="PackedScene" uid="uid://hxrq3yepstad" path="res://entities/camera.tscn" id="14_l3aet"]
+[ext_resource type="PackedScene" uid="uid://dtarmuf6px25p" path="res://scene/pause_menu.tscn" id="15_817g4"]
+[ext_resource type="PackedScene" uid="uid://do1scgp62l0rt" path="res://scene/hud.tscn" id="16_j3lp7"]
+[ext_resource type="Script" uid="uid://b7bqkky6ywbb4" path="res://scripts/ui/warning.gd" id="16_lm1mp"]
+[ext_resource type="Texture2D" uid="uid://cg8j25us36oyx" path="res://sprites/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="17_d0erj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
 size = Vector2(20, 34.97967)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u11s"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(0, 0, 291, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_viwft"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(291, 0, 291, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3cdna"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(582, 0, 291, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u4djg"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(873, 0, 291, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqvdt"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(1164, 0, 291, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02al1"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(1455, 0, 291, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5vxq"]
-atlas = ExtResource("9_kpo55")
+atlas = ExtResource("10_utvfr")
 region = Rect2(1746, 0, 291, 59)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uuwj0"]
@@ -85,14 +86,18 @@ size = Vector2(8, 208)
 size = Vector2(66, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02al1"]
-size = Vector2(68, 45)
+size = Vector2(68, 62)
 
-[node name="Rascunho" type="Node2D" unique_id=1975790546 node_paths=PackedStringArray("_hud")]
-script = ExtResource("1_4u11s")
-_hud = NodePath("UI/HUD")
+[node name="Cenario1" type="Node2D" unique_id=1975790546 node_paths=PackedStringArray("_hud")]
+script = ExtResource("1_oxix0")
+_hud = NodePath("UI/HUD_Diálogo")
 metadata/_edit_vertical_guides_ = [400.0]
 
-[node name="LevelEndCenario2" parent="." unique_id=1700122172 instance=ExtResource("12_6yqkr")]
+[node name="Player" parent="." unique_id=758609415 instance=ExtResource("11_m3q1d")]
+z_index = 2
+position = Vector2(8, 166)
+
+[node name="LevelEndCenario2" parent="." unique_id=1700122172 instance=ExtResource("2_j3lp7")]
 position = Vector2(410, 91)
 next_level = "cenario_2"
 
@@ -109,12 +114,12 @@ position = Vector2(393, 167)
 
 [node name="Terreno" type="TileMapLayer" parent="Mundo/TileMaps" unique_id=1310768756]
 tile_map_data = PackedByteArray("AAAOAAsAAgACAAEAAAANAAsAAgACAAEAAAAMAAsAAgACAAEAAAALAAsAAgACAAEAAAAKAAsAAgACAAEAAAAJAAsAAgACAAEAAAAIAAsAAgACAAEAAAAHAAsAAgACAAEAAAAGAAsAAgACAAEAAAAFAAsAAgACAAEAAAAEAAsAAgACAAEAAAADAAsAAgACAAEAAAACAAsAAgACAAEAAAABAAsAAgACAAEAAAAAAAsAAgABAAEAAAAPAAsAAgACAAEAAAAQAAsAAgACAAEAAAARAAsAAgACAAEAAAASAAsAAgACAAEAAAATAAsAAgACAAEAAAAUAAsAAgACAAEAAAAVAAsAAgACAAEAAAAWAAsAAgACAAEAAAAXAAsAAgACAAEAAAAYAAsAAgACAAEAAAAAAAwAAgABAAIAAAABAAwAAgACAAIAAAACAAwAAgACAAIAAAADAAwAAgACAAIAAAAEAAwAAgACAAIAAAAFAAwAAgACAAIAAAAGAAwAAgACAAIAAAAHAAwAAgACAAIAAAAIAAwAAgACAAIAAAAJAAwAAgACAAIAAAAKAAwAAgACAAIAAAALAAwAAgACAAIAAAAMAAwAAgACAAIAAAANAAwAAgACAAIAAAAOAAwAAgACAAIAAAAPAAwAAgACAAIAAAAQAAwAAgACAAIAAAARAAwAAgACAAIAAAASAAwAAgACAAIAAAATAAwAAgACAAIAAAAUAAwAAgACAAIAAAAVAAwAAgACAAIAAAAWAAwAAgACAAIAAAAXAAwAAgACAAIAAAAFAAoAAgAYAAIAAAAHAAoAAgAYAAIAAAAGAAoAAgAXAAIAAAAIAAoAAgAXAAEAAAANAAoAAgAYAAEAAAAOAAoAAgAYAAIAAAAPAAoAAgAYAAIAAAAUAAoAAgAaAAMAAAAYAAwAAgACAAIAAAA=")
-tile_set = ExtResource("1_txie6")
+tile_set = ExtResource("3_millt")
 
 [node name="Decoração" type="TileMapLayer" parent="Mundo/TileMaps" unique_id=1790267563]
 z_index = 1
 tile_map_data = PackedByteArray("AAASAAoAAwAAAAAAAAA=")
-tile_set = ExtResource("2_txie6")
+tile_set = ExtResource("4_h7ffk")
 
 [node name="Background" type="Node2D" parent="Mundo" unique_id=1417362306]
 z_index = -1
@@ -126,7 +131,7 @@ repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Clouds2" unique_id=740291467]
 scale = Vector2(1.156, 1.156)
-texture = ExtResource("4_txie6")
+texture = ExtResource("5_2wdjg")
 centered = false
 
 [node name="Clouds1" type="Parallax2D" parent="Mundo/Background" unique_id=591296778]
@@ -136,7 +141,7 @@ repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Clouds1" unique_id=535172498]
 scale = Vector2(1.156, 1.156)
-texture = ExtResource("5_ru6yc")
+texture = ExtResource("6_d1dvl")
 centered = false
 
 [node name="Foreground" type="Parallax2D" parent="Mundo/Background" unique_id=718186980]
@@ -144,7 +149,7 @@ scroll_scale = Vector2(0.3, 0.4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Foreground" unique_id=690072548]
 scale = Vector2(1.156, 1.156)
-texture = ExtResource("6_a2qk7")
+texture = ExtResource("7_c7j72")
 centered = false
 
 [node name="Light" type="Parallax2D" parent="Mundo/Background" unique_id=633320797]
@@ -152,7 +157,7 @@ scroll_scale = Vector2(0.4, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Light" unique_id=1272197400]
 scale = Vector2(1.156, 1.156)
-texture = ExtResource("7_3sdn3")
+texture = ExtResource("8_cgwv1")
 centered = false
 
 [node name="Middlegorund" type="Parallax2D" parent="Mundo/Background" unique_id=1308993069]
@@ -162,7 +167,7 @@ repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Middlegorund" unique_id=889428369]
 position = Vector2(0, -31)
-texture = ExtResource("9_viwft")
+texture = ExtResource("9_lpmn5")
 centered = false
 
 [node name="Clouds3" type="Parallax2D" parent="Mundo/Background" unique_id=166633829]
@@ -174,13 +179,9 @@ sprite_frames = SubResource("SpriteFrames_uuwj0")
 autoplay = "default"
 frame_progress = 0.39620367
 
-[node name="Player" parent="Mundo" unique_id=758609415 instance=ExtResource("3_dcp8a")]
-z_index = 2
-position = Vector2(8, 166)
-
-[node name="Mercador" parent="Mundo" unique_id=1244256968 instance=ExtResource("9_ru6yc")]
+[node name="Mercador" parent="Mundo" unique_id=1244256968 instance=ExtResource("12_sa1ve")]
 position = Vector2(297, 167)
-script = ExtResource("10_a2qk7")
+script = ExtResource("13_bmope")
 
 [node name="Barreira" type="StaticBody2D" parent="Mundo" unique_id=1623243963]
 position = Vector2(-4, 104)
@@ -190,13 +191,15 @@ shape = SubResource("RectangleShape2D_viwft")
 
 [node name="UI" type="Node2D" parent="." unique_id=1509559322]
 
-[node name="Camera" parent="UI" unique_id=2119136842 instance=ExtResource("11_3sdn3")]
+[node name="Camera" parent="UI" unique_id=2119136842 instance=ExtResource("14_l3aet")]
 position = Vector2(1, 104)
 limit_right = 400
 
-[node name="pauseMenu" parent="UI" unique_id=487234452 instance=ExtResource("15_viwft")]
+[node name="pauseMenu" parent="UI" unique_id=487234452 instance=ExtResource("15_817g4")]
 
-[node name="HUD" type="CanvasLayer" parent="UI" unique_id=1243359729]
+[node name="HUD_Diálogo" type="CanvasLayer" parent="UI" unique_id=1243359729]
+
+[node name="HUD" parent="UI" unique_id=577550706 instance=ExtResource("16_j3lp7")]
 
 [node name="Diálogo" type="Node2D" parent="." unique_id=1857205737]
 
@@ -210,21 +213,21 @@ shape = SubResource("RectangleShape2D_3cdna")
 
 [node name="warning" type="Node2D" parent="Diálogo" unique_id=1844662133]
 position = Vector2(297, 166)
-script = ExtResource("16_u4djg")
+script = ExtResource("16_lm1mp")
 
 [node name="Area2D" type="Area2D" parent="Diálogo/warning" unique_id=739546379]
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Diálogo/warning/Area2D" unique_id=396066233]
-position = Vector2(-1, -12.5)
+position = Vector2(-1, -21)
 shape = SubResource("RectangleShape2D_02al1")
 debug_color = Color(0.050980393, 0.64705884, 0.20392157, 0.3882353)
 
 [node name="Sprite2D" type="Sprite2D" parent="Diálogo/warning" unique_id=2145075117]
 z_index = 2
 position = Vector2(-1, -19)
-texture = ExtResource("17_bqvdt")
+texture = ExtResource("17_d0erj")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 

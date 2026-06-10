@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cs0omhjyv6nrs"]
 
-[ext_resource type="Script" uid="uid://cajoltmwlrbwg" path="res://scripts/boss.gd" id="1_etn2v"]
+[ext_resource type="Script" uid="uid://cajoltmwlrbwg" path="res://scripts/entidades/boss.gd" id="1_etn2v"]
 [ext_resource type="Texture2D" uid="uid://bgsq8hssll41n" path="res://sprites/Characters/boss/Dead_anin.png" id="1_nqa23"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_etn2v"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0boejem1q1fo"]
 
-[ext_resource type="Script" uid="uid://ciglquu27eqat" path="res://scripts/gerenciador_musicas.gd" id="1_64ete"]
+[ext_resource type="Script" uid="uid://ciglquu27eqat" path="res://scripts/globais/gerenciador_musicas.gd" id="1_64ete"]
 
 [node name="GerenciadorMusicas" type="AudioStreamPlayer" unique_id=1221678466]
 process_mode = 3

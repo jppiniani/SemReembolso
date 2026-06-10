@@ -45,7 +45,7 @@ func go_to_dead_state():
 	hitbox.process_mode = Node.PROCESS_MODE_DISABLED
 	velocity = Vector2.ZERO
 	
-	await get_tree().create_timer(0.7).timeout
+	await get_tree().create_timer(0.5).timeout
 	
 	if coin_scene:
 		var coin_instance = coin_scene.instantiate()
