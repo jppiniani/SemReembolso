@@ -76,4 +76,5 @@ No Refunds (ou Sem Reembolso) é um jogo de plataforma onde um herói recém-che
 <hr>
 <!-- (Aqui eu vou mudar pro PDF atualizado) -->
 <h3>Documentação</h3>
+
 Documento do Projeto (em andamento): [Projeto_BRAAOOB.pdf](https://github.com/user-attachments/files/28857847/Projeto_BRAAOOB.pdf)
