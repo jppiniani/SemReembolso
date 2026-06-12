@@ -1,53 +1,57 @@
 [gd_scene format=3 uid="uid://bchoqdk4vnrbl"]
 
 [ext_resource type="Script" uid="uid://djrbp51uch8d3" path="res://scripts/entidades/player.gd" id="1_merdl"]
-[ext_resource type="Texture2D" uid="uid://c12dqqxhsabgs" path="res://sprites/Characters/player/player.png" id="2_dchgp"]
 [ext_resource type="Texture2D" uid="uid://8l4muab06m2w" path="res://sprites/Characters/player/player fall.png" id="2_ef06p"]
+[ext_resource type="Texture2D" uid="uid://l5xk1leie6h5" path="res://sprites/Penguin/Surprised (16 x 16).png" id="2_kdgjc"]
 [ext_resource type="Texture2D" uid="uid://ctigeawsyor2" path="res://sprites/Characters/knight/knight fall.png" id="2_qly61"]
 [ext_resource type="Texture2D" uid="uid://di58aaron71m0" path="res://sprites/Characters/knight/knight idle-sheet.png" id="2_rfe5m"]
-[ext_resource type="Texture2D" uid="uid://b4i671l6ofati" path="res://sprites/Characters/player/player-2.png" id="3_6nm46"]
+[ext_resource type="Texture2D" uid="uid://dtxe3im0xu6ww" path="res://sprites/Penguin/Lying_On_Ground (16 x 16).png" id="3_q0i8f"]
 [ext_resource type="Texture2D" uid="uid://c4driyp8w6wj1" path="res://sprites/Characters/knight/knight jump.png" id="3_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://dd77bnhsgmksv" path="res://sprites/Characters/knight/knight run-sheet 3.png" id="4_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://ble2unwxc31mc" path="res://sprites/Characters/player/player jump.png" id="5_i623q"]
-[ext_resource type="Texture2D" uid="uid://dougwj4ivjagj" path="res://sprites/Characters/player/player run-sheet.png" id="6_i623q"]
+[ext_resource type="Texture2D" uid="uid://xa5qxayo2s38" path="res://sprites/Characters/player/player idle.png" id="6_dchgp"]
+[ext_resource type="Texture2D" uid="uid://bo2647p38pu8i" path="res://sprites/Characters/player/player2 run-sheet.png" id="10_dchgp"]
 [ext_resource type="AudioStream" uid="uid://ckghbjcv8a7fm" path="res://sounds/sfx/jump.wav" id="10_tjdhl"]
-[ext_resource type="Shader" uid="uid://c7fdufunqo0st" path="res://entities/2dOutline.gdshader" id="10_x08pd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
 radius = 5.0
 height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykqge"]
-atlas = ExtResource("2_dchgp")
-region = Rect2(60, 0, 12, 17)
+atlas = ExtResource("2_kdgjc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn2x3"]
+atlas = ExtResource("3_q0i8f")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgp7q"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(0, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(0, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1n8aq"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(12, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(48, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_28s6d"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(24, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(96, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cicqb"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(36, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(144, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hj0ki"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(48, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(192, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fruft"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(60, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(240, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_slxql"]
-atlas = ExtResource("3_6nm46")
-region = Rect2(72, 0, 12, 18)
+atlas = ExtResource("6_dchgp")
+region = Rect2(288, 0, 48, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
 atlas = ExtResource("2_rfe5m")
@@ -82,31 +86,31 @@ atlas = ExtResource("5_i623q")
 region = Rect2(0, 0, 16, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_evlff"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(0, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7db53"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(14, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_plaij"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(28, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ib8tg"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(42, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcwxb"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(56, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2i2q"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(70, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdqif"]
-atlas = ExtResource("6_i623q")
+atlas = ExtResource("10_dchgp")
 region = Rect2(84, 0, 14, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjdhl"]
@@ -140,10 +144,13 @@ region = Rect2(84, 0, 14, 17)
 [sub_resource type="SpriteFrames" id="SpriteFrames_merdl"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_ykqge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn2x3")
 }],
-"loop": true,
+"loop": false,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -284,10 +291,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dchgp"]
-render_priority = 0
-shader = ExtResource("10_x08pd")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x08pd"]
 size = Vector2(10, 17)
 
@@ -301,15 +304,10 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077530802]
 z_index = 1
+position = Vector2(0, 0.5)
 sprite_frames = SubResource("SpriteFrames_merdl")
-animation = &"dead"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1635500717]
-visible = false
-show_behind_parent = true
-material = SubResource("ShaderMaterial_dchgp")
-sprite_frames = SubResource("SpriteFrames_merdl")
-animation = &"fall"
+animation = &"walk"
+frame_progress = 0.39336514
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1490856148]
 collision_layer = 2

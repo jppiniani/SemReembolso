@@ -152,8 +152,7 @@ shape = SubResource("RectangleShape2D_vb5lg")
 debug_color = Color(0.99206084, 0, 0.26346174, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=627484486]
-position = Vector2(0, -0.499999)
-scale = Vector2(0.9, 0.90624994)
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_8ubxt")
 animation = &"walk"
 frame_progress = 0.87869817
