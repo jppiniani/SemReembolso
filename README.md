@@ -52,10 +52,15 @@ O objetivo geral deste projeto é desenvolver um jogo de plataforma 2D utilizand
 'Sem Reembolso' é um jogo de plataforma onde um herói recém-chegado a um novo local é manipulado por um NPC (Mercador) para realizar a tarefa de destruir um inimigo específico (Chefe) e obter uma recompensa. No final da partida, o jogador é morto pelo Mercador e os itens comprados por ele durante a jornada são revendidos a um próximo jogador em uma nova tentativa. O jogo recebeu esse nome visto que se trata de uma compra "infeliz" do Herói.
 <br>
 <b>Mecânicas Principais:</b>
+
 - **Ciclo de Progressão:** O jogador coleta moedas derrotando inimigos comuns no 'CENÁRIO 2' para comprar os itens na loja. No penúltimo cenário o Herói poderá enfrentar o Chefe e finalmente o derrotar. Após digitar seu nome, o jogador deve continuar para o 'CENÁRIO 4'. Neste último local, o Mercador irá trair o personagem, matando-o, furtando seus itens e finalizando o jogo.
+  
 - **Sistema de Loja e Buffs:** O lojista recomendará o Herói a comprar os itens 'ARMADURA' e 'BOTA'. O primeiro dobrará a vida do personagem e o segundo aumentará a distância do pulo do personagem.
+  
 - **Backtracking e Evolução de Dificuldade:** Após a compra na loja, o personagem retornará ao segundo cenário, porém este irá receber uma atualização visual e comportamental (além dos inimigos anteriores aparecerem novamente, aparecerão novos inimigos voadores). Todos estes inimigos agora serão impossíveis de serem derrotados, cabendo ao jogador desviar deles.
+  
 - **Sistema de Herança Assíncrono:** Caso o jogador ou outra pessoa iniciar uma nova tentativa, os nomes dos dois itens na loja do Mercador poderão receber o nome do jogador anterior (Exemplo: Bota do João, Armadura do João).
+  
 - **Leaderboard Global:** O jogo conta com um leaderboard no menu principal, ranqueando as partidas dos jogadores conforme o tempo de conclusão.
 
 
@@ -138,6 +143,7 @@ classDiagram
     class Inimigo {
         <<abstract>>
         -bool imortal
+        -int acertosNecessarios
     }
     class InimigoComum {
         +droparMoeda() Moeda
@@ -146,7 +152,6 @@ classDiagram
         +voar()
     }
     class Chefe {
-        -int acertosNecessarios
         +receberDano()
     }
     class Moeda {
@@ -163,7 +168,7 @@ classDiagram
     Loja "1" o-- "2" Item : oferece
     Heroi "1" --> "0..2" Item : compra
     Heroi "1" --> "0..*" Moeda : coleta
-    Heroi "1" --> "0..*" Inimigo : enfrenta
+    Heroi "1" --> "1..*" Inimigo : enfrenta
     Mercador "1" --> "1" Heroi : elimina
     InimigoComum "1" --> "0..1" Moeda : dropa
 ```
