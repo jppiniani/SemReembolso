@@ -191,4 +191,6 @@ classDiagram
 <!-- (Aqui eu vou mudar pro PDF atualizado) -->
 <h3>Documentação</h3>
 
-Documento do Projeto (em andamento): [Projeto_BRAAOOB.pdf](https://github.com/user-attachments/files/28857847/Projeto_BRAAOOB.pdf)
+Documento do Projeto (em andamento): [PDF do Projeto](https://github.com/user-attachments/files/29115666/pdf.pdf)
+
+
