@@ -43,18 +43,18 @@
 
 <h3>Objetivo Geral</h3>
 
-O objetivo geral deste projeto é desenvolver um jogo de plataforma 2D utilizando a engine Godot 4.6, integrado a um banco de dados relacional via API, para a disciplina de Análise Orientada a Objetos (AOO). O projeto visa demonstrar a aplicação prática de conceitos de programação orientada a objetos (como herança, polimorfismo e encapsulamento) na estruturação das entidades do jogo (herói, inimigos, itens, mercador). 
+O objetivo geral deste projeto é desenvolver um jogo de plataforma 2D utilizando a engine Godot 4.6, integrado a um banco de dados relacional via API, para a disciplina de Análise Orientada a Objetos (AOO). O projeto visa demonstrar a aplicação prática de conceitos de programação orientada a objetos na estruturação das entidades do jogo (herói, inimigos, itens, mercador) além de construir uma conexão sólida e simples entre Front-End (Godot), Back-End (API em Python) e Banco de Dados (MySQL).
 
 <hr>
 
 <h3>Sobre o Jogo</h3>
-No Refunds (ou Sem Reembolso) é um jogo de plataforma onde um herói recém-chegado a um novo local é manipulado por um NPC (Mercador) para realizar a tarefa de destruir um inimigo específico (Chefe) e obter uma recompensa. No final da partida, o jogador é morto pelo Mercador e os itens comprados por ele durante a jornada são revendidos a um próximo jogador em uma nova tentativa. O jogo recebeu esse nome visto que se trata de uma venda "infeliz" para o Herói.
+'Sem Reembolso' é um jogo de plataforma onde um herói recém-chegado a um novo local é manipulado por um NPC (Mercador) para realizar a tarefa de destruir um inimigo específico (Chefe) e obter uma recompensa. No final da partida, o jogador é morto pelo Mercador e os itens comprados por ele durante a jornada são revendidos a um próximo jogador em uma nova tentativa. O jogo recebeu esse nome visto que se trata de uma compra "infeliz" do Herói.
 
 <b>Mecânicas Principais:</b>
 - **Ciclo de Progressão:** O jogador coleta moedas derrotando inimigos comuns no 'CENÁRIO 2' para comprar os itens na loja. No penúltimo cenário o Herói poderá enfrentar o Chefe e finalmente o derrotar. Após digitar seu nome, o jogador deve continuar para o 'CENÁRIO 4'. Neste último local, o Mercador irá trair o personagem, matando-o, furtando seus itens e finalizando o jogo.
 - **Sistema de Loja e Buffs:** O lojista recomendará o Herói a comprar os itens 'ARMADURA' e 'BOTA'. O primeiro dobrará a vida do personagem e o segundo aumentará a distância do pulo do personagem.
 - **Backtracking e Evolução de Dificuldade:** Após a compra na loja, o personagem retornará ao segundo cenário, porém este irá receber uma atualização visual e comportamental (além dos inimigos anteriores aparecerem novamente, aparecerão novos inimigos voadores). Todos estes inimigos agora serão impossíveis de serem derrotados, cabendo ao jogador desviar deles.
-- **Sistema de Herança Assíncrono:** Caso o jogador ou outra pessoa iniciar uma nova tentativa, os nomes dos dois itens na loja do Mercador receberão o nome do jogador anterior (Exemplo: Bota do João, Armadura do João).
+- **Sistema de Herança Assíncrono:** Caso o jogador ou outra pessoa iniciar uma nova tentativa, os nomes dos dois itens na loja do Mercador poderão receber o nome do jogador anterior (Exemplo: Bota do João, Armadura do João).
 - **Leaderboard Global:** O jogo conta com um leaderboard no menu principal, ranqueando as partidas dos jogadores conforme o tempo de conclusão.
 
 <hr>
@@ -63,7 +63,7 @@ No Refunds (ou Sem Reembolso) é um jogo de plataforma onde um herói recém-che
 
 - **Front-End / Engine:** Utilização da engine Godot 4.6. O Godot possui uma vasta gama de ferramentas nativas e uma interface visual que facilita a manipulação do sistema de Cenas e Nós, tornando a aplicação de conceitos de POO organizada e intuitiva.
 - **Artes Visuais:** O software LibreSprite foi utilizado para criar e animar sprites (imagens bidimensionais 2D).
-- **Back-End (API):** Python (Flask / FastAPI) para a comunicação do jogo com o banco.
+- **Back-End (API):** Python (Flask) para a comunicação do jogo com o banco.
 - **Banco de Dados:** Armazenamento em SGBD Relacional (MySQL).
 - **Versionamento:** Git e GitHub.
 
