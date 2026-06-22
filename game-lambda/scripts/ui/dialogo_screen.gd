@@ -10,19 +10,26 @@ var data: Dictionary = {}
 @export var _dialog: RichTextLabel = null
 @export var _faceset: TextureRect = null
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().paused = true
+	
+	focus_mode = Control.FOCUS_ALL
+	grab_focus()
+	
 	_initialize_dialog()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("interact") and _dialog.visible_ratio < 1:
 		_step = 0.01
-		return
+	else:
+		_step = 0.05
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact") and _dialog.visible_ratio >= 1:
 		
-	_step = 0.05
-	if Input.is_action_just_pressed("interact"):
+		get_viewport().set_input_as_handled() 
+		
 		_id += 1
 		if _id == data.size():
 			get_tree().paused = false
@@ -38,6 +45,8 @@ func _initialize_dialog():
 	
 	_dialog.visible_characters = 0
 	while _dialog.visible_ratio < 1:
+		# Pequena proteção: evita erros caso a cena feche antes do timer acabar
+		if not is_inside_tree(): break 
+		
 		await get_tree().create_timer(_step).timeout
 		_dialog.visible_characters += 1
-		pass

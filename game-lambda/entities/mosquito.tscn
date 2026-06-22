@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bte8ni7e7j8pl"]
+
+[ext_resource type="Script" uid="uid://yv25hq8m13ov" path="res://scripts/entidades/mosquito.gd" id="1_hqx5d"]
+[ext_resource type="Texture2D" uid="uid://drcafitftvhtc" path="res://sprites/Characters/mosquitao/Flying_(32 x 32).png" id="1_pqqnx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqx5d"]
+atlas = ExtResource("1_pqqnx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuxak"]
+atlas = ExtResource("1_pqqnx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k2ua"]
+atlas = ExtResource("1_pqqnx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq6oe"]
+atlas = ExtResource("1_pqqnx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqx5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuxak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k2ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq6oe")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ljv2"]
+size = Vector2(14, 18)
+
+[node name="Mosquito" type="CharacterBody2D" unique_id=2029189291]
+script = ExtResource("1_hqx5d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=850615089]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"fly"
+frame_progress = 0.84493554
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1207793932]
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=804873484]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=446849740 groups=["LethalArea"]]
+shape = SubResource("RectangleShape2D_1ljv2")
+debug_color = Color(0.99206084, 0, 0.26346174, 0.41960785)

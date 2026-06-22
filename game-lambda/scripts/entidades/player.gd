@@ -15,12 +15,20 @@ enum PlayerState{
 @onready var reload_timer: Timer = $ReloadTimer
 
 const SPEED = 80.0
-const JUMP_VELOCITY = -320.0
+var JUMP_VELOCITY = -320.0
+
+var vida_base: int = 1
+var vida_atual: int = 1
+var is_invincible: bool = false
+var tempo_invencibilidade: float = 1.5 # Tempo em segundos que ele ficará piscando
 
 # Variavel que só pode receber algum dos valores do enum, se não gera erro
 var status: PlayerState
 
 func _ready() -> void:
+	add_to_group("Player")
+	atualizar_equipamentos()
+	
 	go_to_idle_state()
 
 func _physics_process(delta: float) -> void:
@@ -141,18 +149,78 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		area.get_parent().take_damage()
 		go_to_jump_state()
 	else:
-		# player morre
-		go_to_dead_state()
+		tomar_dano()
 	
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("LethalArea"):
-		go_to_dead_state()
+		tomar_dano()
 	
 	
 func _on_reload_timer_timeout() -> void:
 	get_tree().reload_current_scene()
 
+func atualizar_equipamentos():
+# Bota aumenta a altura do pulo
+	if Global.has_boots:
+		JUMP_VELOCITY = -450.0
 
+	# Armadura concede o dobro de vida base
+	if Global.has_armor:
+		vida_atual = vida_base * 2
+	# Crie recursos "SpriteFrames" diferentes para cada variação do personagem
+	if Global.has_boots and Global.has_armor:
+	# anim.sprite_frames = preload("res://caminho/para/frames_completo.tres")
+		pass
+	elif Global.has_boots:
+	# anim.sprite_frames = preload("res://caminho/para/frames_bota.tres")
+		pass
+	elif Global.has_armor:
+	# anim.sprite_frames = preload("res://caminho/para/frames_armadura.tres")
+		pass
+		
+func tomar_dano() -> void:
+	# Ignora o dano se já estiver morto ou invencível
+	if status == PlayerState.dead or is_invincible:
+		return
+	vida_atual -= 1
+	
+	if vida_atual <= 0:
+		# Se a vida zerou, morre de vez
+		go_to_dead_state()
+	else:
+		# Se sobreviveu, significa que tinha armadura. 
+		# Ela quebra IMEDIATAMENTE.
+		Global.has_armor = false
+		# Atualiza o visual para tirar a armadura do corpo
+		atualizar_equipamentos() 
+		# Inicia os i-frames piscantes
+		ativar_invencibilidade()
+		
+func ativar_invencibilidade() -> void:
+	is_invincible = true
+	
+	# Cria uma animação via código (Tween)
+	var tween = create_tween()
+	# Faz o Tween repetir a animação de piscar várias vezes
+	tween.set_loops(int(tempo_invencibilidade * 5)) 
+	
+	# Deixa o sprite quase transparente (Alpha 0.2) em 0.1 segundos
+	tween.tween_property(anim, "modulate:a", 0.2, 0.1)
+	# Volta para a cor sólida (Alpha 1.0) em 0.1 segundos
+	tween.tween_property(anim, "modulate:a", 1.0, 0.1)
+	
+	# Pausa a execução DESTA função até o tempo de invencibilidade acabar
+	await get_tree().create_timer(tempo_invencibilidade).timeout
+	
+	# Retorna ao estado vulnerável
+	is_invincible = false
+	anim.modulate.a = 1.0 # Garante que a opacidade volte ao normal (100%) no final
+	
+	# OPCIONAL: Se quiser que ele "perca" a armadura visualmente ao tomar dano
+	if vida_atual == 1:
+		Global.has_armor = false
+		atualizar_equipamentos() # Roda aquela função que troca os sprites frames
+		
 # func _physics_process(delta: float) -> void:
 
 	# Lógica do pulo

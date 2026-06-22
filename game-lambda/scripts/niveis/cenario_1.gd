@@ -1,6 +1,10 @@
 extends Node2D
 
 const _DIALOG_SCREEN: PackedScene = preload("res://scene/dialogo_screen.tscn")
+
+# Preencha com o caminho correto da sua cena da Loja!
+const _SHOP_SCREEN: PackedScene = preload("res://entities/loja.tscn") 
+
 var _dialog_data: Dictionary = {
 	0: {
 		"faceset": "res://sprites/faceset/mercador.png",
@@ -37,61 +41,55 @@ var _dialog_data: Dictionary = {
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
 
-# Pega a referência da DialogArea que está na sua árvore de nós
 @onready var _dialog_area: Area2D = $Diálogo/DialogArea
 
-# Variável para controlar se o jogador está perto o suficiente
 var _can_interact: bool = false
 
 func _ready() -> void:
+	if Global.ja_visitou_cenario_2:
+		Global.cenario2_modo_hard = true
+		
 	MusicaGlobal.tocar_musica("res://sounds/music/shop.mp3")
 	Global.contar_tempo = true
+	
 	if Global.from_world != null:
 		$Player.global_position = get_node(Global.from_world + "Pos").global_position
 		
-	 #Conecta os sinais da Area2D via código (Padrão do Godot 4)
 	_dialog_area.body_entered.connect(_on_dialog_area_body_entered)
 	_dialog_area.body_exited.connect(_on_dialog_area_body_exited)
 
-func _process(delta: float) -> void:
-	# Verifica se pode interagir E se o botão foi pressionado
+func _process(_delta: float) -> void:
 	if _can_interact and Input.is_action_just_pressed("interact"):
-		
-		# Verifica se já não existe um diálogo na tela para evitar sobreposição
 		if _hud.get_child_count() == 0: 
-			var _new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
-			_new_dialog.data = _dialog_data
-			_hud.add_child(_new_dialog)
+			
+			# Se for a primeira vez, mostra o diálogo
+			if not Global.primeira_interacao_concluida:
+				var _new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
+				_new_dialog.data = _dialog_data
+				_hud.add_child(_new_dialog)
+				
+				# Marca que a interação inicial foi concluída
+				Global.primeira_interacao_concluida = true
+				
+				# Espera o diálogo ser finalizado e destruído (queue_free)
+				await _new_dialog.tree_exited 
+				
+				# Abre a loja logo após o diálogo terminar
+				abrir_loja()
+				
+			# Se não for a primeira vez, vai direto para a loja
+			else:
+				abrir_loja()
 
+# Função modular para abrir a loja
+func abrir_loja() -> void:
+	var _nova_loja = _SHOP_SCREEN.instantiate()
+	_hud.add_child(_nova_loja)
 
-
-# Acionado quando algum corpo entra na Area2D
 func _on_dialog_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"): 
 		_can_interact = true
 
-# Acionado quando algum corpo sai da Area2D
 func _on_dialog_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		_can_interact = false
-
-
-#func _on_dialog_area_body_entered(body: Node2D) -> void:
-	#print("Alguém entrou na área: ", body.name)
-	#pass # Replace with function body.
-#
-#
-#func _on_dialog_area_body_exited(body: Node2D) -> void:
-	#pass # Replace with function body.
-
-
-## Called when the node enters the scene tree for the first time.
-#func _ready() -> void:
-	#MusicaGlobal.tocar_musica("res://sounds/music/shop.mp3")
-	#if Global.from_world != null:
-		#$Player.global_position = get_node(Global.from_world + "Pos").global_position
-#
-#
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(_delta: float) -> void:
-	#pass

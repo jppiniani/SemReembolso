@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://do1scgp62l0rt" path="res://scene/hud.tscn" id="16_j3lp7"]
 [ext_resource type="Script" uid="uid://b7bqkky6ywbb4" path="res://scripts/ui/warning.gd" id="16_lm1mp"]
 [ext_resource type="Texture2D" uid="uid://cg8j25us36oyx" path="res://sprites/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="17_d0erj"]
+[ext_resource type="PackedScene" uid="uid://clcvho0vnnxs6" path="res://entities/coin.tscn" id="19_millt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
 size = Vector2(20, 34.97967)
@@ -74,7 +75,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u5vxq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 0.5
 }]
@@ -193,6 +194,7 @@ shape = SubResource("RectangleShape2D_viwft")
 
 [node name="Camera" parent="UI" unique_id=2119136842 instance=ExtResource("14_l3aet")]
 position = Vector2(1, 104)
+limit_top = 0
 limit_right = 400
 
 [node name="pauseMenu" parent="UI" unique_id=487234452 instance=ExtResource("15_817g4")]
@@ -230,5 +232,17 @@ position = Vector2(-1, -19)
 texture = ExtResource("17_d0erj")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Coin" parent="." unique_id=1546560883 instance=ExtResource("19_millt")]
+position = Vector2(67, 167)
+
+[node name="Coin2" parent="." unique_id=300296908 instance=ExtResource("19_millt")]
+position = Vector2(67, 167)
+
+[node name="Coin3" parent="." unique_id=1836092026 instance=ExtResource("19_millt")]
+position = Vector2(67, 167)
+
+[node name="Coin4" parent="." unique_id=311223965 instance=ExtResource("19_millt")]
+position = Vector2(67, 167)
 
 [editable path="LevelEndCenario2"]

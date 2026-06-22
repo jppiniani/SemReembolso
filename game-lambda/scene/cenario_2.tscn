@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://byd3mncxl1vc2" path="res://entities/level_end.tscn" id="10_1q7gi"]
 [ext_resource type="PackedScene" uid="uid://dtarmuf6px25p" path="res://scene/pause_menu.tscn" id="11_i8abe"]
 [ext_resource type="PackedScene" uid="uid://cj4qjunqvwou5" path="res://entities/orc.tscn" id="12_ucpn8"]
+[ext_resource type="PackedScene" uid="uid://bte8ni7e7j8pl" path="res://entities/mosquito.tscn" id="14_b8sut"]
 [ext_resource type="PackedScene" uid="uid://do1scgp62l0rt" path="res://scene/hud.tscn" id="14_m57yx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m57yx"]
@@ -83,6 +84,9 @@ size = Vector2(20, 34.97967)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucpn8"]
 size = Vector2(20, 34.97967)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m57yx"]
+size = Vector2(8, 208)
 
 [node name="Cenario2" type="Node2D" unique_id=2103661168]
 script = ExtResource("1_i8abe")
@@ -175,16 +179,45 @@ position = Vector2(9, 167)
 
 [node name="pauseMenu" parent="." unique_id=487234452 instance=ExtResource("11_i8abe")]
 
-[node name="enemies" type="Node2D" parent="." unique_id=1573191498]
+[node name="InimigosTerrestres" type="Node2D" parent="." unique_id=1573191498]
 
-[node name="Orc" parent="enemies" unique_id=830318618 instance=ExtResource("12_ucpn8")]
+[node name="Orc" parent="InimigosTerrestres" unique_id=830318618 instance=ExtResource("12_ucpn8")]
 position = Vector2(268, 162)
 
-[node name="Orc2" parent="enemies" unique_id=1720276176 instance=ExtResource("12_ucpn8")]
+[node name="Orc2" parent="InimigosTerrestres" unique_id=1720276176 instance=ExtResource("12_ucpn8")]
 position = Vector2(395, 130)
 
-[node name="Orc3" parent="enemies" unique_id=782656377 instance=ExtResource("12_ucpn8")]
+[node name="Orc3" parent="InimigosTerrestres" unique_id=782656377 instance=ExtResource("12_ucpn8")]
 position = Vector2(681, 162)
+
+[node name="Orc4" parent="InimigosTerrestres" unique_id=1348709984 instance=ExtResource("12_ucpn8")]
+position = Vector2(803, 163)
+
+[node name="Orc5" parent="InimigosTerrestres" unique_id=1462466778 instance=ExtResource("12_ucpn8")]
+position = Vector2(1042, 145)
+
+[node name="InimigosVoadores" type="Node2D" parent="." unique_id=805727950]
+
+[node name="Mosquito" parent="InimigosVoadores" unique_id=2029189291 instance=ExtResource("14_b8sut")]
+position = Vector2(301, 38)
+
+[node name="Mosquito2" parent="InimigosVoadores" unique_id=300525605 instance=ExtResource("14_b8sut")]
+position = Vector2(438, 40)
+
+[node name="Mosquito3" parent="InimigosVoadores" unique_id=257484804 instance=ExtResource("14_b8sut")]
+position = Vector2(627, 34)
+
+[node name="Mosquito4" parent="InimigosVoadores" unique_id=667475438 instance=ExtResource("14_b8sut")]
+position = Vector2(922, 29)
+
+[node name="Mosquito5" parent="InimigosVoadores" unique_id=1526216175 instance=ExtResource("14_b8sut")]
+position = Vector2(1185, 23)
+
+[node name="BarreiraRetorno" type="StaticBody2D" parent="." unique_id=162322072]
+position = Vector2(-3, 104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarreiraRetorno" unique_id=1246749826]
+shape = SubResource("RectangleShape2D_m57yx")
 
 [node name="HUD" parent="." unique_id=577550706 instance=ExtResource("14_m57yx")]
 

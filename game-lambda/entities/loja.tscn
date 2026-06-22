@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://br8vgpdrjg2s6"]
+
+[ext_resource type="Script" uid="uid://crj44vfrxg1bu" path="res://scripts/ui/loja.gd" id="1_kbimf"]
+[ext_resource type="Texture2D" uid="uid://b4t3d2ak3m4f0" path="res://sprites/SpritesLojinha/leather_boots_01.png" id="1_ygu7x"]
+[ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="2_kbimf"]
+[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://sprites/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="3_b4s7b"]
+[ext_resource type="Texture2D" uid="uid://dvxs1ryd2tta4" path="res://sprites/SpritesLojinha/leather_armor.png" id="4_7xf6r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.61300504, 0.34346658, 1.92523e-07, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.39094615, 0.18166724, 0.049674958, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[node name="Loja" type="Control" unique_id=495155174]
+process_mode = 3
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_kbimf")
+
+[node name="Panel" type="Panel" parent="." unique_id=160591079]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="btn_sair" type="Button" parent="." unique_id=1096077934]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.98600006
+anchor_top = 0.025
+anchor_right = 0.98600006
+anchor_bottom = 0.025
+offset_left = -20.52002
+offset_top = 4.5
+offset_right = -4.5200195
+offset_bottom = 21.5
+grow_horizontal = 0
+theme = ExtResource("2_kbimf")
+theme_override_font_sizes/font_size = 16
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1415582692]
+custom_minimum_size = Vector2(280, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1374754269]
+layout_mode = 2
+
+[node name="Item1" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=876264928]
+custom_minimum_size = Vector2(0, 70)
+custom_maximum_size = Vector2(-1, 70)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Item1" unique_id=1121569923]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Item1/ColorRect" unique_id=2058462079]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ygu7x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/Item1" unique_id=33309465]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_g4v7s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Item1" unique_id=1781161335]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Item1/VBoxContainer" unique_id=1606353944]
+layout_mode = 2
+theme = ExtResource("2_kbimf")
+theme_override_font_sizes/font_size = 19
+text = "Bota do Heroi Caido"
+
+[node name="botao_bota" type="Button" parent="MarginContainer/VBoxContainer/Item1/VBoxContainer" unique_id=330891466]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme = ExtResource("2_kbimf")
+text = "100"
+icon = ExtResource("3_b4s7b")
+
+[node name="Item2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1253987842]
+custom_minimum_size = Vector2(0, 70)
+custom_maximum_size = Vector2(-1, 70)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBoxContainer/Item2" unique_id=1018240664]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Item2/ColorRect2" unique_id=1652594110]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_7xf6r")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/Item2" unique_id=1612806646]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_g4v7s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Item2" unique_id=2137886160]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Item2/VBoxContainer" unique_id=1285418391]
+layout_mode = 2
+theme = ExtResource("2_kbimf")
+theme_override_font_sizes/font_size = 19
+text = "Armadura do Heroi Caido"
+
+[node name="botao_armadura" type="Button" parent="MarginContainer/VBoxContainer/Item2/VBoxContainer" unique_id=611101298]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme = ExtResource("2_kbimf")
+text = "100"
+icon = ExtResource("3_b4s7b")
+
+[connection signal="pressed" from="btn_sair" to="." method="_on_btn_sair_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Item1/VBoxContainer/botao_bota" to="." method="_on_botao_bota_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Item2/VBoxContainer/botao_armadura" to="." method="_on_botao_armadura_pressed"]

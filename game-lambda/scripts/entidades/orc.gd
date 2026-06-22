@@ -19,6 +19,8 @@ var status: OrcState
 
 var direction = 1
 
+var imortal: bool = false
+
 func _ready() -> void:
 	go_to_walk_state()
 
@@ -69,4 +71,7 @@ func dead_state(_delta):
 	pass
 
 func take_damage():
+	if imortal:
+		return 
+		
 	go_to_dead_state()
