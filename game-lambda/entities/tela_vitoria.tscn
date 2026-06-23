@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cnxkr7pw4df7l"]
+
+[ext_resource type="Script" uid="uid://bro2h3r275w6o" path="res://scripts/ui/tela_vitoria.gd" id="1_50t18"]
+[ext_resource type="StyleBox" uid="uid://u058kw3vu5v8" path="res://UI/utilitarios/style_box_loja.tres" id="1_exwsc"]
+
+[node name="TelaVitoria" type="CanvasLayer" unique_id=283924896]
+process_mode = 3
+
+[node name="TelaVitoria" type="Control" parent="." unique_id=587470749]
+custom_minimum_size = Vector2(220, 132)
+custom_maximum_size = Vector2(220, 132)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 44.0
+offset_right = -100.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_50t18")
+
+[node name="Panel" type="Panel" parent="TelaVitoria" unique_id=78894783]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("1_exwsc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TelaVitoria" unique_id=1536358273]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -35.0
+offset_right = 34.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TelaVitoria/VBoxContainer" unique_id=2135361674]
+layout_mode = 2
+text = "PARABENS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TelaVitoria/VBoxContainer" unique_id=1668871230]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Você derrotou o chefe em:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="TelaVitoria/VBoxContainer" unique_id=808864442]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "00m:00s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="TelaVitoria/VBoxContainer" unique_id=1795333644]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+placeholder_text = "Digite seu Nickname"
+alignment = 1
+
+[node name="Button" type="Button" parent="TelaVitoria/VBoxContainer" unique_id=1186815717]
+custom_maximum_size = Vector2(80, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 11
+text = "PROSSEGUIR"

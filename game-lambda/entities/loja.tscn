@@ -2,17 +2,10 @@
 
 [ext_resource type="Script" uid="uid://crj44vfrxg1bu" path="res://scripts/ui/loja.gd" id="1_kbimf"]
 [ext_resource type="Texture2D" uid="uid://b4t3d2ak3m4f0" path="res://sprites/SpritesLojinha/leather_boots_01.png" id="1_ygu7x"]
+[ext_resource type="StyleBox" uid="uid://u058kw3vu5v8" path="res://UI/utilitarios/style_box_loja.tres" id="2_b4s7b"]
 [ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="2_kbimf"]
 [ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://sprites/Mini FX, Items & UI/Coin-Sprites/00_Coin-Sprites.png" id="3_b4s7b"]
 [ext_resource type="Texture2D" uid="uid://dvxs1ryd2tta4" path="res://sprites/SpritesLojinha/leather_armor.png" id="4_7xf6r"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
-bg_color = Color(0.61300504, 0.34346658, 1.92523e-07, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.39094615, 0.18166724, 0.049674958, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 
@@ -42,7 +35,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/panel = ExtResource("2_b4s7b")
 
 [node name="btn_sair" type="Button" parent="." unique_id=1096077934]
 layout_mode = 1

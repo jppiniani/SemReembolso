@@ -1,6 +1,31 @@
 [gd_scene format=3 uid="uid://ga5gc0tvhf4x"]
 
+[ext_resource type="Texture2D" uid="uid://dbfbncficlop1" path="res://sprites/Characters/mercador/mercador-ataque.png" id="1_810al"]
 [ext_resource type="Texture2D" uid="uid://byrvj18liqgxu" path="res://sprites/Characters/mercador/mercador-sheet.png" id="1_mtlcc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l56k4"]
+atlas = ExtResource("1_810al")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twr1p"]
+atlas = ExtResource("1_810al")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgch7"]
+atlas = ExtResource("1_810al")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah5jr"]
+atlas = ExtResource("1_810al")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abk6i"]
+atlas = ExtResource("1_810al")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4ejc"]
+atlas = ExtResource("1_810al")
+region = Rect2(160, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fskhb"]
 atlas = ExtResource("1_mtlcc")
@@ -38,6 +63,29 @@ region = Rect2(119, 0, 17, 17)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_l56k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twr1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgch7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ah5jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abk6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4ejc")
+}],
+"loop": 0,
+"name": &"ataque",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_fskhb")
 }, {
 "duration": 1.0,
@@ -61,7 +109,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_he8rn")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 10.0
 }]
@@ -75,7 +123,10 @@ height = 16.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=381843377]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_ty4f5")
+animation = &"ataque"
 autoplay = "default"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151059]
 shape = SubResource("CapsuleShape2D_mtlcc")

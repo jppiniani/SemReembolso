@@ -41,10 +41,19 @@ func _on_menu_btn_pressed() -> void:
 func return_to_title():
 	get_tree().paused = false
 	MusicaGlobal.abafar_musica_pause(false)
-	Global.from_world = get_parent().name
-	Global.contar_tempo = false
-	Global.resetar_timer()
+	
+	Global.resetar_partida()
+	
 	get_tree().change_scene_to_file("res://scene/title_screen.tscn")
+
+#func return_to_title():
+	#get_tree().paused = false
+	#MusicaGlobal.abafar_musica_pause(false)
+	#Global.from_world = get_parent().name
+	#Global.contar_tempo = false
+	#Global.resetar_timer()
+	#Global.resetar_moedas()
+	#get_tree().change_scene_to_file("res://scene/title_screen.tscn")
 
 func _on_menu_opcoes_fechado() -> void:
 	$menuHolder.visible = true

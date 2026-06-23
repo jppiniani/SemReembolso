@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cs0omhjyv6nrs"]
 
-[ext_resource type="Script" uid="uid://cajoltmwlrbwg" path="res://scripts/entidades/boss.gd" id="1_etn2v"]
+[ext_resource type="Script" uid="uid://cdjwbw2fxj4px" path="res://scripts/entidades/boss.gd" id="1_etn2v"]
 [ext_resource type="Texture2D" uid="uid://bgsq8hssll41n" path="res://sprites/Characters/boss/Dead_anin.png" id="1_nqa23"]
+[ext_resource type="PackedScene" uid="uid://cnxkr7pw4df7l" path="res://entities/tela_vitoria.tscn" id="2_v85xe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_etn2v"]
 radius = 6.0
@@ -135,7 +136,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e0qs4")
 }],
-"loop": false,
+"loop": 0,
 "name": &"appear",
 "speed": 2.0
 }, {
@@ -164,7 +165,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8k0u5")
 }],
-"loop": true,
+"loop": 1,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -205,7 +206,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sytee")
 }],
-"loop": false,
+"loop": 0,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -234,7 +235,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kxdcu")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -246,6 +247,7 @@ size = Vector2(11, 29.5)
 scale = Vector2(2, 2)
 collision_layer = 4
 script = ExtResource("1_etn2v")
+tela_vitoria_cena = ExtResource("2_v85xe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1629991258]
 position = Vector2(0, 6)
@@ -253,10 +255,8 @@ shape = SubResource("CapsuleShape2D_etn2v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1239426576]
 sprite_frames = SubResource("SpriteFrames_quqjg")
-animation = &"dead"
+animation = &"walk"
 autoplay = "dead"
-frame = 11
-frame_progress = 1.0
 
 [node name="WallDetector" type="RayCast2D" parent="." unique_id=160453783]
 position = Vector2(0, 19)

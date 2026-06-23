@@ -1,0 +1,406 @@
+[gd_scene format=4 uid="uid://cabxhjdwedfob"]
+
+[ext_resource type="Script" uid="uid://cm5h2jl0jtn1a" path="res://scripts/niveis/cenario_4.gd" id="1_v66vi"]
+[ext_resource type="TileSet" uid="uid://cvca2joak8qod" path="res://tiles/Terrain.tres" id="2_jnjiw"]
+[ext_resource type="TileSet" uid="uid://jiwuqjvrbib6" path="res://tiles/Decoration.tres" id="3_ccsgx"]
+[ext_resource type="PackedScene" uid="uid://bchoqdk4vnrbl" path="res://entities/player.tscn" id="4_27px2"]
+[ext_resource type="AudioStream" uid="uid://c782fk63v78gq" path="res://sounds/music/frozenAbyss.mp3" id="4_ryk4g"]
+[ext_resource type="PackedScene" uid="uid://cmhigv7g2iid2" path="res://entities/baú.tscn" id="5_kay1h"]
+[ext_resource type="AudioStream" uid="uid://bauewkwn1gajc" path="res://sounds/sfx/slash.mp3" id="5_nnor0"]
+[ext_resource type="PackedScene" uid="uid://ga5gc0tvhf4x" path="res://entities/mercador.tscn" id="6_bn0iq"]
+[ext_resource type="Theme" uid="uid://dc17nytygteni" path="res://UI/TemaBotaoMenu/temaMenu.tres" id="7_bn0iq"]
+
+[sub_resource type="Animation" id="Animation_kay1h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9, 166)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Baú:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fechado"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mercador:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mercador:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(199, 167)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mercador:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mercador/AnimatedSprite2D:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ataque"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CanvasLayer/Label:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_03h37"]
+resource_name = "animacao_final"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666666, 2.5, 6.4, 7.1666665, 8.733334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"idle", &"walk", &"idle", &"walk", &"idle", &"dead"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5000002, 6.4, 7.1666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9, 166), Vector2(170, 166), Vector2(170, 166), Vector2(153.94, 166)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/AnimatedSprite2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.4, 8.733334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"walk", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"walk", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"dead", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Baú:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.5, 4.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"abrindo", &"aberto"]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Baú")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"abrindo", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mercador:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4.5333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mercador:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4.5333333, 6.3333335, 7.133333, 7.5333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(199.525, 167), Vector2(192.085, 167), Vector2(180.725, 155.04), Vector2(171.335, 166.45)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Mercador:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4.5333333, 6.3333335, 7.133333, 7.5333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.5846852994181004, -0.2007128639793479, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Mercador/AnimatedSprite2D:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(8.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ataque"]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Mercador/AnimatedSprite2D")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(8.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"ataque", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CanvasLayer:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(9.733334),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(9.733334, 13.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CanvasLayer/Label:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(13.733334, 18.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AudioStreamPlayer")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [{
+"end_offset": 224.275,
+"start_offset": 0.0,
+"stream": ExtResource("4_ryk4g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_nnor0")
+}],
+"times": PackedFloat32Array(0, 8.333333)
+}
+tracks/13/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryk4g"]
+_data = {
+&"RESET": SubResource("Animation_kay1h"),
+&"animacao_final": SubResource("Animation_03h37")
+}
+
+[node name="Cenario4" type="Node2D" unique_id=1918244822]
+script = ExtResource("1_v66vi")
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=1232851294]
+
+[node name="Terreno" type="TileMapLayer" parent="Tilemaps" unique_id=839939159]
+tile_map_data = PackedByteArray("AAAAAAsAAgAGAAEAAAABAAsAAgAHAAEAAAACAAsAAgAHAAEAAAADAAsAAgAHAAEAAAAEAAsAAgAHAAEAAAAFAAsAAgAHAAEAAAAGAAsAAgAHAAEAAAAHAAsAAgAHAAEAAAAIAAsAAgAHAAEAAAAJAAsAAgAHAAEAAAAKAAsAAgAHAAEAAAALAAsAAgAHAAEAAAAMAAsAAgAHAAEAAAANAAsAAgAHAAEAAAAOAAsAAgAHAAEAAAAPAAsAAgAHAAEAAAAQAAsAAgAHAAEAAAAAAAwAAgAGAAIAAAABAAwAAgAHAAIAAAACAAwAAgAHAAIAAAADAAwAAgAHAAIAAAAEAAwAAgAHAAIAAAAFAAwAAgAHAAIAAAAGAAwAAgAHAAIAAAAHAAwAAgAHAAIAAAAIAAwAAgAHAAIAAAAJAAwAAgAHAAIAAAAKAAwAAgAHAAIAAAALAAwAAgAHAAIAAAAMAAwAAgAHAAIAAAANAAwAAgAHAAIAAAAOAAwAAgAHAAIAAAAPAAwAAgAHAAIAAAAQAAwAAgAHAAIAAAARAAsAAgAHAAEAAAASAAsAAgAHAAEAAAATAAsAAgAHAAEAAAAUAAsAAgAHAAEAAAAVAAsAAgAHAAEAAAAWAAsAAgAHAAEAAAAXAAsAAgAHAAEAAAAYAAsAAgAIAAEAAAAYAAwAAgAIAAIAAAARAAwAAgAHAAIAAAASAAwAAgAHAAIAAAATAAwAAgAHAAIAAAAUAAwAAgAHAAIAAAAXAAwAAgAHAAIAAAAVAAwAAgAHAAIAAAAWAAwAAgAHAAIAAAA=")
+tile_set = ExtResource("2_jnjiw")
+
+[node name="Fundo" type="TileMapLayer" parent="Tilemaps" unique_id=2002031229]
+tile_map_data = PackedByteArray("AAAAAAkAAgAQAAEAAAAAAAoAAgAQAAIAAAAAAAcAAgAQAAIAAAAAAAgAAgAQAAIAAAAAAAUAAgAQAAIAAAAAAAYAAgAQAAEAAAAAAAMAAgAQAAEAAAAAAAQAAgAQAAEAAAABAAMAAgAQAAIAAAABAAQAAgAQAAEAAAABAAEAAgAQAAIAAAABAAIAAgAQAAEAAAAAAAEAAgAQAAIAAAAAAAIAAgAQAAIAAAAAAAAAAgAQAAEAAAABAAAAAgAQAAEAAAACAAAAAgAQAAEAAAACAAEAAgAQAAIAAAADAAAAAgAQAAEAAAADAAEAAgAQAAIAAAAEAAAAAgAQAAEAAAAEAAEAAgAQAAIAAAAFAAAAAgAQAAEAAAAFAAEAAgAQAAIAAAAGAAAAAgAQAAEAAAAGAAEAAgAQAAIAAAAHAAAAAgAQAAEAAAAHAAEAAgAQAAIAAAAIAAAAAgAQAAEAAAAIAAEAAgAQAAIAAAAJAAAAAgAQAAEAAAAJAAEAAgAQAAIAAAAKAAAAAgAQAAEAAAAKAAEAAgAQAAIAAAALAAAAAgAQAAEAAAALAAEAAgAQAAIAAAAMAAAAAgAQAAEAAAAMAAEAAgAQAAIAAAANAAAAAgAQAAEAAAANAAEAAgAQAAIAAAAOAAAAAgAQAAEAAAAOAAEAAgAQAAIAAAAPAAAAAgAQAAEAAAAPAAEAAgAQAAIAAAAQAAAAAgAQAAEAAAAQAAEAAgAQAAIAAAARAAAAAgAQAAEAAAARAAEAAgAQAAIAAAASAAAAAgAQAAEAAAASAAEAAgAQAAIAAAATAAAAAgAQAAEAAAATAAEAAgAQAAIAAAAUAAAAAgAQAAEAAAAUAAEAAgAQAAIAAAAVAAAAAgAQAAEAAAAVAAEAAgAQAAIAAAAWAAAAAgAQAAEAAAAWAAEAAgAQAAIAAAAXAAAAAgAQAAEAAAAXAAEAAgAQAAIAAAAYAAAAAgAQAAEAAAAYAAEAAgAQAAIAAAAYAAIAAgAQAAEAAAAYAAMAAgAQAAIAAAAXAAIAAgAQAAEAAAAXAAMAAgAQAAIAAAAWAAIAAgAQAAEAAAAWAAMAAgAQAAIAAAAVAAIAAgAQAAEAAAAVAAMAAgAQAAIAAAAUAAIAAgAQAAEAAAAUAAMAAgAQAAIAAAATAAIAAgAQAAEAAAATAAMAAgAQAAIAAAASAAIAAgAQAAEAAAASAAMAAgAQAAIAAAARAAIAAgAQAAEAAAARAAMAAgAQAAIAAAAQAAIAAgAQAAEAAAAQAAMAAgAQAAIAAAAPAAIAAgAQAAEAAAAPAAMAAgAQAAIAAAAOAAIAAgAQAAEAAAAOAAMAAgAQAAIAAAANAAIAAgAQAAEAAAANAAMAAgAQAAIAAAAMAAIAAgAQAAEAAAAMAAMAAgAQAAIAAAALAAIAAgAQAAEAAAALAAMAAgAQAAIAAAAKAAIAAgAQAAEAAAAKAAMAAgAQAAIAAAAJAAIAAgAQAAEAAAAJAAMAAgAQAAIAAAAIAAIAAgAQAAEAAAAIAAMAAgAQAAIAAAAHAAIAAgAQAAEAAAAHAAMAAgAQAAIAAAAGAAIAAgAQAAEAAAAGAAMAAgAQAAIAAAAFAAIAAgAQAAEAAAAFAAMAAgAQAAIAAAAEAAIAAgAQAAEAAAAEAAMAAgAQAAIAAAADAAIAAgAQAAEAAAADAAMAAgAQAAIAAAACAAIAAgAQAAEAAAACAAMAAgAQAAIAAAABAAUAAgAQAAIAAAABAAYAAgAQAAEAAAACAAUAAgAQAAIAAAACAAYAAgAQAAEAAAADAAUAAgAQAAIAAAADAAYAAgAQAAEAAAAEAAUAAgAQAAIAAAAEAAYAAgAQAAEAAAAFAAUAAgAQAAIAAAAFAAYAAgAQAAEAAAACAAQAAgAQAAEAAAADAAQAAgAQAAEAAAAEAAQAAgAQAAEAAAAFAAQAAgAQAAEAAAAGAAQAAgAQAAEAAAAGAAUAAgAQAAIAAAAHAAQAAgAQAAEAAAAHAAUAAgAQAAIAAAAIAAQAAgAQAAEAAAAIAAUAAgAQAAIAAAAJAAQAAgAQAAEAAAAJAAUAAgAQAAIAAAAKAAQAAgAQAAEAAAAKAAUAAgAQAAIAAAALAAQAAgAQAAEAAAALAAUAAgAQAAIAAAAMAAQAAgAQAAEAAAAMAAUAAgAQAAIAAAANAAQAAgAQAAEAAAANAAUAAgAQAAIAAAAOAAQAAgAQAAEAAAAOAAUAAgAQAAIAAAAPAAQAAgAQAAEAAAAPAAUAAgAQAAIAAAAQAAQAAgAQAAEAAAAQAAUAAgAQAAIAAAARAAQAAgAQAAEAAAARAAUAAgAQAAIAAAASAAQAAgAQAAEAAAASAAUAAgAQAAIAAAATAAQAAgAQAAEAAAATAAUAAgAQAAIAAAAUAAQAAgAQAAEAAAAUAAUAAgAQAAIAAAAVAAQAAgAQAAEAAAAVAAUAAgAQAAIAAAAWAAQAAgAQAAEAAAAWAAUAAgAQAAIAAAAXAAQAAgAQAAEAAAAXAAUAAgAQAAIAAAAYAAQAAgAQAAEAAAAYAAUAAgAQAAIAAAAYAAYAAgAQAAEAAAAYAAcAAgAQAAEAAAAXAAYAAgAQAAEAAAAXAAcAAgAQAAEAAAAWAAYAAgAQAAEAAAAWAAcAAgAQAAEAAAAVAAYAAgAQAAEAAAAVAAcAAgAQAAEAAAAUAAYAAgAQAAEAAAAUAAcAAgAQAAEAAAATAAYAAgAQAAEAAAATAAcAAgAQAAEAAAASAAYAAgAQAAEAAAASAAcAAgAQAAEAAAARAAYAAgAQAAEAAAARAAcAAgAQAAEAAAAQAAYAAgAQAAEAAAAQAAcAAgAQAAEAAAAPAAYAAgAQAAEAAAAPAAcAAgAQAAEAAAAOAAYAAgAQAAEAAAAOAAcAAgAQAAEAAAANAAYAAgAQAAEAAAANAAcAAgAQAAEAAAAMAAYAAgAQAAEAAAAMAAcAAgAQAAEAAAALAAYAAgAQAAEAAAALAAcAAgAQAAEAAAAKAAYAAgAQAAEAAAAKAAcAAgAQAAEAAAAJAAYAAgAQAAEAAAAJAAcAAgAQAAEAAAAIAAYAAgAQAAEAAAAIAAcAAgAQAAEAAAAHAAYAAgAQAAEAAAAHAAcAAgAQAAEAAAAGAAYAAgAQAAEAAAAGAAcAAgAQAAEAAAAFAAcAAgAQAAEAAAAEAAcAAgAQAAEAAAADAAcAAgAQAAEAAAACAAcAAgAQAAEAAAABAAcAAgAQAAEAAAABAAgAAgAQAAIAAAACAAgAAgAQAAIAAAADAAgAAgAQAAIAAAAEAAgAAgAQAAIAAAAFAAgAAgAQAAIAAAAGAAgAAgAQAAIAAAAHAAgAAgAQAAIAAAAIAAgAAgAQAAIAAAAJAAgAAgAQAAIAAAAKAAgAAgAQAAIAAAALAAgAAgAQAAIAAAAMAAgAAgAQAAIAAAANAAgAAgAQAAIAAAAOAAgAAgAQAAIAAAAPAAgAAgAQAAIAAAAQAAgAAgAQAAIAAAARAAgAAgAQAAIAAAASAAgAAgAQAAIAAAATAAgAAgAQAAIAAAAUAAgAAgAQAAIAAAAVAAgAAgAQAAIAAAAWAAgAAgAQAAIAAAAXAAgAAgAQAAIAAAAYAAgAAgAQAAIAAAAYAAkAAgAQAAEAAAAYAAoAAgAQAAIAAAAXAAkAAgAQAAEAAAAXAAoAAgAQAAIAAAAWAAkAAgAQAAEAAAAWAAoAAgAQAAIAAAAVAAkAAgAQAAEAAAAVAAoAAgAQAAIAAAAUAAkAAgAQAAEAAAAUAAoAAgAQAAIAAAATAAkAAgAQAAEAAAATAAoAAgAQAAIAAAASAAkAAgAQAAEAAAASAAoAAgAQAAIAAAARAAkAAgAQAAEAAAARAAoAAgAQAAIAAAAQAAkAAgAQAAEAAAAQAAoAAgAQAAIAAAAPAAkAAgAQAAEAAAAPAAoAAgAQAAIAAAAOAAkAAgAQAAEAAAAOAAoAAgAQAAIAAAANAAkAAgAQAAEAAAANAAoAAgAQAAIAAAAMAAkAAgAQAAEAAAAMAAoAAgAQAAIAAAALAAkAAgAQAAEAAAALAAoAAgAQAAIAAAAKAAkAAgAQAAEAAAAKAAoAAgAQAAIAAAAJAAkAAgAQAAEAAAAJAAoAAgAQAAIAAAAIAAkAAgAQAAEAAAAIAAoAAgAQAAIAAAAHAAkAAgAQAAEAAAAHAAoAAgAQAAIAAAAGAAkAAgAQAAEAAAAGAAoAAgAQAAIAAAAFAAkAAgAQAAEAAAAFAAoAAgAQAAIAAAAEAAkAAgAQAAEAAAAEAAoAAgAQAAIAAAADAAkAAgAQAAEAAAADAAoAAgAQAAIAAAACAAkAAgAQAAEAAAACAAoAAgAQAAIAAAABAAkAAgAQAAEAAAABAAoAAgAQAAIAAAA=")
+tile_set = ExtResource("2_jnjiw")
+
+[node name="Decoração" type="TileMapLayer" parent="Tilemaps" unique_id=1309790700]
+tile_set = ExtResource("3_ccsgx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1959870190]
+libraries/ = SubResource("AnimationLibrary_ryk4g")
+autoplay = &"animacao_final"
+
+[node name="Player" parent="." unique_id=758609415 instance=ExtResource("4_27px2")]
+position = Vector2(9, 166)
+script = null
+
+[node name="AnimatedSprite2D" parent="Player" index="1" unique_id=2077530802]
+animation = &"idle"
+frame = 0
+frame_progress = 0.0
+
+[node name="Baú" parent="." unique_id=1495447204 instance=ExtResource("5_kay1h")]
+z_index = 2
+position = Vector2(201, 160)
+animation = &"fechado"
+
+[node name="Mercador" parent="." unique_id=1244256968 instance=ExtResource("6_bn0iq")]
+visible = false
+position = Vector2(199, 167)
+scale = Vector2(-1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1618364989]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1826876886]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1034799046]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -24.5
+offset_right = 48.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_bn0iq")
+theme_override_font_sizes/font_size = 50
+text = "SEM
+REEMBOLSO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1607520205]
+
+[editable path="Player"]
+[editable path="Baú"]
+[editable path="Mercador"]
