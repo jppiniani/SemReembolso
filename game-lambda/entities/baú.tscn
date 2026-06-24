@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://cmhigv7g2iid2"]
 
 [ext_resource type="Texture2D" uid="uid://dch12f5tx3cd3" path="res://sprites/tilesets/whismy/chest.png" id="1_0a8yi"]
+[ext_resource type="Texture2D" uid="uid://dr5phrchp52dm" path="res://sprites/tilesets/whismy/chest2.png" id="2_lwajo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lwajo"]
 atlas = ExtResource("1_0a8yi")
+region = Rect2(960, 0, 40, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bidxs"]
+atlas = ExtResource("2_lwajo")
 region = Rect2(960, 0, 40, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ugd5h"]
@@ -102,6 +107,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_bidxs")
+}],
+"loop": 1,
+"name": &"aberto2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ugd5h")
 }, {
 "duration": 1.0,
@@ -176,4 +189,4 @@ animations = [{
 
 [node name="Baú" type="AnimatedSprite2D" unique_id=1495447204]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"aberto"
+animation = &"aberto2"

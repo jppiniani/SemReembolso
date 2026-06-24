@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cetvoywc00wfo" path="res://sprites/Characters/mercador/mercador-ataque1-sheet.png" id="1_810al"]
 [ext_resource type="Texture2D" uid="uid://d4jpes88f1nvc" path="res://sprites/Characters/mercador/mercador-walk.png" id="1_l56k4"]
 [ext_resource type="Texture2D" uid="uid://byrvj18liqgxu" path="res://sprites/Characters/mercador/mercador-sheet.png" id="1_mtlcc"]
+[ext_resource type="Texture2D" uid="uid://bp6i1fqkyk0xc" path="res://sprites/Characters/mercador/mercador-pulo.png" id="4_twr1p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yvm8v"]
 atlas = ExtResource("1_l56k4")
@@ -88,6 +89,10 @@ region = Rect2(102, 0, 17, 17)
 atlas = ExtResource("1_mtlcc")
 region = Rect2(119, 0, 17, 17)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcbdy"]
+atlas = ExtResource("4_twr1p")
+region = Rect2(0, 0, 19, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ty4f5"]
 animations = [{
 "frames": [{
@@ -167,6 +172,14 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcbdy")
+}],
+"loop": 1,
+"name": &"pulo",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mtlcc"]
@@ -178,8 +191,8 @@ height = 16.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=381843377]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_ty4f5")
-animation = &"andando"
-frame_progress = 0.5330068
+animation = &"pulo"
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151059]
 shape = SubResource("CapsuleShape2D_mtlcc")
