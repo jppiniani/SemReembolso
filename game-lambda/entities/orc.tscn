@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://clcvho0vnnxs6" path="res://entities/coin.tscn" id="2_uet01"]
 [ext_resource type="Texture2D" uid="uid://0rc0ajme7d53" path="res://sprites/Characters/inimigo morte1.png" id="3_uet01"]
 [ext_resource type="Texture2D" uid="uid://6aoybylmsl1x" path="res://sprites/Characters/inimigo morte2.png" id="4_1kwgt"]
-[ext_resource type="Texture2D" uid="uid://cgwbhf1oqpy5k" path="res://sprites/Characters/inimigo walk wip.png" id="5_nwr8m"]
+[ext_resource type="Texture2D" uid="uid://bd120yijk1ve1" path="res://sprites/Characters/inimigo walk.png" id="5_uet01"]
+[ext_resource type="Texture2D" uid="uid://2310i1171xlo" path="res://sprites/Characters/inimigo 2 walk.png" id="6_1kwgt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vb5lg"]
 radius = 8.0
@@ -21,28 +22,52 @@ region = Rect2(0, 0, 64, 32)
 atlas = ExtResource("4_1kwgt")
 region = Rect2(0, 0, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1y34"]
-atlas = ExtResource("5_nwr8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcmuc"]
+atlas = ExtResource("5_uet01")
 region = Rect2(0, 0, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6mmjs"]
-atlas = ExtResource("5_nwr8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iqia"]
+atlas = ExtResource("5_uet01")
 region = Rect2(64, 0, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wpaq"]
-atlas = ExtResource("5_nwr8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1y34"]
+atlas = ExtResource("5_uet01")
 region = Rect2(128, 0, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_afntt"]
-atlas = ExtResource("5_nwr8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mmjs"]
+atlas = ExtResource("5_uet01")
 region = Rect2(192, 0, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yahj3"]
-atlas = ExtResource("5_nwr8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wpaq"]
+atlas = ExtResource("5_uet01")
 region = Rect2(256, 0, 64, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_afntt"]
+atlas = ExtResource("5_uet01")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yahj3"]
+atlas = ExtResource("6_1kwgt")
+region = Rect2(0, 0, 64, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0576"]
-atlas = ExtResource("5_nwr8m")
+atlas = ExtResource("6_1kwgt")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ortq"]
+atlas = ExtResource("6_1kwgt")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nak1h"]
+atlas = ExtResource("6_1kwgt")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp6jm"]
+atlas = ExtResource("6_1kwgt")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqyno"]
+atlas = ExtResource("6_1kwgt")
 region = Rect2(320, 0, 64, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ubxt"]
@@ -60,6 +85,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_jcmuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iqia")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_j1y34")
 }, {
 "duration": 1.0,
@@ -70,16 +101,33 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_afntt")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yahj3")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m0576")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ortq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nak1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp6jm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqyno")
 }],
 "loop": 1,
-"name": &"walk",
-"speed": 6.0
+"name": &"walk2",
+"speed": 5.0
 }]
 
 [node name="Orc" type="CharacterBody2D" unique_id=830318618]
@@ -103,7 +151,8 @@ debug_color = Color(0.99206084, 0, 0.26346174, 0.41960785)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=627484486]
 position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_8ubxt")
-animation = &"dead"
+animation = &"walk2"
+frame_progress = 0.062398225
 flip_h = true
 
 [node name="WallDetector" type="RayCast2D" parent="." unique_id=374991808]
