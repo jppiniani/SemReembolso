@@ -23,3 +23,6 @@
 *.otf filter=lfs diff=lfs merge=lfs -text
 *.pck filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+
+# Executável exportado do jogo (vai na pasta build/)
+*.exe filter=lfs diff=lfs merge=lfs -text

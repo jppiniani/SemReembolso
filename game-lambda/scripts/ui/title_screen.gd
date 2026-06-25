@@ -34,7 +34,9 @@ func _on_opcoes_btn_pressed() -> void:
 	$MenuOpcoes/MarginContainer/VBoxContainer/HSlider.grab_focus()
 
 func _on_leaderboard_btn_pressed() -> void:
-	pass # Replace with function body.
+	# Instancia a tela do leaderboard por cima do menu. Ela se fecha sozinha no "Voltar".
+	var cena := load("res://scene/leaderboard.tscn")
+	add_child(cena.instantiate())
 
 
 func _on_quit_btn_pressed() -> void:

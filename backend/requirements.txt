@@ -1,0 +1,4 @@
+# Dependências da API (instale com: python -m pip install -r requirements.txt)
+Flask          # framework web que cria a API
+PyMySQL        # driver puro-Python para conectar no MySQL (sem partes compiladas)
+python-dotenv  # lê as variáveis do arquivo .env

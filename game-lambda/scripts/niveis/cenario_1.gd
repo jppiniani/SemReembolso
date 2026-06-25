@@ -51,6 +51,9 @@ func _ready() -> void:
 		
 	MusicaGlobal.tocar_musica("res://sounds/music/shop.mp3")
 	Global.contar_tempo = true
+
+	# Prefetch dos nomes herdados, para a loja abrir já com o nome certo (sem flicker).
+	Api.buscar_itens()
 	
 	if Global.from_world != null:
 		$Player.global_position = get_node(Global.from_world + "Pos").global_position
