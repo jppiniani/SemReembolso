@@ -1,30 +1,43 @@
 [gd_scene format=3 uid="uid://bte8ni7e7j8pl"]
 
 [ext_resource type="Script" uid="uid://yv25hq8m13ov" path="res://scripts/entidades/mosquito.gd" id="1_hqx5d"]
-[ext_resource type="Texture2D" uid="uid://drcafitftvhtc" path="res://sprites/Characters/mosquitao/Flying_(32 x 32).png" id="1_pqqnx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqx5d"]
-atlas = ExtResource("1_pqqnx")
-region = Rect2(0, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://d4gdri23qm75y" path="res://sprites/Characters/inimigo voador.png" id="2_hqx5d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cuxak"]
-atlas = ExtResource("1_pqqnx")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("2_hqx5d")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1k2ua"]
-atlas = ExtResource("1_pqqnx")
-region = Rect2(64, 0, 32, 32)
+atlas = ExtResource("2_hqx5d")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fq6oe"]
-atlas = ExtResource("1_pqqnx")
+atlas = ExtResource("2_hqx5d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ljv2"]
+atlas = ExtResource("2_hqx5d")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t581r"]
+atlas = ExtResource("2_hqx5d")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpawq"]
+atlas = ExtResource("2_hqx5d")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q87lf"]
+atlas = ExtResource("2_hqx5d")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mc3b"]
+atlas = ExtResource("2_hqx5d")
+region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hqx5d")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cuxak")
 }, {
@@ -33,6 +46,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fq6oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ljv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t581r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpawq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q87lf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mc3b")
 }],
 "loop": 1,
 "name": &"fly",
@@ -44,15 +72,16 @@ radius = 6.0
 height = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ljv2"]
-size = Vector2(14, 18)
+size = Vector2(30, 18)
 
 [node name="Mosquito" type="CharacterBody2D" unique_id=2029189291]
 script = ExtResource("1_hqx5d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=850615089]
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"fly"
-frame_progress = 0.84493554
+frame_progress = 0.50175
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1207793932]
