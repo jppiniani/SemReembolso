@@ -128,9 +128,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m3q1d")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
-"speed": 22.0
+"speed": 1.7
 }]
 
 [node name="Cenario1" type="Node2D" unique_id=1975790546 node_paths=PackedStringArray("_hud")]
@@ -277,122 +277,124 @@ texture = ExtResource("17_d0erj")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="GrassLandFlower15" type="Sprite2D" parent="." unique_id=499349123]
+[node name="Props" type="Node2D" parent="." unique_id=840567028]
+
+[node name="GrassLandFlower15" type="Sprite2D" parent="Props" unique_id=499349123]
 position = Vector2(29, 169)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower14" type="Sprite2D" parent="." unique_id=702659615]
+[node name="GrassLandFlower14" type="Sprite2D" parent="Props" unique_id=702659615]
 position = Vector2(27, 170)
 texture = ExtResource("22_lpmn5")
 
-[node name="GrassLandFlower1" type="Sprite2D" parent="." unique_id=867315754]
+[node name="GrassLandFlower1" type="Sprite2D" parent="Props" unique_id=867315754]
 position = Vector2(49, 170)
 texture = ExtResource("21_cgwv1")
 
-[node name="GrassLandFlower2" type="Sprite2D" parent="." unique_id=461931944]
+[node name="GrassLandFlower2" type="Sprite2D" parent="Props" unique_id=461931944]
 position = Vector2(25, 167)
 texture = ExtResource("21_cgwv1")
 
-[node name="GrassLandTree" type="Sprite2D" parent="." unique_id=150099900]
+[node name="GrassLandTree" type="Sprite2D" parent="Props" unique_id=150099900]
 modulate = Color(0.4392157, 0.5019608, 0.3764706, 1)
 position = Vector2(16, 136)
 texture = ExtResource("19_d1dvl")
 
-[node name="GrassLandFlower12" type="Sprite2D" parent="." unique_id=1356544412]
+[node name="GrassLandFlower12" type="Sprite2D" parent="Props" unique_id=1356544412]
 position = Vector2(321, 166)
 texture = ExtResource("21_cgwv1")
 
-[node name="GrassLandFlower3" type="Sprite2D" parent="." unique_id=141168469]
+[node name="GrassLandFlower3" type="Sprite2D" parent="Props" unique_id=141168469]
 position = Vector2(32, 168)
 texture = ExtResource("22_lpmn5")
 
-[node name="GrassLandFlower4" type="Sprite2D" parent="." unique_id=427061870]
+[node name="GrassLandFlower4" type="Sprite2D" parent="Props" unique_id=427061870]
 position = Vector2(46, 168)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower5" type="Sprite2D" parent="." unique_id=1585472071]
+[node name="GrassLandFlower5" type="Sprite2D" parent="Props" unique_id=1585472071]
 position = Vector2(47, 171)
 texture = ExtResource("21_cgwv1")
 
-[node name="GrassLandFlower11" type="Sprite2D" parent="." unique_id=718093722]
+[node name="GrassLandFlower11" type="Sprite2D" parent="Props" unique_id=718093722]
 position = Vector2(322, 169)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower6" type="Sprite2D" parent="." unique_id=468807408]
+[node name="GrassLandFlower6" type="Sprite2D" parent="Props" unique_id=468807408]
 position = Vector2(45, 170)
 texture = ExtResource("22_lpmn5")
 
-[node name="GrassLandTree2" type="Sprite2D" parent="." unique_id=1191247077]
+[node name="GrassLandTree2" type="Sprite2D" parent="Props" unique_id=1191247077]
 modulate = Color(0.54901963, 0.627451, 0.47843137, 1)
 position = Vector2(38, 137)
 texture = ExtResource("19_d1dvl")
 
-[node name="GrassLandFlower7" type="Sprite2D" parent="." unique_id=1904532812]
+[node name="GrassLandFlower7" type="Sprite2D" parent="Props" unique_id=1904532812]
 position = Vector2(42, 170)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower8" type="Sprite2D" parent="." unique_id=93401110]
+[node name="GrassLandFlower8" type="Sprite2D" parent="Props" unique_id=93401110]
 position = Vector2(318, 169)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower9" type="Sprite2D" parent="." unique_id=1430005507]
+[node name="GrassLandFlower9" type="Sprite2D" parent="Props" unique_id=1430005507]
 position = Vector2(321, 170)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower10" type="Sprite2D" parent="." unique_id=932259841]
+[node name="GrassLandFlower10" type="Sprite2D" parent="Props" unique_id=932259841]
 position = Vector2(318, 168)
 texture = ExtResource("21_cgwv1")
 
-[node name="GrassLandFlower13" type="Sprite2D" parent="." unique_id=1152231053]
+[node name="GrassLandFlower13" type="Sprite2D" parent="Props" unique_id=1152231053]
 position = Vector2(325, 170)
 texture = ExtResource("22_lpmn5")
 
-[node name="GrassLandFlower16" type="Sprite2D" parent="." unique_id=158968181]
+[node name="GrassLandFlower16" type="Sprite2D" parent="Props" unique_id=158968181]
 position = Vector2(175, 172)
 texture = ExtResource("21_cgwv1")
 
-[node name="GrassLandFlower17" type="Sprite2D" parent="." unique_id=1153265660]
+[node name="GrassLandFlower17" type="Sprite2D" parent="Props" unique_id=1153265660]
 position = Vector2(173, 170)
 texture = ExtResource("22_lpmn5")
 
-[node name="GrassLandFlower18" type="Sprite2D" parent="." unique_id=1793566878]
+[node name="GrassLandFlower18" type="Sprite2D" parent="Props" unique_id=1793566878]
 position = Vector2(177, 171)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower21" type="Sprite2D" parent="." unique_id=79038105]
+[node name="GrassLandFlower21" type="Sprite2D" parent="Props" unique_id=79038105]
 position = Vector2(107, 169)
 texture = ExtResource("22_lpmn5")
 
-[node name="GrassLandFlower19" type="Sprite2D" parent="." unique_id=1705998919]
+[node name="GrassLandFlower19" type="Sprite2D" parent="Props" unique_id=1705998919]
 position = Vector2(108, 171)
 texture = ExtResource("20_c7j72")
 
-[node name="GrassLandFlower20" type="Sprite2D" parent="." unique_id=910423368]
+[node name="GrassLandFlower20" type="Sprite2D" parent="Props" unique_id=910423368]
 position = Vector2(105, 171)
 texture = ExtResource("21_cgwv1")
 
-[node name="Borboleta" type="AnimatedSprite2D" parent="." unique_id=635029840]
+[node name="Borboleta" type="AnimatedSprite2D" parent="Props" unique_id=635029840]
 position = Vector2(70, 113)
 sprite_frames = SubResource("SpriteFrames_sa1ve")
 autoplay = "default"
 speed_scale = 5.0
 script = ExtResource("24_cgwv1")
 
-[node name="Borboleta2" type="AnimatedSprite2D" parent="." unique_id=574556428]
+[node name="Borboleta2" type="AnimatedSprite2D" parent="Props" unique_id=574556428]
 position = Vector2(367, 101)
 sprite_frames = SubResource("SpriteFrames_sa1ve")
 autoplay = "default"
 speed_scale = 5.0
 script = ExtResource("25_lpmn5")
 
-[node name="Borboleta3" type="AnimatedSprite2D" parent="." unique_id=119698467]
+[node name="Borboleta3" type="AnimatedSprite2D" parent="Props" unique_id=119698467]
 position = Vector2(33, 89)
 sprite_frames = SubResource("SpriteFrames_sa1ve")
 autoplay = "default"
 speed_scale = 5.0
 script = ExtResource("26_utvfr")
 
-[node name="Borboleta4" type="AnimatedSprite2D" parent="." unique_id=863695632]
+[node name="Borboleta4" type="AnimatedSprite2D" parent="Props" unique_id=863695632]
 position = Vector2(160, 67)
 sprite_frames = SubResource("SpriteFrames_sa1ve")
 autoplay = "default"

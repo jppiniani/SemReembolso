@@ -75,6 +75,15 @@ func _montar_ui() -> void:
 	voltar.size_flags_horizontal = Control.SIZE_SHRINK_END
 	voltar.pressed.connect(_on_voltar)
 	vbox.add_child(voltar)
+	
+	var caminho_botao = voltar.get_path()
+	voltar.focus_neighbor_top = caminho_botao
+	voltar.focus_neighbor_bottom = caminho_botao
+	voltar.focus_neighbor_left = caminho_botao
+	voltar.focus_neighbor_right = caminho_botao
+	voltar.focus_next = caminho_botao
+	voltar.focus_previous = caminho_botao
+	
 	voltar.grab_focus()
 
 

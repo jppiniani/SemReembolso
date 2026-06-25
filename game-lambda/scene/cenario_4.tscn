@@ -424,15 +424,15 @@ tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "clips": [{
-"end_offset": 217.5823,
+"end_offset": 219.4323,
 "start_offset": 0.0,
 "stream": ExtResource("4_ryk4g")
 }, {
-"end_offset": 0.0,
-"start_offset": 0.0,
+"end_offset": 0.72999984,
+"start_offset": 0.16,
 "stream": ExtResource("5_nnor0")
 }],
-"times": PackedFloat32Array(0, 14.933332)
+"times": PackedFloat32Array(0, 13.133333)
 }
 tracks/13/use_blend = true
 tracks/14/type = "value"
@@ -577,6 +577,7 @@ scale = Vector2(-1, 1)
 [node name="AnimatedSprite2D" parent="Mercador" index="0" unique_id=381843377]
 position = Vector2(0.5249939, 0)
 animation = &"ataque"
+flip_h = true
 
 [node name="CollisionShape2D" parent="Mercador" index="1" unique_id=151059]
 position = Vector2(0.3350067, 0.55000305)

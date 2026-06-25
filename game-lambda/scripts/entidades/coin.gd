@@ -4,7 +4,7 @@ extends Area2D
 @onready var collect_sfx: AudioStreamPlayer = $collect
 
 var pode_coletar : bool = false
-var coins := 100
+var coins := 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
