@@ -18,6 +18,15 @@
 [ext_resource type="PackedScene" uid="uid://do1scgp62l0rt" path="res://scene/hud.tscn" id="16_j3lp7"]
 [ext_resource type="Script" uid="uid://b7bqkky6ywbb4" path="res://scripts/ui/warning.gd" id="16_lm1mp"]
 [ext_resource type="Texture2D" uid="uid://cg8j25us36oyx" path="res://sprites/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="17_d0erj"]
+[ext_resource type="Texture2D" uid="uid://cl812tglfykov" path="res://sprites/tilesets/props/GrassLand_Tree.png" id="19_d1dvl"]
+[ext_resource type="Texture2D" uid="uid://82b62ckkq0ny" path="res://sprites/tilesets/props/GrassLand_Flower_1.png" id="20_c7j72"]
+[ext_resource type="Texture2D" uid="uid://de5fwi5evr841" path="res://sprites/tilesets/props/GrassLand_Flower_2.png" id="21_cgwv1"]
+[ext_resource type="Texture2D" uid="uid://buupd5smhbbe4" path="res://sprites/tilesets/props/GrassLand_Flower_3.png" id="22_lpmn5"]
+[ext_resource type="Texture2D" uid="uid://8ua1dop4x1jk" path="res://sprites/tilesets/props/GrassLand_Butterfly.png" id="23_c7j72"]
+[ext_resource type="Script" uid="uid://dol3k5np1rqj3" path="res://scene/borboleta.gd" id="24_cgwv1"]
+[ext_resource type="Script" uid="uid://l454pf1mlr15" path="res://scene/borboleta_2.gd" id="25_lpmn5"]
+[ext_resource type="Script" uid="uid://b2f6kgxxqq24i" path="res://scene/borboleta_3.gd" id="26_utvfr"]
+[ext_resource type="Script" uid="uid://bqefqibridh4v" path="res://scene/borboleta_4.gd" id="27_m3q1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yqkr"]
 size = Vector2(20, 34.97967)
@@ -87,6 +96,42 @@ size = Vector2(66, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02al1"]
 size = Vector2(68, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgwv1"]
+atlas = ExtResource("23_c7j72")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpmn5"]
+atlas = ExtResource("23_c7j72")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utvfr"]
+atlas = ExtResource("23_c7j72")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3q1d"]
+atlas = ExtResource("23_c7j72")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sa1ve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgwv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpmn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utvfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3q1d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 22.0
+}]
 
 [node name="Cenario1" type="Node2D" unique_id=1975790546 node_paths=PackedStringArray("_hud")]
 script = ExtResource("1_oxix0")
@@ -166,7 +211,7 @@ repeat_size = Vector2(288, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Mundo/Background/Middlegorund" unique_id=889428369]
-position = Vector2(0, -31)
+position = Vector2(-1, -31)
 texture = ExtResource("9_lpmn5")
 centered = false
 
@@ -230,5 +275,127 @@ position = Vector2(-1, -19)
 texture = ExtResource("17_d0erj")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
+
+[node name="GrassLandFlower15" type="Sprite2D" parent="." unique_id=499349123]
+position = Vector2(29, 169)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower14" type="Sprite2D" parent="." unique_id=702659615]
+position = Vector2(27, 170)
+texture = ExtResource("22_lpmn5")
+
+[node name="GrassLandFlower1" type="Sprite2D" parent="." unique_id=867315754]
+position = Vector2(49, 170)
+texture = ExtResource("21_cgwv1")
+
+[node name="GrassLandFlower2" type="Sprite2D" parent="." unique_id=461931944]
+position = Vector2(25, 167)
+texture = ExtResource("21_cgwv1")
+
+[node name="GrassLandTree" type="Sprite2D" parent="." unique_id=150099900]
+modulate = Color(0.4392157, 0.5019608, 0.3764706, 1)
+position = Vector2(16, 136)
+texture = ExtResource("19_d1dvl")
+
+[node name="GrassLandFlower12" type="Sprite2D" parent="." unique_id=1356544412]
+position = Vector2(321, 166)
+texture = ExtResource("21_cgwv1")
+
+[node name="GrassLandFlower3" type="Sprite2D" parent="." unique_id=141168469]
+position = Vector2(32, 168)
+texture = ExtResource("22_lpmn5")
+
+[node name="GrassLandFlower4" type="Sprite2D" parent="." unique_id=427061870]
+position = Vector2(46, 168)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower5" type="Sprite2D" parent="." unique_id=1585472071]
+position = Vector2(47, 171)
+texture = ExtResource("21_cgwv1")
+
+[node name="GrassLandFlower11" type="Sprite2D" parent="." unique_id=718093722]
+position = Vector2(322, 169)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower6" type="Sprite2D" parent="." unique_id=468807408]
+position = Vector2(45, 170)
+texture = ExtResource("22_lpmn5")
+
+[node name="GrassLandTree2" type="Sprite2D" parent="." unique_id=1191247077]
+modulate = Color(0.54901963, 0.627451, 0.47843137, 1)
+position = Vector2(38, 137)
+texture = ExtResource("19_d1dvl")
+
+[node name="GrassLandFlower7" type="Sprite2D" parent="." unique_id=1904532812]
+position = Vector2(42, 170)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower8" type="Sprite2D" parent="." unique_id=93401110]
+position = Vector2(318, 169)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower9" type="Sprite2D" parent="." unique_id=1430005507]
+position = Vector2(321, 170)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower10" type="Sprite2D" parent="." unique_id=932259841]
+position = Vector2(318, 168)
+texture = ExtResource("21_cgwv1")
+
+[node name="GrassLandFlower13" type="Sprite2D" parent="." unique_id=1152231053]
+position = Vector2(325, 170)
+texture = ExtResource("22_lpmn5")
+
+[node name="GrassLandFlower16" type="Sprite2D" parent="." unique_id=158968181]
+position = Vector2(175, 172)
+texture = ExtResource("21_cgwv1")
+
+[node name="GrassLandFlower17" type="Sprite2D" parent="." unique_id=1153265660]
+position = Vector2(173, 170)
+texture = ExtResource("22_lpmn5")
+
+[node name="GrassLandFlower18" type="Sprite2D" parent="." unique_id=1793566878]
+position = Vector2(177, 171)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower21" type="Sprite2D" parent="." unique_id=79038105]
+position = Vector2(107, 169)
+texture = ExtResource("22_lpmn5")
+
+[node name="GrassLandFlower19" type="Sprite2D" parent="." unique_id=1705998919]
+position = Vector2(108, 171)
+texture = ExtResource("20_c7j72")
+
+[node name="GrassLandFlower20" type="Sprite2D" parent="." unique_id=910423368]
+position = Vector2(105, 171)
+texture = ExtResource("21_cgwv1")
+
+[node name="Borboleta" type="AnimatedSprite2D" parent="." unique_id=635029840]
+position = Vector2(70, 113)
+sprite_frames = SubResource("SpriteFrames_sa1ve")
+autoplay = "default"
+speed_scale = 5.0
+script = ExtResource("24_cgwv1")
+
+[node name="Borboleta2" type="AnimatedSprite2D" parent="." unique_id=574556428]
+position = Vector2(367, 101)
+sprite_frames = SubResource("SpriteFrames_sa1ve")
+autoplay = "default"
+speed_scale = 5.0
+script = ExtResource("25_lpmn5")
+
+[node name="Borboleta3" type="AnimatedSprite2D" parent="." unique_id=119698467]
+position = Vector2(33, 89)
+sprite_frames = SubResource("SpriteFrames_sa1ve")
+autoplay = "default"
+speed_scale = 5.0
+script = ExtResource("26_utvfr")
+
+[node name="Borboleta4" type="AnimatedSprite2D" parent="." unique_id=863695632]
+position = Vector2(160, 67)
+sprite_frames = SubResource("SpriteFrames_sa1ve")
+autoplay = "default"
+speed_scale = 5.0
+script = ExtResource("27_m3q1d")
 
 [editable path="LevelEndCenario2"]
