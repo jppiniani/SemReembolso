@@ -172,16 +172,34 @@ classDiagram
     Mercador "1" --> "1" Heroi : elimina
     InimigoComum "1" --> "0..1" Moeda : dropa
 ```
-<br>
+<hr>
 <h3>Como Rodar o Projeto</h3>
 
 A arquitetura tem 3 camadas que precisam estar no ar, nesta ordem: **MySQL → API (Python/Flask) → Jogo (Godot)**.
 
 <b>Pré-requisitos</b>
 
+- **Git** + **[Git LFS](https://git-lfs.com/)** — obrigatório para baixar o projeto corretamente (ver passo 0 abaixo)
 - **MySQL Server 8.x** (o Workbench é opcional, só ajuda a visualizar)
 - **Python 3.10+**
 - **Godot 4.6** — necessário <b>apenas</b> para rodar a partir do código-fonte (Opção B). Para só jogar, use o executável (Opção A) e o Godot não é preciso.
+
+<b>0. Obtendo o projeto (clone — NÃO use "Download ZIP")</b>
+
+⚠️ Este repositório usa **Git LFS** para os binários (o executável, as imagens, os áudios e as fontes do jogo). O botão **"Download ZIP"** do GitHub **não baixa os arquivos LFS** — ele traz apenas "ponteiros" de texto de poucos bytes no lugar deles. O resultado é um projeto quebrado: o `.exe` não abre e o Godot acusa vários arquivos faltando. **Sempre clone:**
+
+```bash
+git lfs install                                          # uma vez por máquina
+git clone https://github.com/jppiniani/SemReembolso.git
+```
+
+Para confirmar que os binários vieram de verdade (e não como ponteiros):
+
+```bash
+ls -lh build/SemReembolso.exe   # deve ter ~148 MB, não alguns KB
+```
+
+> Se o arquivo vier com poucos KB, o Git LFS não estava ativo no clone. Rode `git lfs install` e depois `git lfs pull` para baixar o conteúdo real.
 
 <b>1. Banco de dados</b>
 
@@ -196,10 +214,18 @@ mysql -u root -p < backend/schema.sql
 
 ```bash
 cd backend
-python -m venv venv
+python -m venv venv            # cria o ambiente virtual (a pasta venv/)
 venv\Scripts\activate          # Windows  (Linux/Mac: source venv/bin/activate)
 pip install -r requirements.txt
 ```
+
+> A **venv** é um ambiente isolado só com as bibliotecas deste projeto, sem "sujar" o Python global. O `activate` só existe **depois** de criar a venv com o comando acima — não pule essa linha.
+>
+> No **PowerShell**, se o `activate` falhar com *"running scripts is disabled on this system"*, libere a execução de scripts para o seu usuário (uma vez só) e tente de novo:
+> ```powershell
+> Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+> ```
+> Se ainda assim não quiser usar venv, você pode instalar as dependências no Python global (`pip install -r requirements.txt`) e rodar direto com `python app.py` — funciona, mas perde o isolamento.
 
 Crie o arquivo de credenciais a partir do modelo e edite com a sua senha do MySQL:
 
@@ -223,7 +249,7 @@ A API fica disponível em `http://127.0.0.1:5000`. Deixe esse terminal aberto.
 - <b>Opção B — A partir do código (precisa do Godot 4.6):</b> abra a pasta `game-lambda/` no Godot 4.6 e clique em <b>Play</b> (F5).
 
 > Se a loja mostrar os nomes padrão ("Bota do Herói Traído") em vez dos nomes herdados, ou o leaderboard ficar carregando, é sinal de que a API não está acessível — confira se o `python app.py` está rodando.
-
+<br>
 <hr>
 
 <h3>Ferramentas e tecnologias utilizadas</h3>
