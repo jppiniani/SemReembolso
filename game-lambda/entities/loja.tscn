@@ -69,7 +69,6 @@ layout_mode = 2
 
 [node name="Item1" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=876264928]
 custom_minimum_size = Vector2(0, 70)
-custom_maximum_size = Vector2(-1, 70)
 layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Item1" unique_id=1121569923]
@@ -96,10 +95,9 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("2_kbimf")
 theme_override_font_sizes/font_size = 19
-text = "Bota do Heroi Caido"
+text = "Bota do Heroi Traido"
 
 [node name="botao_bota" type="Button" parent="MarginContainer/VBoxContainer/Item1/VBoxContainer" unique_id=330891466]
-custom_maximum_size = Vector2(-1, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
@@ -109,7 +107,6 @@ icon = ExtResource("3_b4s7b")
 
 [node name="Item2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1253987842]
 custom_minimum_size = Vector2(0, 70)
-custom_maximum_size = Vector2(-1, 70)
 layout_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBoxContainer/Item2" unique_id=1018240664]
@@ -136,10 +133,9 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("2_kbimf")
 theme_override_font_sizes/font_size = 19
-text = "Armadura do Heroi Caido"
+text = "Armadura do Heroi Traido"
 
 [node name="botao_armadura" type="Button" parent="MarginContainer/VBoxContainer/Item2/VBoxContainer" unique_id=611101298]
-custom_maximum_size = Vector2(-1, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6

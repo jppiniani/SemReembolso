@@ -173,6 +173,59 @@ classDiagram
     InimigoComum "1" --> "0..1" Moeda : dropa
 ```
 <br>
+<h3>Como Rodar o Projeto</h3>
+
+A arquitetura tem 3 camadas que precisam estar no ar, nesta ordem: **MySQL → API (Python/Flask) → Jogo (Godot)**.
+
+<b>Pré-requisitos</b>
+
+- **MySQL Server 8.x** (o Workbench é opcional, só ajuda a visualizar)
+- **Python 3.10+**
+- **Godot 4.6** — necessário <b>apenas</b> para rodar a partir do código-fonte (Opção B). Para só jogar, use o executável (Opção A) e o Godot não é preciso.
+
+<b>1. Banco de dados</b>
+
+Importe o schema (cria o banco `game_lambda`, as tabelas e os itens iniciais):
+
+```bash
+mysql -u root -p < backend/schema.sql
+```
+> Ou pelo Workbench: <b>File → Open SQL Script</b> → `backend/schema.sql` → botão <b>Execute</b> (raio).
+
+<b>2. API (back-end)</b>
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate          # Windows  (Linux/Mac: source venv/bin/activate)
+pip install -r requirements.txt
+```
+
+Crie o arquivo de credenciais a partir do modelo e edite com a sua senha do MySQL:
+
+```bash
+copy .env.example .env         # Windows  (Linux/Mac: cp .env.example .env)
+```
+
+Abra o `.env` e troque o valor de `DB_PASSWORD` pela senha do seu MySQL. Depois suba a API:
+
+```bash
+python app.py
+```
+
+A API fica disponível em `http://127.0.0.1:5000`. Deixe esse terminal aberto.
+
+> ⚠️ O `.env` contém a senha e <b>não vai para o Git</b> (está no `.gitignore`). Cada pessoa cria o seu a partir do `.env.example`.
+
+<b>3. O Jogo</b>
+
+- <b>Opção A — Executável (não precisa do Godot):</b> rode o arquivo `build/SemReembolso.exe`. Ele procura a API em `127.0.0.1:5000`, então garanta que os passos 1 e 2 estão rodando. (Detalhes em [`build/README.md`](build/README.md).)
+- <b>Opção B — A partir do código (precisa do Godot 4.6):</b> abra a pasta `game-lambda/` no Godot 4.6 e clique em <b>Play</b> (F5).
+
+> Se a loja mostrar os nomes padrão ("Bota do Herói Traído") em vez dos nomes herdados, ou o leaderboard ficar carregando, é sinal de que a API não está acessível — confira se o `python app.py` está rodando.
+
+<hr>
+
 <h3>Ferramentas e tecnologias utilizadas</h3>
 
 - **Front-End / Engine:** Utilização da engine Godot 4.6. O Godot possui uma vasta gama de ferramentas nativas e uma interface visual que facilita a manipulação do sistema de Cenas e Nós, tornando a aplicação de conceitos de POO organizada e intuitiva.

@@ -74,5 +74,5 @@ CREATE TABLE run_item (
 -- Dados iniciais
 -- =============================================================
 INSERT INTO item (codigo, nome_default, preco) VALUES
-    ('BOTA',     'Bota do Cavaleiro Traido',     10),
-    ('ARMADURA', 'Armadura do Cavaleiro Traido', 20);
+    ('BOTA',     'Bota do Heroi Traido',     100),
+    ('ARMADURA', 'Armadura do Heroi Traido', 150);
